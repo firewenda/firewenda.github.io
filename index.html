@@ -15,7 +15,7 @@ body{font-size:14px;color:#333;font-family:微软雅黑,宋体;background-color:
 .clearfix:after{clear:both;}
 .wx-box{width:100%;height:100%;background-size:auto 100%;position:relative;background-repeat:no-repeat;background-position:center;background:#000 url(images/loading.gif) center no-repeat;}
 .u-globalAudio{color:#fff;text-decoration:none;font-size:24px;position:fixed;right:10%;bottom:28px;display:block;z-index:9999;}
-.u-globalAudio .icon-music{width:54px;height:54px;background:url(images/units-icons.png) 0 0;display:block;position:fixed;right:10px;top:10px;zoom:0.5;}
+.u-globalAudio .icon-music{width:54px;height:54px;background:url(images/units-icons.png) 0 0;display:block;position:fixed;right:10px;top:30px;zoom:0.5;}
 .z-play .icon-music{animation-name:rotate;animation-duration:1.5s;animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-name:rotate;-webkit-animation-duration:1.5s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:rotate;-moz-animation-duration:1.5s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;-ms-animation-name:rotate;-ms-animation-duration:1.5s;-ms-animation-iteration-count:infinite;-ms-animation-timing-function:linear;}
 @keyframes rotate{  
 from{-webkit-transform:rotate(0deg);}
@@ -54,9 +54,9 @@ to{-webkit-transform:rotate(360deg);}
 #robot{position:absolute;top:0;left:0;z-index:1;}
 #redux{position:absolute;top:0;left:0;z-index:2;}
 </style>
-<script type='text/javascript' src="js/jquery.min.js"></script>
-<script type='text/javascript' src='js/jquery.eraser.js'></script>
-<script type = "text/javascript">
+<script type='text/javascript' src="javascript/jquery.min.js"></script>
+<script type='text/javascript' src='javascript/jquery.eraser.js'></script>
+<script>
 addEventListener( "load", init, false );
 function init( event ) {
     $('#redux').eraser( {
