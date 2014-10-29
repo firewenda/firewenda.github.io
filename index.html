@@ -1,141 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-wdith,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"></meta>
-<title>欢迎参加毛毛和王海翔的婚礼</title>
-<style>
-*{padding:0;margin:0;}
-html{height:100%;}
-img{width:100%;}
-body{font-size:14px;color:#333;font-family:微软雅黑,宋体;background-color:#fff;letter-spacing:1px;box-shadow:0 0 160px 0 #5C99E7;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;-khtml-user-select:none;user-select:none;height:100%;overflow:hidden;}
-.wx-page{font:24px/1.2 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;max-width:640px;height:100%;margin:0 auto;overflow:hidden;}
-.max-page img{width:100%;display:block;border:0;}
-.clearfix:before,.clearfix:after{display:table;content:" ";}
-.clearfix:after{clear:both;}
-.wx-box{width:100%;height:100%;background-size:auto 100%;position:relative;background-repeat:no-repeat;background-position:center;background:#000 url(images/loading.gif) center no-repeat;}
-.u-globalAudio{color:#fff;text-decoration:none;font-size:24px;position:fixed;right:10%;bottom:28px;display:block;z-index:9999;}
-.u-globalAudio .icon-music{width:54px;height:54px;background:url(images/units-icons.png) 0 0;display:block;position:fixed;right:10px;top:30px;zoom:0.5;}
-.z-play .icon-music{animation-name:rotate;animation-duration:1.5s;animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-name:rotate;-webkit-animation-duration:1.5s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:rotate;-moz-animation-duration:1.5s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;-ms-animation-name:rotate;-ms-animation-duration:1.5s;-ms-animation-iteration-count:infinite;-ms-animation-timing-function:linear;}
-@keyframes rotate{  
-from{-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(360deg);}
-}
-@-webkit-keyframes rotate{
-from {-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(360deg);}
-}
-@-moz-keyframes rotate{  
-from {-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(360deg);}
-}
-@-ms-keyframes rotate{  
-from {-webkit-transform:rotate(0deg);}
-to{-webkit-transform:rotate(360deg);}
-}
-.u-guideTop{width:40px;height:50px;background:url(images/units-icons.png) -67px 0;position:absolute;left:50%;bottom:50px;margin-left:-25px;display:block;z-index:9998;}
-.u-guideTop.z-move{-webkit-animation:guideTop 1.5s infinite;zoom:0.5;}
-@-webkit-keyframes guideTop{0-webkit-transform:translateY(42px);opacity:0;}
-60%{-webkit-transform:translateY(12px);opacity:1;}
-100%{-webkit-transform:translateY(0px);opacity:0;}
-}
-.wx-box img{width:100%;height:auto;}
-#box1{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;height:100%;text-align:center;position:relative;z-index:1;background-color:#000;}
-#box1 img{width:100%;}
-#box1 canvas{width:100%;}
-#box0{background:#000;}
-.djs_wrapper{width:90%;height:90%;padding:5%;}
-.djs_wrapper img{width:100%;}
-.djs_main{border:5px solid #7bc623;-webkit-box-sizing:border-box;box-sizing:border-box;}
-.djs_countdown{display:none;text-align:center;color:#fff;padding:2% 0;font-size:20px;}
-.djs_countdown s{text-decoration:none;color:#fff;font-weight:400;color:#7cc724;font-size:24px;font-weight:700;}
-.wx-info{height:auto;margin:0 auto;border-top:10px solid #000;}
-.wx-map{height:50%;background:#fff;overflow:hidden;}
-#robot{position:absolute;top:0;left:0;z-index:1;}
-#redux{position:absolute;top:0;left:0;z-index:2;}
-</style>
-<script type='text/javascript' src="javascripts/jquery.min.js"></script>
-<script type='text/javascript' src='javascripts/jquery.eraser.js'></script>
-<script>
-addEventListener( "load", init, false );
-function init( event ) {
-    $('#redux').eraser( {
-        completeRatio:0.5,
-        completeFunction: function(){
-            $("#box1").remove();
-        }
-    });
-}
-function reset(event) {
-    $("#redux").eraser('reset');
-    event.preventDefault();
-}
-function grow(event) {
-    $("#redux").eraser("size",700);     /* 橡皮擦大小 */
-    event.preventDefault();
-}
-</script>
-</head>
-<body>
-<div class="wx-page">
-    <header class="app-header">
-        <a href="javascript:void(0);" class="u-globalAudio z-play">
-            <i class="icon-music"></i>
-            <audio id="Video" src="images/music.mp3" autoplay="autoplay" loop="loop"></audio>
-        </a>
-    </header>
-    <div class="wx-box" style="" id="box1">
-        <img id="robot" src="images/2.jpg" />
-        <img id="redux" src="images/1.jpg" />
-    </div>
-    <div class="wx-box" style="" id="box2">
-        <img data-ks-lazyload="images/2.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
-    </div>
-    <div class="wx-box" style="" id="box3">
-        <img data-ks-lazyload="images/3.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
-    </div>
-    <div class="wx-box" style="" id="box4">
-        <img data-ks-lazyload="images/4.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
-    </div>
-    <div class="wx-box" id="box5">
-        <img data-ks-lazyload="images/5.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="文达的博客.github.io : 文达的博客">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>文达的博客.github.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/firewenda">View on GitHub</a>
+
+          <h1 id="project_title">文达的博客.github.io</h1>
+          <h2 id="project_tagline">文达的博客</h2>
+
+        </header>
     </div>
 
-    <div class="wx-box" id="box6">
-        <img data-ks-lazyload="images/6.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="firewendagithubio" class="anchor" href="#firewendagithubio"><span class="octicon octicon-link"></span></a>firewenda.github.io</h1>
+
+<p>这是文达的blog</p>
+      </section>
     </div>
 
-    <div class="wx-box" id="box7">
-        <img data-ks-lazyload="images/7.jpg">
-        <a href="javascript:void(0);" class="u-guideTop z-move"></a>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <div class="wx-box" id="box0">
-        <div class="djs_wrapper">
-            <div class="djs_main">
-                <img src="http://gtms01.alicdn.com/tps/i1/TB1pdM3GXXXXXaBXFXXHkqK9VXX-554-124.jpg">
-                <p class="djs_countdown" data-endtime="2014/10/26 15:00:00">${d}天${h}时${m}分${s}秒</p>
-            </div>
-            <div class="wx-info">
-                <img src="http://gtms03.alicdn.com/tps/i3/TB1X3U3GXXXXXaJXFXXEW.PMpXX-576-169.jpg">
-            </div>
-            <div class="wx-map"></div>
-        </div>
-    </div>
-</div>
-<script src="http://g.tbcdn.cn/kissy/k/1.4.4/seed-min.js" charset="utf-8"></script>
-<script>
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('Y.E("B,M",4(S,c,d){9 $=S.12;9 f=$(\'#H\')[0];$(\'.u-q\').p(\'A\',4(){8(f.D){$(s).I(\'z-j\');f.j()}N{f.P();$(\'.u-q\').T(\'z-j\')}});9 g=V.W(\'X\');4 3(b){9 o=s;o.w=b.w||0;o.C=$("#"+b.2)[0];o.y=0;o.F=0;o.G=0;o.k=0.5;o.n=7;o.J=K;o.r=4(){d.p(\'#\'+b.2,"L",4(e){8(e.h==\'O\'){e.i()}8(e.h==\'Q\'){e.i()}8(e.h==\'R\'){o.t();e.i()}8(e.h==\'U\'){o.v();e.i()}})};o.t=4(){9 a=$(".l-m").x($("#"+b.2));8(a<o.n-1){$("#"+b.2).Z(o.k)}};o.v=4(){9 a=$(".l-m").x($("#"+b.2));8(a>0){$("#"+b.2).10(".l-m").11(o.k)}};o.r()};6 3({2:"13"});6 3({2:"14"});6 3({2:"15"});6 3({2:"16"});6 3({2:"17"});6 3({2:"18"});6 3({2:"19"})});',62,72,'||id|Tc|function||new||if|var||||||||direction|preventDefault|play|movespeed|wx|box|maxnum||on|globalAudio|touchmove|this|moveUp||moveDown|xh|index|oldy||click|node|obj|paused|use|newy|movey|Video|addClass|open|true|swiping|event|else|left|pause|right|up||removeClass|down|document|getElementById|box1|KISSY|slideUp|prev|slideDown|all|box2|box3|box4|box5|box6|box7|box0'.split('|'),0,{}))
-</script>
-<script>
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('l.p("4,E/k/1.3/C",5(f,c,d){7 $=f.A;5 9(){0.4=".I";0.8=5(a){7 b=6 n($(a).o("j-q")).r();6 d({t:a,v:b,w:\'x\',y:[\'d\',z,2,\'h\',B,2,\'m\',g,2,\'s\',g,2,\'u\',D,1]})};0.i=5(){0.8(0.4);$(0.4).F("G","H")}};7 e=6 9();e.4=".J";e.i()});',46,46,'this||||node|function|new|var|djs|Djs||||||S|60||init|data|countdown|KISSY||Date|attr|use|endtime|getTime||el||stopPoint|effetc|slide|clock|100|all|24|index|10|gallery|css|display|block|by_djs|djs_countdown'.split('|'),0,{}))
-</script>
-<script>
-KISSY.use("gallery/lazyload/1.0/index,node",function(S,Datalazyload){ var lazyload = new Datalazyload();});
-</script>
-</body>
+
+    
+
+  </body>
 </html>
