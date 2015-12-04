@@ -334,6 +334,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 本文作者[BeiYuu]
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
+[wenda]:    https://firewenda.github.io  "wenda"
 [Github]:   http://github.com "Github"
 [jQuery]:   https://github.com/jquery/jquery "jQuery@github"
 [Twitter]:  https://github.com/twitter/bootstrap "Twitter@github"

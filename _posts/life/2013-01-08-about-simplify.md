@@ -44,12 +44,11 @@ description: 胡言乱语而已，看看就好。
 [Next Day][6]就是这样，简单美妙，但是当你想要更多的时候，控制权也完全交到你手中，并且很高效。
 
 ##TL;DR
-错过这篇废话而无用的文章，你是赚到啦！
 
 
 
 
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
+[wenda]:    https://firewenda.github.io  "wenda"
 [1]:    {{ page.url}}  ({{ page.title }})
 [2]: http://movie.douban.com/subject/3821067/
 [3]: http://movie.douban.com/subject/1291557/

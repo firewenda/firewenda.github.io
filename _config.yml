@@ -1,11 +1,13 @@
-auto: true
+#auto: true
+encoding: utf-8
 
 markdown: rdiscount
-pygments: true
+highlighter: pygments
+gems: [jekyll-paginate]
 paginate: 8
 permalink: /:title
 
-title: Wenda
+title: wenda's blog
 url: http://isme.wang
 feed: /atom.xml
 author_info: <a href="http:/isme.wang/">Wenda</a>
