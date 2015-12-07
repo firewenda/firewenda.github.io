@@ -16,6 +16,7 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习�
     <li><a href="http://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a> 廖雪峰的官方网站</li>
     <li><a href="http://www.ruanyifeng.com/" target="_blank">阮一峰的个人网站</a> 阮一峰的个人网站</li>
     <li><a href="http://javascript.ruanyifeng.com/" target="_blank">JavaScript 标准参考教程</a> JavaScript 标准参考教程</li>
+    <li><a href="http://es6.ruanyifeng.com/" target="_blank">ECMAScript 6 入门</a> ECMAScript 6 入门</li>
     <li><a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭的个人博客</a> 张鑫旭, 个人博客, 个人网站, web前端,JavaScript,css,html</li>
     <li><a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> 汤姆大叔的博客</li>
 </ul>
