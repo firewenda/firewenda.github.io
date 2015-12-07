@@ -112,6 +112,8 @@ fibonacci(1000);//1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987
 
 <script src="/js/post.js" type="text/javascript"></script>
 
+    
+    <div id="J_gotoTop"><img src="images/top.png"></div>
 
     <script type="text/javascript">
         $(function(){
@@ -123,6 +125,19 @@ fibonacci(1000);//1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987
                 }else{
                     $('.home-contact').slideDown(100);
                 }
+            });
+            $(window).on('scroll',function(){
+                if($(window).scrollTop() > 300){
+                    $("#J_gotoTop").fadeIn();
+                }else{
+                    $("#J_gotoTop").fadeOut();
+                }
+            })
+            //返回顶部
+            $("#J_gotoTop").click(function(e){
+                $('html,body').animate({
+                    scrollTop:'0px'
+                },500);
             });
         })
     </script>
