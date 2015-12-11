@@ -5,7 +5,7 @@
     * Author:         Wenda
     -->
     <meta charset="utf-8" />
-    <title>OverAPI | wenda's blog</title>
+    <title>块级元素垂直居中的方法 | wenda's blog</title>
     <meta name="author" content="Wenda" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="Wenda's Blog" />
@@ -42,41 +42,160 @@
 
 <div id="content">
     <div class="entry">
-        <h1 class="entry-title"><a href="/overapi-cheatsheet" title="OverAPI">OverAPI</a></h1>
-        <p class="entry-date">2012-09-22</p>
-        <p><a href="http://overapi.com" title="OverAPI - Collecting all the cheat sheets">OverAPI</a>是一个收集所有参考手册项目。项目结构很简单，将常用语言的API很扁平的展现出来，方便翻阅和查找。</p>
+        <h1 class="entry-title"><a href="/blog-share-2" title="块级元素垂直居中的方法">块级元素垂直居中的方法</a></h1>
+        <p class="entry-date">2015-12-11</p>
+        <h2>元素垂直居中的方法</h2>
 
-<p>Chrome插件下载：<a href="https://chrome.google.com/webstore/detail/oedodeocfdeegliepeeoieemhdgoijod?hl=zh-CN" title="All Cheat Sheets">All Cheat Sheets</a></p>
+<p>利用CSS进行元素的水平居中，比较简单，行级元素设置其父元素的text-align center，块级元素设置其本身的left 和 right margins为auto即可。以下为本人尝试让块级元素垂直居中的方法：</p>
 
-<p><a href="http://overapi.com" title="OverAPI - Collecting all the cheat sheets" target="_blank"><img src="/images/overapi/overapi.jpg" alt="OverAPI"></a></p>
+<h3>通过display转化让块级元素垂直居中方法</h3>
 
-<p>生活在继续，遇到的人和事越来越繁杂，于是，满目的秋意、愉悦的欢叫，都像微风一样，带来的是美妙的简单。</p>
+<p>一、直接设置line-height高度为parent高度，将子元素转换为为inline-block</p>
 
-<p>我们总想拥有一切，可一切到底有多少，就像诺兰的处女作<a href="http://movie.douban.com/subject/1397546/" title="Following">Following</a>中表现的一样，一些物品只有在失去时才知道他存在过。</p>
+<p><strong>HTML</strong></p>
 
-<p>人生有目标才能前进，无论这个目标能否实现，OverAPI的目标是拥有一切，如果你有兴趣一起实现，可以联系作者<a href="http://beiyuu.com" title="BeiYuu">BeiYuu</a>。</p>
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
 
-<p>现在已经有：</p>
+<p><strong>CSS</strong></p>
 
-<ul>
-<li><a href="http://overapi.com/python/">Python Cheat Sheet</a></li>
-<li><a href="http://overapi.com/jquery/">jQuery Cheat Sheet</a></li>
-<li><a href="http://overapi.com/nodejs/">NodeJS Cheat Sheet</a></li>
-<li><a href="http://overapi.com/php/">PHP Cheat Sheet</a></li>
-<li><a href="http://overapi.com/ruby/">Ruby Cheat Sheet</a></li>
-<li><a href="http://overapi.com/javascript/">Javascript Cheat Sheet</a></li>
-<li><a href="http://overapi.com/actionscript/">ActionScript Cheat Sheet</a></li>
-<li><a href="http://overapi.com/css/">CSS Cheat Sheet</a></li>
-<li><a href="http://overapi.com/git/">Git Cheat Sheet</a></li>
-<li><a href="http://overapi.com/svn/">SVN Cheat Sheet</a></li>
-<li><a href="http://overapi.com/mysql/">MySQL Cheat Sheet</a></li>
-<li><a href="http://overapi.com/regex/">Regex Cheat Sheet</a></li>
-<li><a href="http://overapi.com/linux/">Linux Cheat Sheet</a></li>
-<li><a href="http://overapi.com/html/">HTML Cheat Sheet</a></li>
-<li><a href="http://overapi.com/html-dom/">HTML-DOM Cheat Sheet</a></li>
-<li><a href="http://overapi.com/mod_rewrite/">mod_rewrite Cheat Sheet</a></li>
-</ul>
+<pre><code>.parent {
+    height: 200px;
+    line-height: 200px;
+}
+.parent img {
+    display: inline-block;
+    vertical-align: middle;
+}
+</code></pre>
 
+<p>二、将父级设置为display: table-cell，然后通过vertical-aligh: middle使元素垂直居中</p>
+
+<p><strong>HTML</strong></p>
+
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong></p>
+
+<pre><code>.parent {
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.parent img{
+    display: block;
+    *display: inline-block; //低版本 IE fix bug
+}
+</code></pre>
+
+<h3>通过position定位让块级垂直居中方法</h3>
+
+<p>一、已知图片或块级元素高度，通过定位top值为50%，然后通过定图片或块级元素高度一半的margin-top负值进行偏移</p>
+
+<p><strong>HTML</strong></p>
+
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong></p>
+
+<pre><code>.parent {
+    position: relative;
+    height: 200px;
+}
+.parent img {
+    display: block;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+</code></pre>
+
+<p>二、未知图片或块级元素高度，通过定位top值为50%，然后通过css3 transform的translateY负50%进行偏移</p>
+
+<p><strong>HTML</strong></p>
+
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong></p>
+
+<pre><code>.parent {
+    position: relative;
+    height: 200px;
+}
+.parent img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+}
+</code></pre>
+
+<p>三、未知图片或块级元素高度，通过margin:auto实现绝对定位元素的水平垂直居中</p>
+
+<p><strong>HTML</strong></p>
+
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong></p>
+
+<pre><code>.parent {
+    height: 200px;
+    position: relative;
+}
+.parent img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+</code></pre>
+
+<p>四、未知图片或块级元素高度，通过js进行定位，以下代码使用jquery</p>
+
+<p><strong>HTML</strong></p>
+
+<pre><code>&lt;div class="parent"&gt;
+    &lt;img src="image.png" alt="" /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>CSS</strong></p>
+
+<pre><code>.parent {
+    position: relative;
+    height: 200px;
+}
+.parent img {
+    display: block;
+    position: absolute;
+}
+</code></pre>
+
+<p><strong>js</strong></p>
+
+<pre><code>$(".parent img").css({top: ($(".parent").height() - $(".parent img").height())/2 + 'px'});
+</code></pre>
+
+<blockquote><p>其他方法还可以参考 <a href="http://vanseodesign.com/css/vertical-centering/" target="_blank">http://vanseodesign.com/css/vertical-centering/</a></p>
+
+<p>有兴趣还可以仔细阅读 <a href="http://www.zhangxinxu.com/wordpress/?s=%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD" target="_blank">张鑫旭的个人博客</a></p></blockquote>
 
     </div>
 
