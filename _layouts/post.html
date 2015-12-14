@@ -18,10 +18,30 @@ layout: default
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
         {{ content }}
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="http:www.isme.wang{{ page.url }}"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"firewenda"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+            </script>
+        <!-- 多说公共JS代码 end -->
     </div>
 
     <div class="sidenav">
-        <wb:follow-button uid="2991975565" type="red_1" width="100%" height="75" ></wb:follow-button>
+        <img class="head-img" src="images/head.png">
+        <ul class="some-info">
+            <li>姓名：文达</li>
+            <li>个人简介：在成为前端菜鸟的路上奔跑，不断努力！</li>
+        </ul>
     </div>
 
     <div class="sidenav">
