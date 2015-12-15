@@ -43,11 +43,11 @@
     <div class="entry">
         <h1 class="entry-title"><a href="/blog-share-2" title="块级元素垂直居中的方法">块级元素垂直居中的方法</a></h1>
         <p class="entry-date">2015-12-11</p>
-        <h2>元素垂直居中的方法</h2>
+        <h2 id="section">元素垂直居中的方法</h2>
 
 <p>利用CSS进行元素的水平居中，比较简单，行级元素设置其父元素的text-align center，块级元素设置其本身的left 和 right margins为auto即可。以下为本人尝试让块级元素垂直居中的方法：</p>
 
-<h3>通过display转化让块级元素垂直居中方法</h3>
+<h3 id="display">通过display转化让块级元素垂直居中方法</h3>
 
 <p>一、直接设置line-height高度为parent高度，将子元素转换为为inline-block</p>
 
@@ -92,7 +92,7 @@
 }
 </code></pre>
 
-<h3>通过position定位让块级垂直居中方法</h3>
+<h3 id="position">通过position定位让块级垂直居中方法</h3>
 
 <p>一、已知图片或块级元素高度，通过定位top值为50%，然后通过定图片或块级元素高度一半的margin-top负值进行偏移</p>
 
@@ -192,9 +192,13 @@
 <pre><code>$(".parent img").css({top: ($(".parent").height() - $(".parent img").height())/2 + 'px'});
 </code></pre>
 
-<blockquote><p>其他方法还可以参考 <a href="http://vanseodesign.com/css/vertical-centering/" target="_blank">http://vanseodesign.com/css/vertical-centering/</a></p>
+<blockquote>
+  <p>其他方法还可以参考 <a href="http://vanseodesign.com/css/vertical-centering/" target="_blank">http://vanseodesign.com/css/vertical-centering/</a></p>
+</blockquote>
 
-<p>有兴趣还可以仔细阅读 <a href="http://www.zhangxinxu.com/wordpress/?s=%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD" target="_blank">张鑫旭的个人博客</a></p></blockquote>
+<blockquote>
+  <p>有兴趣还可以仔细阅读 <a href="http://www.zhangxinxu.com/wordpress/?s=%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD" target="_blank">张鑫旭的个人博客</a></p>
+</blockquote>
 
         <!-- 多说评论框 start -->
         <div class="ds-thread" data-thread-key="/blog-share-2" data-title="块级元素垂直居中的方法" data-url="http:www.isme.wang/blog-share-2"></div>

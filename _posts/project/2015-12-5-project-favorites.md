@@ -20,7 +20,8 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习�
     <li><a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭的个人博客</a> 张鑫旭, 个人博客, 个人网站, web前端,JavaScript,css,html</li>
     <li><a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> 汤姆大叔的博客</li>
     <li><a href="http://www.75team.com/" target="_blank">奇舞团</a> 奇虎360旗下前端开发团队</li>
-    <li><a href="https://tinypng.com/" target="_blank">图片压缩</a></li>
+    <li><a href="https://tinypng.com/" target="_blank">图片压缩</a>熊猫图片压缩</li>
+    <li><a href="http://jsfiddle.net/" target="_blank">jsfiddle</a>在线代码演示</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
