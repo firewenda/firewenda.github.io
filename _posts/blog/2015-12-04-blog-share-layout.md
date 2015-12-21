@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  利用HTML和CSS实现常见的布局
+title:  【转载】利用HTML和CSS实现常见的布局
 description:  利用HTML和CSS实现常见的布局
 category: blog
 ---
