@@ -1,6 +1,6 @@
 /* 重置浏览器CSS */
 html{color:#000;}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,anav,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
 body,button,input,select,textarea{font-size:12px/1.5;}
 input,select,textarea{font-size:100%;}
@@ -59,6 +59,30 @@ blockquote p{ margin-bottom: 0;}
 .sidenav a { color:#555; font-size:14px; display:block;}
 .sidenav .head-img{ width: 90px; float: left;}
 .sidenav .some-info{ padding-left: 110px; font-size: 12px;}
+
+/*爱心动画*/
+.sidenav .heart {
+   cursor: pointer;
+   height: 50px;
+   width: 50px;
+   background-image:url('../../images/web_heart_animation.png');
+   background-position: left;
+   background-repeat:no-repeat;
+   background-size:2900%;
+   position: absolute;
+   margin-top: 50px;
+   margin-left: 190px;
+}
+.sidenav .heart:hover {
+  background-position:right;
+}
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+}
+@keyframes heart-burst {
+  from {background-position:left;}
+  to { background-position:right;}
+}
 .entry{margin-bottom:80px;width:680px; float:left; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; }
 .entry ul{margin-bottom:25px;margin-left:25px;}
 .entry p+ul {margin-top:-20px;}
@@ -80,7 +104,7 @@ blockquote p{ margin-bottom: 0;}
     box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
     background-size:cover;
     background-position:50% 50%;
-    background-image:url(../../images/leftnav.jpg);
+    background-image:url('../../images/leftnav.jpg');
 }
 .blog .aside{
     

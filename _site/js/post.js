@@ -27,13 +27,23 @@ $(document).ready(function(){
         var href = $(this).attr('href');
         if(href){
             if(href.indexOf('#') == 0){
-            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('isme.wang')>-1 ){
             }else if ($(element).has('img').length){
             }else{
                 $(this).attr('target','_blank');
                 $(this).addClass('external');
             }
         }
+    });
+
+    /*
+    爱心动画
+    */
+    $('.heart').hover(function(){
+        $(this).toggleClass('is_animating');
+    });
+    $('.heart').on('animationend', function(){
+        $(this).toggleClass('is_animating');
     });
 
     (function(){
