@@ -2,7 +2,7 @@
 layout: post
 title: 个人收藏夹
 category: project
-description: 在学习路上，收藏那些优秀的网站，以便时常温习。
+description: 在学习路上，收藏那些优秀的网站，以便时常温习
 ---
 
 2015年12月5日，杭州迎来初雪。漫步大雪中，看着雪如同精灵般在路灯下起舞，甚是惊艳。不经意间回忆起往昔关于雪的记忆，心中不免泛起涟漪。。。
@@ -46,6 +46,13 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习�
     <li><a href="http://www.jslint.com/">JSLint</a> The JavaScript Code Quality Tool</li>
     <li><a href="http://webpack.github.io/">webpack</a> webpack is a module bundler</li>
     <li><a href="http://daneden.github.io/animate.css/">Animate.css</a> Animate css3动画列表</li>
+</ul>
+
+### CSS预编译
+<ul>
+    <li><a href="">CSS预处理器</a> 8个CSS预处理器</li>
+    <li><a href="http://lesscss.org/">less</a> less</li>
+    <li><a href="http://sass-lang.com/">sass</a> sass</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
