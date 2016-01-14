@@ -48,6 +48,11 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
     <li><a href="http://daneden.github.io/animate.css/">Animate.css</a> Animate css3动画列表</li>
 </ul>
 
+#### 注意事项
+使用gulp和grunt等压缩工具build项目时，尤其当压缩框架文件时。<br>
+到框架的github主页，查看package.json文件配置项，并应用到自己项目配置文件里。<br>
+**直接用官网提供的配置项，build项目时有可能产生不可预知的错误。**
+
 ### CSS预编译
 <ul>
     <li><a href="">CSS预处理器</a> 8个CSS预处理器</li>
