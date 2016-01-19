@@ -104,16 +104,15 @@ blockquote p{ margin-bottom: 0;}
     box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
     background-size:cover;
     background-position:50% 50%;
-    background-image:url('../../images/leftnav.jpg');
 }
 .blog .aside{
-    
+    background-image:url('../../images/leftnav.jpg');
 }
 .life .aside{
-    
+    background-image:url('../../images/leftnav_1.jpg');
 }
 .project .aside{
-    
+    background-image:url('../../images/leftnav_2.png');
 }
 .index-content .section { margin-left:20%; padding-top:80px; padding-right:15%; ;}
 
