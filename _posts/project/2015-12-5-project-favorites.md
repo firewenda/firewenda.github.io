@@ -13,16 +13,16 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
 ### 网站学习
 <ul>
     <li><a href="https://github.com/" target="_blank">github</a> 必看，技术的交流平台</li>
-    <li><a href="https://cnodejs.org/">cnode</a> nodejs中文社区</li>
-    <li><a href="http://reactjs.cn/">react</a> ReactJS中文网站</li>
-    <li><a href="http://backbonejs.org/">backbonejs</a> backbonejs</li>
+    <li><a href="https://cnodejs.org/" target="_blank">cnode</a> nodejs中文社区</li>
+    <li><a href="http://reactjs.cn/" target="_blank">react</a> ReactJS中文网站</li>
+    <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
 </ul>
 
 ### 博客学习
 <ul>
-    <li><a href="http://taobaofed.org/">淘宝前端团队（FED）</a> 淘宝前端团队（FED）</li>
-    <li><a href="http://segmentfault.com/">SegmentFault</a> 专注于程序员开发者的社区平台</li>
-    <li><a href="http://stackoverflow.com/">stackoverflow</a> Q&amp;A for professional and enthusiast programmers</li>
+    <li><a href="http://taobaofed.org/" target="_blank">淘宝前端团队（FED）</a> 淘宝前端团队（FED）</li>
+    <li><a href="http://segmentfault.com/" target="_blank">SegmentFault</a> 专注于程序员开发者的社区平台</li>
+    <li><a href="http://stackoverflow.com/" target="_blank">stackoverflow</a> Q&amp;A for professional and enthusiast programmers</li>
     <li><a href="http://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a> 廖雪峰的官方网站</li>
     <li><a href="http://www.ruanyifeng.com/" target="_blank">阮一峰的个人网站</a> 阮一峰的个人网站</li>
     <li><a href="http://javascript.ruanyifeng.com/" target="_blank">JavaScript 标准参考教程</a> JavaScript 标准参考教程</li>
@@ -36,17 +36,17 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
 <ul>
     <li><a href="http://www.imooc.com/" target="_blank">慕课网</a> 国内最大的IT技能学习平台</li>
     <li><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a> IT在线教育平台-中国最大的IT职业在线教育平台</li>
-    <li><a href="http://www.codefordream.com/">几米家的网站</a> HTML、CSS、Javascript基础知识</li>
+    <li><a href="http://www.codefordream.com/" target="_blank">几米家的网站</a> HTML、CSS、Javascript基础知识</li>
 </ul>
 
 ## 工具类
 <ul>
     <li><a href="https://tinypng.com/" target="_blank">图片压缩</a> 熊猫图片压缩</li>
     <li><a href="http://jsfiddle.net/" target="_blank">jsfiddle</a> 在线代码演示</li>
-    <li><a href="http://www.gulpjs.com.cn/">gulp.js</a> 基于流的自动化构建工具-gulp.js 中文网</li>
-    <li><a href="http://www.jslint.com/">JSLint</a> The JavaScript Code Quality Tool</li>
-    <li><a href="http://webpack.github.io/">webpack</a> webpack is a module bundler</li>
-    <li><a href="http://daneden.github.io/animate.css/">Animate.css</a> Animate css3动画列表</li>
+    <li><a href="http://www.gulpjs.com.cn/" target="_blank">gulp.js</a> 基于流的自动化构建工具-gulp.js 中文网</li>
+    <li><a href="http://www.jslint.com/" target="_blank">JSLint</a> The JavaScript Code Quality Tool</li>
+    <li><a href="http://webpack.github.io/" target="_blank">webpack</a> webpack is a module bundler</li>
+    <li><a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a> Animate css3动画列表</li>
 </ul>
 
 #### 注意事项
@@ -56,9 +56,9 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
 
 ### CSS预编译
 <ul>
-    <li><a href="">CSS预处理器</a> 8个CSS预处理器</li>
-    <li><a href="http://lesscss.org/">less</a> less</li>
-    <li><a href="http://sass-lang.com/">sass</a> sass</li>
+    <li><a href="http://www.oschina.net/news/22745/8-css-preprocessors-speed" target="_blank">CSS预处理器</a> 8个CSS预处理器</li>
+    <li><a href="http://lesscss.org/" target="_blank">less</a> less</li>
+    <li><a href="http://sass-lang.com/" target="_blank">sass</a> sass</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"

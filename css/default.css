@@ -37,6 +37,7 @@ a.external:hover {background-position:right -15px;}
 .entry-date {text-align:center;color:#999;margin-bottom:60px;font-size:14px;}
 
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
+h2 a.external{background: none;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
 h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
 p {margin-bottom:40px;line-height:1.8em;}
@@ -189,7 +190,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .index-content .section ul { width:85%; }
     .index-content .cate-bar { width:85%; }
     .index-content .artical-cate { margin-top:50px; }
-    
+
     #J_gotoTop,
     .blog .aside,
     .project .aside,
