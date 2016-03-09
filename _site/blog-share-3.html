@@ -43,13 +43,19 @@
     <div class="entry">
         <h1 class="entry-title"><a href="/blog-share-3" title="【转载】完全理解JavaScript关键字this">【转载】完全理解JavaScript关键字this</a></h1>
         <p class="entry-date">2015-12-21</p>
-        <blockquote><p>译者：葵中剑</p>
+        <blockquote>
+  <p>译者：葵中剑</p>
+</blockquote>
 
-<p>译文地址：<a href="http://swordair.com/fully-understanding-the-this-keyword-translation/">完全理解JavaScript关键字this</a></p>
+<blockquote>
+  <p>译文地址：<a href="http://swordair.com/fully-understanding-the-this-keyword-translation/">完全理解JavaScript关键字this</a></p>
+</blockquote>
 
-<p>英文原文地址：<a href="http://code.tutsplus.com/tutorials/fully-understanding-the-this-keyword--net-21117">Fully Understanding the this Keyword</a></p></blockquote>
+<blockquote>
+  <p>英文原文地址：<a href="http://code.tutsplus.com/tutorials/fully-understanding-the-this-keyword--net-21117">Fully Understanding the this Keyword</a></p>
+</blockquote>
 
-<h2>this的概念性概述</h2>
+<h2 id="this">this的概念性概述</h2>
 
 <p>每当一个函数被创建，一个叫做this的关键字(在幕后)也随之被创建出来，它链接着包含函数进行操作的对象。换句话说，this在其所在函数的作用域里可用，是包含那个函数作为属性和方法的对象的引用。</p>
 
@@ -81,15 +87,13 @@ console.log(cody.getGender()); // logs 'male'
 
 <p>关于this的主题会让人感到困惑，但其实未必如此。只要记住，通常，this被用在函数里并指向包含这个函数的对象，而不是这个函数本身(例外情况包括使用new关键字或者call()和apply())。</p>
 
-<h3>注意事项</h3>
-
+<h3 id="section">注意事项</h3>
 <ul>
     <li>关键字this的行为看起来就像其他变量一样，除了你不能改变它。</li>
     <li>不同于arguments和任何发送给函数的参数，在调用(活动)的对象中，this是一个关键字(而不是属性)。</li>
 </ul>
 
-
-<h2>如何确定this的值?</h2>
+<h2 id="this-1">如何确定this的值?</h2>
 
 <p>传递给所有函数的this，其值基于函数被调用的运行时的上下文。请注意下这里，因为这是“那些你需要去记下来的怪异(不同寻常)”之一。</p>
 
@@ -115,7 +119,9 @@ sayFoo(); // logs 'foo'
 
 <p>下面是显式使用全局对象(即window)的相同的代码，或许有用吧。</p>
 
-<blockquote><p>(译注：原文使用 head object 一词，是原作者所著书《JavaScript Enlightenment》里的用语，并不详见于其他地方，其意与全局变量 global object 完全相同。下面的翻译将所有的 head object 译为全局对象)</p></blockquote>
+<blockquote>
+  <p>(译注：原文使用 head object 一词，是原作者所著书《JavaScript Enlightenment》里的用语，并不详见于其他地方，其意与全局变量 global object 完全相同。下面的翻译将所有的 head object 译为全局对象)</p>
+</blockquote>
 
 <pre><code>window.foo = 'foo';  
 window.myObject = {foo: 'I am myObject.foo'};  
@@ -127,14 +133,13 @@ window.sayFoo(); //logs 'foo'
 
 <p>确保你在传递函数时，或者有多个引用指向一个函数时，你明白this的值会随着你调用函数的上下文的不同而改变。</p>
 
-<h3>注意事项</h3>
+<h3 id="section-1">注意事项</h3>
 
 <ul>
     <li>除了this以外的所有变量以及参数都遵循词法作用域(Lexical Scoping)</li>
 </ul>
 
-
-<h2>嵌套函数里的this指向全局对象</h2>
+<h2 id="this-2">嵌套函数里的this指向全局对象</h2>
 
 <p>你也许想知道，当this用在被另一个函数包含的函数里会发生什么。糟糕的是在ECMA 3里，this迷失了方向并指向了全局对象(浏览器的window对象)，而不是包含函数定义的对象。</p>
 
@@ -171,7 +176,7 @@ foo.func1(function(){console.log(this)});
 
 <p>现在你应该不会忘记了：当包含this的函数嵌套在另一个函数中，或者在另一个函数的上下文中被调用时，this的值将总是指向全局对象(再说一次，这将会在ECMAScript 5里被修正)。</p>
 
-<h2>解决嵌套函数的问题</h2>
+<h2 id="section-2">解决嵌套函数的问题</h2>
 
 <p>为了this的值不丢失，你可以简单地在父函数里使用作用域链来保存this的引用。下面的代码演示了怎么做，用一个叫做that的变量，并利用它的作用域，我们能更好保存上下文的轨迹。</p>
 
@@ -190,7 +195,7 @@ foo.func1(function(){console.log(this)});
 myObject.myMethod(); // invoke myMethod
 </code></pre>
 
-<h2>控制this的值</h2>
+<h2 id="this-3">控制this的值</h2>
 
 <p>this的值通常取决于函数被调用处的上下文(除了使用new关键字的情况以外，这方面稍后讨论)，但是你可以使用apply()和call()来定义调用函数时this指向的对象，以此覆盖/控制this的值。使用这些方法，就好像再说：“嘿，调用 X 函数，但是告诉它，用 Z 对象作为this的值”。这么做的话，JavaScript默认决定this值的方式就被覆盖了。</p>
 
@@ -227,7 +232,7 @@ console.log(myObject); // logs Object {foo = 'foo', bar = 'bar'}
 
 <p>这里你需要记住的是，你可以覆盖在一个函数作用域里JavaScript默认决定this值的方式。</p>
 
-<h2>在自定义构造函数中使用this关键字</h2>
+<h2 id="this-4">在自定义构造函数中使用this关键字</h2>
 
 <p>当一个函数联合new关键字一起被调用时，this的值——就如同其在构造函数中的表示——指向对象实例本身。换种说法：在构造函数里，我们可以在对象被实际创建之前就通过this指代(控制)对象。这种情况下，this默认值的变化，与使用call()或apply()并没有什么不同。</p>
 
@@ -253,7 +258,7 @@ console.log(cody.name); // undefined, the value is actually set at window.name
 console.log(window.name); // logs 'Cody Lindley'
 </code></pre>
 
-<h2>prototype方法中的this指向一个构造实例</h2>
+<h2 id="prototypethis">prototype方法中的this指向一个构造实例</h2>
 
 <p>当函数被添加为构造函数的prototype属性时，这个函数里的this指向调用这个函数的实例。假设我们有一个自定义的Person()的构造函数，其需要人的全名(full name)作为参数。为了访问人的全名，我们将whatIsMyFullName方法添加到Person.prototype，这样，所有的的Person实例都继承了这个方法。当使用this时，这个方法就可以引用调用它的实例(以及这个实例的属性)。</p>
 
@@ -285,7 +290,7 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
 
 <p>这里需要记住的是，当this关键字用在prototype对象的方法里时，其就指向实例。如果实例不包含那个属性，就开始原型查找(搜索查找原型链)。</p>
 
-<h2>注意事项</h2>
+<h2 id="section-3">注意事项</h2>
 
 <p>如果this所指向的实例或对象不包含被引用到的属性，那么这里适用任何原型查找都要使用的相同法则，沿着原型链(prototype chain)查找属性。所以在我们的例子里，如果我们的实例中不包含fullName属性，那么就会沿原型链查找fullName，先查找Person.prototype.fullName，然后是Object.prototype.fullName。</p>
 

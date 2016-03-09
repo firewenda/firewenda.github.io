@@ -46,7 +46,7 @@
         <p>最近做的一个项目，通过接口渲染数据后，使相同内容的表格行为同一种颜色，以下是代码实现。
 页面基于jquery，使用<a href="https://github.com/aui/artTemplate" target="_blank">artTemplate模板引擎</a></p>
 
-<h3>CSS代码</h3>
+<h3 id="css">CSS代码</h3>
 
 <pre><code>.color_0 {
     background: #ccc;
@@ -57,7 +57,7 @@
 }
 </code></pre>
 
-<h3>HTML代码</h3>
+<h3 id="html">HTML代码</h3>
 
 <pre><code>&lt;table class="main-table"&gt;
 &lt;/table&gt;
@@ -69,7 +69,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<h3>数据模拟</h3>
+<h3 id="section">数据模拟</h3>
 
 <pre><code>var dataList = {
     data: [
@@ -102,7 +102,7 @@
 };
 </code></pre>
 
-<h3>JS代码</h3>
+<h3 id="js">JS代码</h3>
 
 <pre><code>$(function() {
     function changeColor(conf, data) {

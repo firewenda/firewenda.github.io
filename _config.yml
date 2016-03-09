@@ -1,7 +1,7 @@
 #auto: true
 encoding: utf-8
 
-markdown: rdiscount
+markdown: kramdown
 highlighter: pygments
 gems: [jekyll-paginate]
 paginate: 8
