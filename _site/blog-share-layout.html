@@ -58,46 +58,51 @@
 
 <p><strong>使用inline-block 和 text-align实现</strong></p>
 
-<pre><code>.parent{text-align: center;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{text-align: center;}
 .child{display: inline-block;}
 </code></pre>
+</div>
 
 <p>优点：兼容性好；
 不足：需要同时设置子元素和父元素</p>
 
 <p><strong>使用margin:0 auto来实现</strong></p>
 
-<pre><code>.child{width:200px;margin:0 auto;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.child{width:200px;margin:0 auto;}
 </code></pre>
+</div>
 
 <p>优点：兼容性好
 缺点: 需要指定宽度</p>
 
 <p><strong>使用table实现</strong></p>
 
-<pre><code>.child{display:table;margin:0 auto;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.child{display:table;margin:0 auto;}
 </code></pre>
+</div>
 
 <p>优点:只需要对自身进行设置
 不足:IE6,7需要调整结构</p>
 
 <p><strong>使用绝对定位实现</strong></p>
 
-<pre><code>.parent{position:relative;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{position:relative;}
 /*或者实用margin-left的负值为盒子宽度的一半也可以实现，不过这样就必须知道盒子的宽度，但兼容性好*/
 .child{position:absolute;left:50%;transform:translate(-50%);}
 </code></pre>
+</div>
 
 <p>不足：兼容性差,IE9及以上可用</p>
 
 <p><strong>实用flex布局实现</strong></p>
 
-<pre><code>/*第一种方法*/
+<div class="highlighter-rouge"><pre class="highlight"><code>/*第一种方法*/
 .parent{display:flex;justify-content:center;}
 /*第二种方法*/
 .parent{display:flex;}
 .child{margin:0 auto;}
 </code></pre>
+</div>
 
 <p>缺点：兼容性差，如果进行大面积的布局可能会影响效率</p>
 
@@ -111,41 +116,47 @@
 
 <p>在使用vertical-align的时候，由于对齐的基线是用行高的基线作为标记，故需要设置line-height或设置display:table-cell;</p>
 
-<pre><code>/*第一种方法*/
+<div class="highlighter-rouge"><pre class="highlight"><code>/*第一种方法*/
 .parent{display:table-cell;vertical-align:middle;height:20px;}
 /*第二种方法*/
 .parent{display:inline-block;vertical-align:middle;line-height:20px;}
 </code></pre>
+</div>
 
 <p><strong>使用绝对定位</strong></p>
 
-<pre><code>.parent{position:relative;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{position:relative;}
 .child{positon:absolute;top:50%;transform:translate(0,-50%);}
 </code></pre>
+</div>
 
 <p><strong>实用flex实现</strong></p>
 
-<pre><code>.parent{display:flex;align-items:center;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{display:flex;align-items:center;}
 </code></pre>
+</div>
 
 <h3 id="section-2">水平垂直全部居中</h3>
 
 <p><strong>利用vertical-align,text-align,inline-block实现</strong></p>
 
-<pre><code>.parent{display:table-cell;vertical-align:middle;text-align:center;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{display:table-cell;vertical-align:middle;text-align:center;}
 .child{display:inline-block;}
 </code></pre>
+</div>
 
 <p><strong>利用绝对定位实现</strong></p>
 
-<pre><code>.parent{position:relative;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{position:relative;}
 .child{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
 </code></pre>
+</div>
 
 <p><strong>利用flex实现</strong></p>
 
-<pre><code>.parent{display:flex;justify-content:center;align-items:center;}
+<div class="highlighter-rouge"><pre class="highlight"><code>.parent{display:flex;justify-content:center;align-items:center;}
 </code></pre>
+</div>
 
 <h2 id="section-3">其他</h2>
 

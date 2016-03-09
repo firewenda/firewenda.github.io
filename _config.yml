@@ -2,7 +2,7 @@
 encoding: utf-8
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 8
 permalink: /:title
