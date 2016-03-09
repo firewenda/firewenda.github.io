@@ -126,7 +126,7 @@
                 if (flag === false) {
                     try {
                         var lastcolor = _self.temparr[_self.temparr.length - 1].color;
-                        lastcolor &gt;= 1 ? color = 0 : color = lastcolor + 1;
+                        color = lastColor &gt;= 1 ? 0 : lastColor + 1;
                     } catch (e) {}
                     _self.temparr.push({
                         t: html,
