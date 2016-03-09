@@ -25,7 +25,6 @@ body .hide{display:none;}
 .left{float:left;}
 .right{float:right;}
 
-
 /***********default settings**********/
 body {font:16px "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
 a {color:#4A75B5;text-decoration:none;outline:none;}
@@ -51,7 +50,6 @@ blockquote{ margin-bottom: 40px; border-left: 3px solid #ccc; padding-left: 10px
 blockquote p{ margin-bottom: 0;}
 /************layout style*****************/
 #content {width:1060px;margin:90px auto 60px;min-height:400px;height:auto !important;height:400px; }
-
 
 /****************entry style**************/
 .sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; }
