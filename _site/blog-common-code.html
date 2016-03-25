@@ -47,7 +47,7 @@
 
 <p>大于等于0的数字，最多允许两位小数</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/^\d+(?:\.\d{1,2})?$/.test(2.12); //true
+<div class="highlighter-rouge"><pre class="highlight"><code>/^\d+(?:\.\d{1,2})?$/.test(2.12); // =&gt; true
 </code></pre>
 </div>
 
@@ -141,6 +141,16 @@
 }
 </code></pre>
 </div>
+
+<p>多个浮点数相加</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var sumArr = ["209.49", "52.37", "13.09", "4", "261.86"];
+var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
+</code></pre>
+</div>
+
+<p>*注意：reduce 为ES5 Array新方法，ie9以下浏览器不兼容<br />
+具体用法参考：<a href="http://www.zhihu.com/question/24927450" target="_blank">如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？</a></p>
 
 <h2 id="html">常用HTML代码</h2>
 

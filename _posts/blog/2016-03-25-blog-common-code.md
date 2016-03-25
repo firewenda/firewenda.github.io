@@ -9,7 +9,7 @@ category: blog
 
 大于等于0的数字，最多允许两位小数
 
-    /^\d+(?:\.\d{1,2})?$/.test(2.12); //true
+    /^\d+(?:\.\d{1,2})?$/.test(2.12); // => true
 
 ## 常用JS代码
     var util = {
@@ -99,6 +99,14 @@ category: blog
             return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
         }
     }
+
+多个浮点数相加
+
+    var sumArr = ["209.49", "52.37", "13.09", "4", "261.86"];
+    var sum = sumArr.reduce(util.accAdd); // =>540.81
+
+*注意：reduce 为ES5 Array新方法，ie9以下浏览器不兼容<br>
+具体用法参考：<a href="http://www.zhihu.com/question/24927450" target="_blank">如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？</a>
 
 ## 常用HTML代码
 
