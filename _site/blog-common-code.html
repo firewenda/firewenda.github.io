@@ -5,7 +5,7 @@
     * Author:         Wenda
     -->
     <meta charset="utf-8" />
-    <title>Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？ | wenda's blog</title>
+    <title>常用代码总结 | wenda's blog</title>
     <meta name="author" content="Wenda" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="Wenda's Blog" />
@@ -41,37 +41,121 @@
 
 <div id="content">
     <div class="entry">
-        <h1 class="entry-title"><a href="/blog-dekaron-1" title="Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？">Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？</a></h1>
-        <p class="entry-date">2015-12-07</p>
-        <h2 id="section">斐波那契数列</h2>
+        <h1 class="entry-title"><a href="/blog-common-code" title="常用代码总结">常用代码总结</a></h1>
+        <p class="entry-date">2016-03-25</p>
+        <h2 id="section">常用正则表达式</h2>
 
-<p>百度百科定义：斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家列昂纳多·斐波那契以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……<br />
-<strong>特别指出：第0项是0，第1项是第一个1。</strong><br />
-这个数列从第2项开始，每一项都等于前两项之和。</p>
+<p>大于等于0的数字，最多允许两位小数
+    /^\d+(?:.\d{1,2})?$/.test(2.12); //true</p>
 
-<p>利用javascript实现方法：</p>
+<h2 id="js">常用JS代码</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>var util = {
+    /**
+     * Function formatMoney 数值转或货币格式
+     *  -@param {Number} number 要转换的数值
+     *  -@param {Number} places 保留小数点位数
+     *  -@param {String} symbol 货币符号
+     *  -@param {String} thousand 间隔符
+     *  -@param {String} decimal 小数位符号
+     * Return {String}
+     */
+    formatMoney: function(number, places, symbol, thousand, decimal) {
+        number = number || 0;
+        places = !isNaN(places = Math.abs(places)) ? places : 2;
+        symbol = symbol !== undefined ? symbol : "$";
+        thousand = thousand || ",";
+        decimal = decimal || ".";
+        var negative = number &lt; 0 ? "-" : "",
+            i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + "",
+            j = (j = i.length) &gt; 3 ? j % 3 : 0;
+        return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
+    },
+    // 两个浮点数求和
+    accAdd: function(num1, num2) {
+        var r1, r2, m;
+        try {
+            r1 = num1.toString().split('.')[1].length;
+        } catch (e) {
+            r1 = 0;
+        }
+        try {
+            r2 = num2.toString().split(".")[1].length;
+        } catch (e) {
+            r2 = 0;
+        }
+        m = Math.pow(10, Math.max(r1, r2));
+        // return (num1*m+num2*m)/m;
+        return Math.round(num1 * m + num2 * m) / m;
+    },
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function fibonacci(n) {
-    var i = 1, j = 1;
-    var arr = [i, j];
-    var last = 1;
-
-    while (true) {
-        last = i + j;
-        if(last&gt;n)break;
-        i = j;
-        j = last;
-        arr.push(last);
+    // 两个浮点数相减
+    accSub: function(num1, num2) {
+        var r1, r2, m;
+        try {
+            r1 = num1.toString().split('.')[1].length;
+        } catch (e) {
+            r1 = 0;
+        }
+        try {
+            r2 = num2.toString().split(".")[1].length;
+        } catch (e) {
+            r2 = 0;
+        }
+        m = Math.pow(10, Math.max(r1, r2));
+        n = (r1 &gt;= r2) ? r1 : r2;
+        return (Math.round(num1 * m - num2 * m) / m).toFixed(n);
+    },
+    // 两个浮点数相除
+    accDiv: function(num1, num2) {
+        var t1, t2, r1, r2;
+        try {
+            t1 = num1.toString().split('.')[1].length;
+        } catch (e) {
+            t1 = 0;
+        }
+        try {
+            t2 = num2.toString().split(".")[1].length;
+        } catch (e) {
+            t2 = 0;
+        }
+        r1 = Number(num1.toString().replace(".", ""));
+        r2 = Number(num2.toString().replace(".", ""));
+        return (r1 / r2) * Math.pow(10, t2 - t1);
+    },
+    //两个浮点数相乘
+    accMul: function(num1, num2) {
+        var m = 0,
+            s1 = num1.toString(),
+            s2 = num2.toString();
+        try {
+            m += s1.split(".")[1].length;
+        } catch (e) {}
+        try {
+            m += s2.split(".")[1].length;
+        } catch (e) {}
+        return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
     }
-    console.log(arr.join(','));
 }
+</code></pre>
+</div>
 
-fibonacci(1000);//1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987
+<h2 id="html">常用HTML代码</h2>
+
+<h2 id="css">常用CSS代码</h2>
+
+<p>文字太多超出部分省略号显示</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.text-ellipsis{
+    width: 185px; //设置宽度
+    white-space: nowrap; //将文本限制在一行
+    overflow: hidden; //溢出部分要隐藏
+    text-overflow: ellipsis; //出现省略号
+}
 </code></pre>
 </div>
 
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="/blog-dekaron-1" data-title="Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？" data-url="http:www.isme.wang/blog-dekaron-1"></div>
+        <div class="ds-thread" data-thread-key="/blog-common-code" data-title="常用代码总结" data-url="http:www.isme.wang/blog-common-code"></div>
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">
