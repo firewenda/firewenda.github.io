@@ -107,8 +107,8 @@ category: blog
 文字太多超出部分省略号显示
 
     .text-ellipsis{
-        width: 185px; //设置宽度
-        white-space: nowrap; //将文本限制在一行
-        overflow: hidden; //溢出部分要隐藏
-        text-overflow: ellipsis; //出现省略号
+        max-width: 185px; /*设置宽度*/
+        white-space: nowrap; /*将文本限制在一行*/
+        overflow: hidden; /*溢出部分要隐藏*/
+        text-overflow: ellipsis; /*出现省略号*/
     }
