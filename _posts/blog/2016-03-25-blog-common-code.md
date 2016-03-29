@@ -68,6 +68,19 @@ category: blog
             n = (r1 >= r2) ? r1 : r2;
             return (Math.round(num1 * m - num2 * m) / m).toFixed(n);
         },
+        //两个浮点数相乘
+        accMul: function(num1, num2) {
+            var m = 0,
+                s1 = num1.toString(),
+                s2 = num2.toString();
+            try {
+                m += s1.split(".")[1].length;
+            } catch (e) {}
+            try {
+                m += s2.split(".")[1].length;
+            } catch (e) {}
+            return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
+        }
         // 两个浮点数相除
         accDiv: function(num1, num2) {
             var t1, t2, r1, r2;
@@ -84,19 +97,6 @@ category: blog
             r1 = Number(num1.toString().replace(".", ""));
             r2 = Number(num2.toString().replace(".", ""));
             return (r1 / r2) * Math.pow(10, t2 - t1);
-        },
-        //两个浮点数相乘
-        accMul: function(num1, num2) {
-            var m = 0,
-                s1 = num1.toString(),
-                s2 = num2.toString();
-            try {
-                m += s1.split(".")[1].length;
-            } catch (e) {}
-            try {
-                m += s2.split(".")[1].length;
-            } catch (e) {}
-            return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
         }
     }
 

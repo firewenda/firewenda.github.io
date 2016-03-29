@@ -16,6 +16,7 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
     <li><a href="https://github.com/" target="_blank">github</a> 必看，技术的交流平台</li>
     <li><a href="https://cnodejs.org/" target="_blank">cnode</a> nodejs中文社区</li>
     <li><a href="http://reactjs.cn/" target="_blank">react</a> ReactJS中文网站</li>
+    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> backbonejs中文社区</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
 </ul>
 
@@ -60,6 +61,13 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
     <li><a href="http://www.oschina.net/news/22745/8-css-preprocessors-speed" target="_blank">CSS预处理器</a> 8个CSS预处理器</li>
     <li><a href="http://lesscss.org/" target="_blank">less</a> less</li>
     <li><a href="http://sass-lang.com/" target="_blank">sass</a> sass</li>
+</ul>
+
+## 框架类
+
+<ul>
+    <li><a href="http://ionicframework.com/">ionicframework</a> 一款开源的Html5移动App开发框架</li>
+    <li><a href="http://framework7.taobao.org/">framework7</a> 一个开源免费的框架可以用来开发混合移动应用</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
