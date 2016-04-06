@@ -16,7 +16,7 @@ description: 在学习路上，收藏那些优秀的网站，以便时常温习
     <li><a href="https://github.com/" target="_blank">github</a> 必看，技术的交流平台</li>
     <li><a href="https://cnodejs.org/" target="_blank">cnode</a> nodejs中文社区</li>
     <li><a href="http://reactjs.cn/" target="_blank">react</a> ReactJS中文网站</li>
-    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> backbonejs中文社区</li>
+    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
 </ul>
 
