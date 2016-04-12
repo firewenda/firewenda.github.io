@@ -1,26 +1,16 @@
 ---
-layout: home
+layout: main
 ---
 
-<div class="index-content blog">
-    <div class="section">
-        <ul class="artical-cate">
-            <li class="on"><a href="/"><span>Blog</span></a></li>
-            <li style="text-align:center"><a href="/life"><span>life</span></a></li>
-            <li style="text-align:right"><a href="/project"><span>Project</span></a></li>
-        </ul>
+<img src="/images/background.jpg" class="fullscreenImg">
+<div class="fullscreenMask"></div>
 
-        <div class="cate-bar"><span id="cateBar"></span></div>
-
-        <ul class="artical-list">
-        {% for post in site.categories.blog %}
-            <li>
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="title-desc">{{ post.description }}</div>
-            </li>
-        {% endfor %}
-        </ul>
-    </div>
-    <div class="aside">
-    </div>
+<div class="panel-cover">
+    <img src="/images/head.png" class="face">
+    <h1>Wenda's blog</h1>
+    <ul>
+        <li><a class="fa fa-2x fa-tags" href="/blog" title="blog"><span class="description">Blog</span></a><em class="nav">Blog</em></li>
+        <li><a class="fa fa-2x fa-birthday-cake" href="/life" title="life"><span class="description">Life</span></a><em class="nav">Life</em></li>
+        <li><a class="fa fa-2x fa-calendar" href="/project" title="project"><span class="description">Project</span></a><em class="nav">Project</em></li>
+    </ul>
 </div>
