@@ -37,6 +37,9 @@ sub{vertical-align:text-bottom;}
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    *background: #000;
+    opacity: .5;
+    *filter: alpha(opacity=50);
 }
 
 
