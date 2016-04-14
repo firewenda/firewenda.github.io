@@ -2,11 +2,11 @@
 layout: main
 ---
 
-<img src="/images/background.jpg" class="fullscreenImg">
+<img src="/images/index/background.jpg" class="fullscreenImg">
 <div class="fullscreenMask"></div>
 
 <div class="panel-cover">
-    <img src="/images/head.png" class="face">
+    <img src="/images/icon/head.png" class="face">
     <h1>Wenda's blog</h1>
     <ul>
         <li><a class="fa fa-2x fa-tags" href="/blog" title="blog"><span class="description">Blog</span></a><em class="nav">Blog</em></li>
