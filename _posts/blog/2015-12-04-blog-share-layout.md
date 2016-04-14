@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  【转载】利用HTML和CSS实现常见的布局
+title:  【转载】利用HTML和CSS实现常见布局
 description:  利用HTML和CSS实现常见的布局
 category: blog
 ---
 
->作者：mrshi 
+>作者：mrshi
 
 >原文地址：<a href="http://segmentfault.com/a/1190000003931851">http://segmentfault.com/a/1190000003931851</a>
 

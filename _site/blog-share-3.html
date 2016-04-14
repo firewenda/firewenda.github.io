@@ -63,27 +63,27 @@
 
 <p>让我们来看看这个对象：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var cody = {  
+<div class="highlighter-rouge"><pre class="highlight"><code>var cody = {
     living:true,
     age:23,
     gender:'male',
-    getGender:function(){return cody.gender;} 
+    getGender:function(){return cody.gender;}
 };
 
-console.log(cody.getGender()); // logs 'male'  
+console.log(cody.getGender()); // logs 'male'
 </code></pre>
 </div>
 
 <p>注意里面的getGender函数，我们通过点符号(例如cody.gender)访问cody对象自身的gender属性。这段代码可以被重写，用this来访问cody对象，因为this指向cody对象。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var cody = {  
+<div class="highlighter-rouge"><pre class="highlight"><code>var cody = {
     living:true,
     age:23,
     gender:'male',
-    getGender:function(){return this.gender;} 
+    getGender:function(){return this.gender;}
 };
 
-console.log(cody.getGender()); // logs 'male' 
+console.log(cody.getGender()); // logs 'male'
 </code></pre>
 </div>
 
@@ -105,15 +105,15 @@ console.log(cody.getGender()); // logs 'male'
 
 <p>myObject还有一个foo属性，这里被一同用到。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var foo = 'foo';  
+<div class="highlighter-rouge"><pre class="highlight"><code>var foo = 'foo';
 var myObject = {foo: 'I am myObject.foo'};
 
-var sayFoo = function() {  
-    console.log(this['foo']); 
+var sayFoo = function() {
+    console.log(this['foo']);
 };
 
 // give myObject a sayFoo property and have it point to sayFoo function
-myObject.sayFoo = sayFoo;  
+myObject.sayFoo = sayFoo;
 myObject.sayFoo(); // logs 'I am myObject.foo'
 
 sayFoo(); // logs 'foo'
@@ -128,10 +128,10 @@ sayFoo(); // logs 'foo'
   <p>(译注：原文使用 head object 一词，是原作者所著书《JavaScript Enlightenment》里的用语，并不详见于其他地方，其意与全局变量 global object 完全相同。下面的翻译将所有的 head object 译为全局对象)</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>window.foo = 'foo';  
-window.myObject = {foo: 'I am myObject.foo'};  
-window.sayFoo = function() { console.log(this.foo); };  
-window.myObject.sayFoo = window.sayFoo;  
+<div class="highlighter-rouge"><pre class="highlight"><code>window.foo = 'foo';
+window.myObject = {foo: 'I am myObject.foo'};
+window.sayFoo = function() { console.log(this.foo); };
+window.myObject.sayFoo = window.sayFoo;
 window.myObject.sayFoo(); //logs 'I am myObject.foo'
 window.sayFoo(); //logs 'foo'
 </code></pre>
@@ -151,11 +151,11 @@ window.sayFoo(); //logs 'foo'
 
 <p>下面的代码中，在func2和func3中的this迷失了方向，不是指向myObject，而是指向了全局对象。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {  
+<div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {
     func1:function() {
         console.log(this); //logs myObject
         varfunc2=function() {
-            console.log(this); //logs window, and will do so from this point on 
+            console.log(this); //logs window, and will do so from this point on
             varfunc3=function() {
                 console.log(this); //logs window, as it’s the head object
             }();
@@ -171,7 +171,7 @@ myObject.func1();
 
 <p>考虑下面的代码，当将一个匿名函数传递到foo.func1时发生了什么。当一个匿名函数在foo.func1的内部调用(函数嵌套在函数中)，这个匿名函数中的this的值将会指向全局对象。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var foo = {  
+<div class="highlighter-rouge"><pre class="highlight"><code>var foo = {
     func1:function(bar){
         bar(); //logs window, not foo
         console.log(this);//the this keyword here will be a reference to foo object
@@ -188,8 +188,8 @@ foo.func1(function(){console.log(this)});
 
 <p>为了this的值不丢失，你可以简单地在父函数里使用作用域链来保存this的引用。下面的代码演示了怎么做，用一个叫做that的变量，并利用它的作用域，我们能更好保存上下文的轨迹。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {  
-    myProperty:'I can see the light', 
+<div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {
+    myProperty:'I can see the light',
     myMethod:function() {
         var that=this; //store a reference to this (i.e.myObject) in myMethod scope varhelperFunctionfunction(){//childfunction
         var helperFunction = function() { //childfunction
@@ -212,7 +212,7 @@ myObject.myMethod(); // invoke myMethod
 
 <div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {};
 
-var myFunction = function(param1, param2) {  
+var myFunction = function(param1, param2) {
     //setviacall()'this'points to my Object when function is invoked
     this.foo = param1;
     this.bar = param2;
@@ -221,7 +221,7 @@ var myFunction = function(param1, param2) {
 
 myFunction.call(myObject, 'foo', 'bar'); // invoke function, set this value to myObject
 
-console.log(myObject) // logs Object {foo = 'foo', bar = 'bar'}  
+console.log(myObject) // logs Object {foo = 'foo', bar = 'bar'}
 </code></pre>
 </div>
 
@@ -229,14 +229,14 @@ console.log(myObject) // logs Object {foo = 'foo', bar = 'bar'}
 
 <div class="highlighter-rouge"><pre class="highlight"><code>var myObject = {};
 
-var myFunction = function(param1, param2) {  
-    //set via apply(), this points to my Object when function is invoked 
+var myFunction = function(param1, param2) {
+    //set via apply(), this points to my Object when function is invoked
     this.foo=param1;
     this.bar=param2;
     console.log(this); // logs Object{foo='foo', bar='bar'}
 };
 
-myFunction.apply(myObject, ['foo', 'bar']); // invoke function, set this value  
+myFunction.apply(myObject, ['foo', 'bar']); // invoke function, set this value
 console.log(myObject); // logs Object {foo = 'foo', bar = 'bar'}
 </code></pre>
 </div>
@@ -249,8 +249,8 @@ console.log(myObject); // logs Object {foo = 'foo', bar = 'bar'}
 
 <p>下面，我们设置了一个Person的构造函数，并用this来指向将要被创建的对象。当Person的实例被创建，this.name将会指向新创建的对象，并用传递给构造函数的参数(name)的值，给新对象里的name属性赋值。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(name) {  
-    this.name = name || 'johndoe'; // this will refer to the instanc ecreated 
+<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(name) {
+    this.name = name || 'johndoe'; // this will refer to the instanc ecreated
 }
 
 var cody = new Person('Cody Lindley'); // create an instance, based on Person constructor
@@ -261,12 +261,12 @@ console.log(cody.name); // logs 'Cody Lindley'
 
 <p>当使用new关键字调用构造函数时this指向“即将被创建的对象”。如果我们没有使用new关键字，那么this的值将会是Person被调用的上下文——这里就是全局对象。让我们检验下这个脚本。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(name) {  
-    this.name=name||'johndoe'; 
+<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(name) {
+    this.name=name||'johndoe';
 }
 
-var cody = Person('Cody Lindley'); // notice we did not use 'new'  
-console.log(cody.name); // undefined, the value is actually set at window.name  
+var cody = Person('Cody Lindley'); // notice we did not use 'new'
+console.log(cody.name); // undefined, the value is actually set at window.name
 console.log(window.name); // logs 'Cody Lindley'
 </code></pre>
 </div>
@@ -277,27 +277,27 @@ console.log(window.name); // logs 'Cody Lindley'
 
 <p>这里我演示了两个Person对象的创建(cody和lisa)，以及继承来的包含this关键字的whatIsMyFullName方法如何访问实例。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(x){  
+<div class="highlighter-rouge"><pre class="highlight"><code>var Person = function(x){
     if(x){this.fullName = x};
 };
 
-Person.prototype.whatIsMyFullName = function() {  
+Person.prototype.whatIsMyFullName = function() {
     return this.fullName; // 'this' refers to the instance created from Person()
 }
 
-var cody = new Person('cody lindley');  
+var cody = new Person('cody lindley');
 var lisa = new Person('lisa lindley');
 
 // call the inherited whatIsMyFullName method, which uses this to refer to the instance
 console.log(cody.whatIsMyFullName(), lisa.whatIsMyFullName()); //logs 'cody lindley lisa lindley'
 
-/* The prototype chain is still in effect, so if the instance does not have a 
-fullName property, it will look for it in the prototype chain.  
-Below, we add a fullName property to both the Person prototype and the Object  
+/* The prototype chain is still in effect, so if the instance does not have a
+fullName property, it will look for it in the prototype chain.
+Below, we add a fullName property to both the Person prototype and the Object
 prototype. See notes. */
 
-Object.prototype.fullName = 'John Doe';  
-var john = new Person(); // no argument is passed so fullName is not added to instance  
+Object.prototype.fullName = 'John Doe';
+var john = new Person(); // no argument is passed so fullName is not added to instance
 console.log(john.whatIsMyFullName()); // logs 'John Doe'
 </code></pre>
 </div>
@@ -319,8 +319,7 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
                 ds.type = 'text/javascript';ds.async = true;
                 ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                 ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
             })();
             </script>
         <!-- 多说公共JS代码 end -->
@@ -328,7 +327,7 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
 
     <div class="sidenav">
         <div class="heart"></div>
-        <img class="head-img" src="/images/head.png">
+        <img class="head-img" src="/images/icon/head.png">
         <ul class="some-info">
             <li>姓名：文达</li>
             <li>简介：在成为前端菜鸟的路上奔跑！</li>
@@ -341,7 +340,7 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
         
             <li><a href="/blog-common-code">常用代码总结</a></li>
         
-            <li><a href="/blog-share-4">相同内容隔行变色</a></li>
+            <li><a href="/blog-share-4">常用功能总结</a></li>
         
             <li><a href="/blog-share-3">【转载】完全理解JavaScript关键字this</a></li>
         
@@ -349,7 +348,7 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
         
             <li><a href="/blog-dekaron-1">Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？</a></li>
         
-            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见的布局</a></li>
+            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见布局</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -381,38 +380,13 @@ console.log(john.whatIsMyFullName()); // logs 'John Doe'
         
         </ul>
     </div>
+
+    <div id="J_gotoTop"></div>
+
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

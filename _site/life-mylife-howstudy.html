@@ -139,8 +139,7 @@
                 ds.type = 'text/javascript';ds.async = true;
                 ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                 ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
             })();
             </script>
         <!-- 多说公共JS代码 end -->
@@ -148,7 +147,7 @@
 
     <div class="sidenav">
         <div class="heart"></div>
-        <img class="head-img" src="/images/head.png">
+        <img class="head-img" src="/images/icon/head.png">
         <ul class="some-info">
             <li>姓名：文达</li>
             <li>简介：在成为前端菜鸟的路上奔跑！</li>
@@ -161,7 +160,7 @@
         
             <li><a href="/blog-common-code">常用代码总结</a></li>
         
-            <li><a href="/blog-share-4">相同内容隔行变色</a></li>
+            <li><a href="/blog-share-4">常用功能总结</a></li>
         
             <li><a href="/blog-share-3">【转载】完全理解JavaScript关键字this</a></li>
         
@@ -169,7 +168,7 @@
         
             <li><a href="/blog-dekaron-1">Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？</a></li>
         
-            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见的布局</a></li>
+            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见布局</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -201,38 +200,13 @@
         
         </ul>
     </div>
+
+    <div id="J_gotoTop"></div>
+
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

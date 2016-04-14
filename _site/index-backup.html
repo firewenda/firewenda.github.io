@@ -48,8 +48,8 @@
             </li>
         
             <li>
-                <h2><a href="/blog-share-4">相同内容隔行变色</a></h2>
-                <div class="title-desc">相同内容隔行变色</div>
+                <h2><a href="/blog-share-4">常用功能总结</a></h2>
+                <div class="title-desc">常用功能总结</div>
             </li>
         
             <li>
@@ -68,7 +68,7 @@
             </li>
         
             <li>
-                <h2><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见的布局</a></h2>
+                <h2><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见布局</a></h2>
                 <div class="title-desc">利用HTML和CSS实现常见的布局</div>
             </li>
         
@@ -84,77 +84,8 @@
 </div>
 
 
-<script type="text/javascript">
-    $(function(){
-        function animateBar($item,noAni){
-            var spanLeft = $item.find('span').offset().left;
-            var conLeft = $item.parent().offset().left;
-            var left = spanLeft - conLeft;
-            var width = $item.find('span').width() + 8;
-
-            if(noAni){
-                $('#cateBar').css({left:left,width:width})
-            }else{
-                $('#cateBar').stop().animate({left:left,width:width},300)
-            }
-        }
-
-        var waitForFinalEvent = (function () {
-            var timers = {};
-            return function (callback, ms, uniqueId) {
-                if (!uniqueId) {
-                    uniqueId = "Don't call this twice without a uniqueId";
-                }
-                if (timers[uniqueId]) {
-                    clearTimeout (timers[uniqueId]);
-                }
-                timers[uniqueId] = setTimeout(callback, ms);
-            };
-        })();
-
-        $('.artical-cate li').mouseenter(function(){
-            animateBar($(this));
-        }).mouseleave(function(){
-            animateBar($('.artical-cate .on'));
-        });
-
-        $(window).resize(function(e){
-            waitForFinalEvent(function(){
-                animateBar($('.artical-cate .on'));
-            })
-        })
-        animateBar($('.artical-cate .on'),true);
-    });
-</script>
+<script src="/js/index.js" type="text/javascript"></script>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

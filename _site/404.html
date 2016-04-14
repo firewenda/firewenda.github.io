@@ -36,33 +36,5 @@
 </div>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     * Author:         Wenda
     -->
     <meta charset="utf-8" />
-    <title>相同内容隔行变色 | wenda's blog</title>
+    <title>常用功能总结 | wenda's blog</title>
     <meta name="author" content="Wenda" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="Wenda's Blog" />
@@ -43,9 +43,11 @@
 
 <div id="content">
     <div class="entry">
-        <h1 class="entry-title"><a href="/blog-share-4" title="相同内容隔行变色">相同内容隔行变色</a></h1>
+        <h1 class="entry-title"><a href="/blog-share-4" title="常用功能总结">常用功能总结</a></h1>
         <p class="entry-date">2016-03-09</p>
-        <p>最近做的一个项目，通过接口渲染数据后，使相同内容的表格行为同一种颜色，以下是代码实现。
+        <h2 id="section">相同内容隔行变色</h2>
+
+<p>最近做的一个项目，通过接口渲染数据后，使相同内容的表格行为同一种颜色，以下是代码实现。
 页面基于jquery，使用<a href="https://github.com/aui/artTemplate" target="_blank">artTemplate模板引擎</a></p>
 
 <h3 id="css">CSS代码</h3>
@@ -73,7 +75,7 @@
 </code></pre>
 </div>
 
-<h3 id="section">数据模拟</h3>
+<h3 id="section-1">数据模拟</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>var dataList = {
     data: [
@@ -162,8 +164,50 @@
 </code></pre>
 </div>
 
+<h2 id="section-2">分页后将数据插入数组提交</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/**
+ * [getArrs 获取所有数据]
+ * @return {[type]} [description]
+ */
+function getArrs() {
+    this.firstarr = [];
+    this.temparr = [];
+}
+getArrs.prototype = {
+    getTemp: function(index) {
+        var self = this;
+        self.temparr = [];
+        $('.js-user').each(function(k, v) {
+            self.temparr[k] = {
+                'id': $(v).attr('data-userId'),
+                'report_user_id': $(v).val()
+            };
+        });
+        self.firstarr[index] = self.temparr;
+    },
+    turnout: function() {
+        var self = this;
+        var tarr = [];
+        $.each(self.firstarr, function(k, v) {
+            $.each(v, function(index, item) {
+                tarr.push(item);
+            });
+        });
+        return tarr;
+    }
+};
+var allDatas = new getArrs();
+
+allDatas.getTemp(0);
+$('.submit').on('click', function() {
+    console.log(allDatas.turnout());
+});
+</code></pre>
+</div>
+
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="/blog-share-4" data-title="相同内容隔行变色" data-url="http:www.isme.wang/blog-share-4"></div>
+        <div class="ds-thread" data-thread-key="/blog-share-4" data-title="常用功能总结" data-url="http:www.isme.wang/blog-share-4"></div>
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">
@@ -173,8 +217,7 @@
                 ds.type = 'text/javascript';ds.async = true;
                 ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                 ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
             })();
             </script>
         <!-- 多说公共JS代码 end -->
@@ -182,7 +225,7 @@
 
     <div class="sidenav">
         <div class="heart"></div>
-        <img class="head-img" src="/images/head.png">
+        <img class="head-img" src="/images/icon/head.png">
         <ul class="some-info">
             <li>姓名：文达</li>
             <li>简介：在成为前端菜鸟的路上奔跑！</li>
@@ -195,7 +238,7 @@
         
             <li><a href="/blog-common-code">常用代码总结</a></li>
         
-            <li><a href="/blog-share-4">相同内容隔行变色</a></li>
+            <li><a href="/blog-share-4">常用功能总结</a></li>
         
             <li><a href="/blog-share-3">【转载】完全理解JavaScript关键字this</a></li>
         
@@ -203,7 +246,7 @@
         
             <li><a href="/blog-dekaron-1">Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？</a></li>
         
-            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见的布局</a></li>
+            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见布局</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -235,38 +278,13 @@
         
         </ul>
     </div>
+
+    <div id="J_gotoTop"></div>
+
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

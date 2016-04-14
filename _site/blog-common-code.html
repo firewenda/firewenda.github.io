@@ -92,7 +92,6 @@
         // return (num1*m+num2*m)/m;
         return Math.round(num1 * m + num2 * m) / m;
     },
-
     // 两个浮点数相减
     accSub: function(num1, num2) {
         var r1, r2, m;
@@ -122,7 +121,7 @@
             m += s2.split(".")[1].length;
         } catch (e) {}
         return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
-    }
+    },
     // 两个浮点数相除
     accDiv: function(num1, num2) {
         var t1, t2, r1, r2;
@@ -139,6 +138,22 @@
         r1 = Number(num1.toString().replace(".", ""));
         r2 = Number(num2.toString().replace(".", ""));
         return (r1 / r2) * Math.pow(10, t2 - t1);
+    },
+    /**
+     * [CtoH 输入内容全角转半角]
+     * @param {[type string]} str [输入字符串]
+     */
+    CtoH: function(str) {　　
+        var result = '';　　
+        for (var i = 0; i &lt; str.length; i++) {　　　
+            if (str.charCodeAt(i) == 12288) {　　　　
+                result += String.fromCharCode(str.charCodeAt(i) - 12256);　　　　
+                continue;　　　
+            }　　　
+            if (str.charCodeAt(i) &gt; 65280 &amp;&amp; str.charCodeAt(i) &lt; 65375) result += String.fromCharCode(str.charCodeAt(i) - 65248);　　　
+            else result += String.fromCharCode(str.charCodeAt(i));　　
+        }
+        return result;
     }
 }
 </code></pre>
@@ -180,8 +195,7 @@ var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
                 ds.type = 'text/javascript';ds.async = true;
                 ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                 ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
             })();
             </script>
         <!-- 多说公共JS代码 end -->
@@ -189,7 +203,7 @@ var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
 
     <div class="sidenav">
         <div class="heart"></div>
-        <img class="head-img" src="/images/head.png">
+        <img class="head-img" src="/images/icon/head.png">
         <ul class="some-info">
             <li>姓名：文达</li>
             <li>简介：在成为前端菜鸟的路上奔跑！</li>
@@ -202,7 +216,7 @@ var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
         
             <li><a href="/blog-common-code">常用代码总结</a></li>
         
-            <li><a href="/blog-share-4">相同内容隔行变色</a></li>
+            <li><a href="/blog-share-4">常用功能总结</a></li>
         
             <li><a href="/blog-share-3">【转载】完全理解JavaScript关键字this</a></li>
         
@@ -210,7 +224,7 @@ var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
         
             <li><a href="/blog-dekaron-1">Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？</a></li>
         
-            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见的布局</a></li>
+            <li><a href="/blog-share-layout">【转载】利用HTML和CSS实现常见布局</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -242,38 +256,13 @@ var sum = sumArr.reduce(util.accAdd); // =&gt;540.81
         
         </ul>
     </div>
+
+    <div id="J_gotoTop"></div>
+
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
 
 
-    <div id="J_gotoTop"></div>
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-            $(window).on('scroll',function(){
-                if($(window).scrollTop() > 300){
-                    $("#J_gotoTop").fadeIn();
-                }else{
-                    $("#J_gotoTop").fadeOut();
-                }
-            })
-            //返回顶部
-            $("#J_gotoTop").click(function(e){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                },500);
-            });
-        })
-    </script>
 </body>
 </html>

@@ -50,7 +50,6 @@ category: blog
             // return (num1*m+num2*m)/m;
             return Math.round(num1 * m + num2 * m) / m;
         },
-
         // 两个浮点数相减
         accSub: function(num1, num2) {
             var r1, r2, m;
@@ -80,7 +79,7 @@ category: blog
                 m += s2.split(".")[1].length;
             } catch (e) {}
             return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
-        }
+        },
         // 两个浮点数相除
         accDiv: function(num1, num2) {
             var t1, t2, r1, r2;
@@ -97,6 +96,22 @@ category: blog
             r1 = Number(num1.toString().replace(".", ""));
             r2 = Number(num2.toString().replace(".", ""));
             return (r1 / r2) * Math.pow(10, t2 - t1);
+        },
+        /**
+         * [CtoH 输入内容全角转半角]
+         * @param {[type string]} str [输入字符串]
+         */
+        CtoH: function(str) {　　
+            var result = '';　　
+            for (var i = 0; i < str.length; i++) {　　　
+                if (str.charCodeAt(i) == 12288) {　　　　
+                    result += String.fromCharCode(str.charCodeAt(i) - 12256);　　　　
+                    continue;　　　
+                }　　　
+                if (str.charCodeAt(i) > 65280 && str.charCodeAt(i) < 65375) result += String.fromCharCode(str.charCodeAt(i) - 65248);　　　
+                else result += String.fromCharCode(str.charCodeAt(i));　　
+            }
+            return result;
         }
     }
 
