@@ -100,6 +100,7 @@ category: blog
         /**
          * [CtoH 输入内容全角转半角]
          * @param {[type string]} str [输入字符串]
+         * Tips: 当为全角*号时，此方法不会转换为半角*号
          */
         CtoH: function(str) {　　
             var result = '';　　
@@ -112,6 +113,16 @@ category: blog
                 else result += String.fromCharCode(str.charCodeAt(i));　　
             }
             return result;
+        },
+        /**
+         * [toFixed 解决js toFixed()四舍五不入问题,此方法为Aangularjs解决方案]
+         * @param  {[type]} num       [需要转换的数字]
+         * @param  {[type]} precision [需要保留的小数位]
+         * @return {[type]}           [description]
+         * Tips: 当为0.0001或者更小的数字时，会返回NaN
+         */
+        toFixed: function(num, precision) {
+            return (+(Math.round(+(num + 'e' + precision)) + 'e' + -precision)).toFixed(precision);
         }
     }
 
