@@ -134,8 +134,6 @@ category: blog
 *注意：reduce 为ES5 Array新方法，ie9以下浏览器不兼容<br>
 具体用法参考：<a href="http://www.zhihu.com/question/24927450" target="_blank">如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？</a>
 
-## 常用HTML代码
-
 ## 常用CSS代码
 
 文字太多超出部分省略号显示
@@ -146,3 +144,16 @@ category: blog
         overflow: hidden; /*溢出部分要隐藏*/
         text-overflow: ellipsis; /*出现省略号*/
     }
+
+设置 line-height 的最佳方式
+
+    line-height: 2;
+
+确保将 line-height 指定为一个无单位的数值；这样一来，指定了不同 font-size 的子元素将会继承这个数值而不是一个固定的高度。
+
+我们假设页面默认的 font-size 是 12pt ，不过它也会包含了一个 font-size 为 24pt 的头部。如果你将 body 的 line-height 设置为2em 或者 200%，那样在文档中（当然也包括头部）就会得到一个 24pt 的行高（body 的 font-size 的 2 倍）。因而，头部就是单倍行距，而不是双倍！
+相反，将 line-height 设置为 2 会告知浏览器保持 font-size/line-height 比例，即便文字的尺寸发生变化。body 的行高将是 24pt，而头部的文字为 24pt，行高也将自动增长为 48pt。
+
+## 常用HTML代码
+
+待补充。。。
