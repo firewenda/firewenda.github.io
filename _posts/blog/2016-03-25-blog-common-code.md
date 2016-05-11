@@ -123,6 +123,20 @@ category: blog
          */
         toFixed: function(num, precision) {
             return (+(Math.round(+(num + 'e' + precision)) + 'e' + -precision)).toFixed(precision);
+        },
+        /**
+         * [getWeekCounts 获得一个月的周数]
+         * It working only week starts on sunday
+         * Not working if week starts on monday
+         * @param  {[type]} year         [四位数年份]
+         * @param  {[type]} month_number [月份month_number is in the range 1..12]
+         * @return {[type]}              [返回一个月的周数]
+         */
+        getWeekCounts: function(year, month_number) {
+            var firstOfMonth = new Date(year, month_number - 1, 1);
+            var lastOfMonth = new Date(year, month_number, 0);
+            var used = firstOfMonth.getDay() + lastOfMonth.getDate();
+            return Math.ceil( used / 7);
         }
     }
 
