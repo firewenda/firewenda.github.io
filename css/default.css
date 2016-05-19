@@ -196,6 +196,30 @@ blockquote p {
 }
 
 /****************entry style**************/
+.fixed-nav{
+    width: 1060px;
+    height: 38px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -530px;
+}
+.fixed-nav ul{
+    height: 100%;
+}
+.fixed-nav ul li{
+    display: block;
+    float: left;
+    width: 23%;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    background: #000;
+    padding-right: 2px;
+}
+.fixed-nav ul li a{
+    color: #fff;
+}
 
 .sidenav {
     width: 250px;
@@ -229,7 +253,6 @@ blockquote p {
 }
 
 /*爱心动画*/
-
 .sidenav .heart {
     cursor: pointer;
     height: 50px;

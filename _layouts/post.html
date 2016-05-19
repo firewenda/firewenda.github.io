@@ -14,6 +14,15 @@ layout: default
 </style>
 
 <div id="content">
+
+    <div class="fixed-nav">
+        <ul>
+            <li><a href="/blog" title="blog"><span class="description">Blog</span></a></li>
+            <li><a href="/life" title="life"><span class="description">Life</span></a></li>
+            <li><a href="/project" title="project"><span class="description">Project</span></a></li>
+        </ul>
+    </div>
+
     <div class="entry">
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
