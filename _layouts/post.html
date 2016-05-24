@@ -25,7 +25,7 @@ layout: default
 
     <div class="entry">
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+        <p class="entry-date">发表于 {{ page.date|date:"%Y-%m-%d" }}</p>
         {{ content }}
         <!-- 多说评论框 start -->
         <div class="ds-thread" data-thread-key="{{ page.url }}" data-title="{{ page.title }}" data-url="http:www.isme.wang{{ page.url }}"></div>
