@@ -3,6 +3,8 @@ layout: post
 title: sublime text 常用插件推荐
 category: project
 description: SublimeText的可扩展性，让本已精彩的编辑器更加好用
+tags:
+    - SublimeText
 ---
 
 ## 1. <a href="https://packagecontrol.io/installation#st3" target="_blank">Package Control</a>

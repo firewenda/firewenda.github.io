@@ -3,6 +3,8 @@ layout: post
 title: 【转载经典】 提问的艺术
 category: life
 description: 相信大部分老鸟当年都看过这篇经典的文章。在这里在转一次，以帮助大家能更好地问问题，以便获得更好的回答。
+tags:
+    - 生活
 ---
 
 ## 提问之前

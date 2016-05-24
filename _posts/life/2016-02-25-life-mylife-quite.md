@@ -3,6 +3,8 @@ layout: post
 title: 静心写代码
 category: life
 description: 多和优秀的人交流，多学习他们身上的优秀品质，而不是去羡慕嫉妒。
+tags:
+    - 随笔
 ---
 
 ## 为何静心

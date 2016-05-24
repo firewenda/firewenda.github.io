@@ -3,6 +3,8 @@ layout: post
 title: 胡言乱语说简单
 category: life
 description: 胡言乱语而已，看看就好。
+tags:
+    - 杂谈
 ---
 
 ##最初的简单

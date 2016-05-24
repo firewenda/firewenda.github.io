@@ -3,6 +3,9 @@ layout: post
 title:  【转载】利用HTML和CSS实现常见布局
 description:  利用HTML和CSS实现常见的布局
 category: blog
+tags:
+    - HTML
+    - CSS
 ---
 
 >作者：mrshi

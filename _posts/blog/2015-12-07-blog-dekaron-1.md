@@ -3,6 +3,8 @@ layout: post
 title: Javascript挑战题（一）：如何产生一个n以内的斐波那契序列？
 description: 给定一个数n，编写函数返回<=n的所有斐波那契数。
 category: blog
+tags:
+    - Javascript
 ---
 
 ## 斐波那契数列

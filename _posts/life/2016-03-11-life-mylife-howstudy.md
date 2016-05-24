@@ -3,6 +3,8 @@ layout: post
 title: 梁漱溟：做学问的八个境界
 category: life
 description: 所谓学问，就是对问题说得出道理，有自己的想法。
+tags:
+    - 读书
 ---
 
 >转载部分内容，原文地址：<a href="http://www.ruanyifeng.com/blog/2013/09/liang_shuming.html">梁漱溟：做学问的八个境界</a>
