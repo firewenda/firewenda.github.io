@@ -369,6 +369,18 @@ blockquote p {
     font-size: 14px;
     line-height: 1.6em;
 }
+.index-content .post-more-link {
+    margin-top: 20px;
+    text-align: left;
+}
+.index-content .post-more-link .btn {
+    font-size: 14px;
+    background: transparent;
+    color: #666;
+    border-bottom: 2px solid #666;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
 .index-content .artical-cate {
     width: 70%;
     margin: 0 auto;
