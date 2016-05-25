@@ -1199,6 +1199,9 @@ h3.about {
     #sidebar .profile span {
         display: none
     }
+    .footer {
+        display: none;
+    }
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
