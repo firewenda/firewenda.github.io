@@ -21,7 +21,7 @@
     "homepage": "https://github.com/firewenda/firewenda.github.io#readme",
     "devDependencies": {
         "gulp": "latest",
-        "gulp-minify-css": "latest",
+        "gulp-clean-css": "latest",
         "gulp-imagemin": "latest",
         "gulp-concat": "latest",
         "gulp-uglify": "latest",

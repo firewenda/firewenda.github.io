@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    minifycss = require('gulp-minify-css'),
+    minifycss = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -18,9 +18,9 @@ gulp.task('minifycss', function() {
 
 //压缩js
 gulp.task('minifyjs', function() {
-    return gulp.src('js/{index,post}.js')
-        .pipe(concat('main.js')) //合并所有js到main.js
-        .pipe(gulp.dest('dist/js')) //输出main.js到文件夹
+    return gulp.src('js/post.js')
+        //.pipe(concat('main.js')) //合并所有js到main.js
+        //.pipe(gulp.dest('dist/js')) //输出main.js到文件夹
         .pipe(rename({
             suffix: '.min'
         })) //rename压缩后的文件名

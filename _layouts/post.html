@@ -11,17 +11,21 @@ layout: default
     @media screen and (max-width: 1020px){
         body { background:#fff; }
     }
+    #sidebar{
+        display: none;
+    }
 </style>
 
 <div id="content">
 
     <div class="fixed-nav">
-        <ul>
-            <li><a href="/blog" title="blog"><span class="description">Blog</span></a></li>
+        <ul class="artical-cate">
+            <li class="on"><a href="/blog" title="blog"><span class="description">Blog</span></a></li>
             <li><a href="/life" title="life"><span class="description">Life</span></a></li>
             <li><a href="/project" title="project"><span class="description">Project</span></a></li>
             <li><a href="/tags" title="tags"><span class="description">Tags</span></a></li>
         </ul>
+        <div class="cate-bar"><span id="cateBar"></span></div>
     </div>
 
     <div class="entry">
@@ -80,5 +84,3 @@ layout: default
     <div id="J_gotoTop"></div>
 
 </div>
-
-<script src="/js/post.js" type="text/javascript"></script>

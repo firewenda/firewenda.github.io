@@ -18,7 +18,8 @@ layout: home
             <li>
                 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <div class="title-desc">{{ post.description }}</div>
-                <!--<span class="date">{{ post.date | date_to_string }}</span>
+                <hr>
+                <!--<span class="date">Posted by Wenda on {{ post.date | date: "%Y-%-m-%-d" }}</span>
                 <p>{% if post.excerpt.size > 100 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
                 <div class="post-more-link text-center">
                     <a class="btn" href="{{ post.url }}">
@@ -28,7 +29,5 @@ layout: home
             </li>
         {% endfor %}
         </ul>
-    </div>
-    <div class="aside">
     </div>
 </div>

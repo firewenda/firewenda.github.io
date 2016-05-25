@@ -20,10 +20,9 @@ layout: home
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 </h2>
                 <div class="title-desc">{{ post.description }}</div>
+                <hr>
             </li>
         {% endfor %}
         </ul>
-    </div>
-    <div class="aside">
     </div>
 </div>

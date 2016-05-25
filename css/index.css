@@ -148,7 +148,10 @@ sub {
     letter-spacing: 0.1em;
     font-family: Arial;
 }
-@media (max-width: 450px) {
+@media (max-width: 750px) {
+    .panel-cover{
+        padding-top: 1rem;
+    }
     .panel-cover h1 {
         font-size: 2em;
     }
