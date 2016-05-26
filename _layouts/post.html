@@ -49,11 +49,11 @@ layout: default
         <!-- 多说公共JS代码 end -->
     </div>
 
-    <div class="sidenav">
+    <div class="sidenav aboutme">
         <div class="heart"></div>
         <img class="head-img" src="/images/icon/head.png">
         <ul class="some-info">
-            <li>姓名：文达</li>
+            <li>姓名：<em>文达</em></li>
             <li>简介：在成为前端菜鸟的路上奔跑！</li>
         </ul>
     </div>
@@ -79,6 +79,18 @@ layout: default
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
+    </div>
+
+    <!-- Friends Blog -->
+    <div class="sidenav friends">
+        {% if site.friends %}
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+            {% for friend in site.friends %}
+                <li><a href="{{friend.href}}" target="_blank">{{friend.title}}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
 
     <div id="J_gotoTop"></div>

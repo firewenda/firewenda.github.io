@@ -36,3 +36,17 @@ kramdown:
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
+
+# Friends
+friends: [
+    {
+        title: "小米诺",
+        href: "http://www.xiaominuo.com/"
+    },{
+        title: "江南客的博客",
+        href: "http://www.ismumu.com"
+    },{
+        title: "黄玄的博客",
+        href: "http://huangxuan.me/"
+    }
+]
