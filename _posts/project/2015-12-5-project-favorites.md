@@ -19,8 +19,8 @@ tags:
     <li><a href="https://cnodejs.org/" target="_blank">cnode</a> nodejs中文社区</li>
     <li><a href="http://reactjs.cn/" target="_blank">react</a> ReactJS中文网站</li>
     <li><a href="http://reactnative.cn/" target="_blank">React Native</a> React Native 中文网</li>
-    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
+    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
 </ul>
 
