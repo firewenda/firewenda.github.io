@@ -18,8 +18,8 @@ h3,
 h4,
 h5,
 h6,
-pre,
-code,
+/*pre,
+code,*/
 form,
 fieldset,
 legend,
@@ -358,11 +358,11 @@ h6 {
 }
 
 p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 1.8em;
 }
 
-// code {
+/*// code {
 //     background: #eee;
 //     border: 1px solid #ccc;
 //     padding: 0 5px;
@@ -401,7 +401,7 @@ p {
 // pre ol {
 //     margin-left: 25px;
 //     list-style-type: decimal;
-// }
+// }*/
 
 blockquote {
     margin-bottom: 40px;
@@ -879,14 +879,14 @@ h3.about {
     .entry img {
         max-width: 90%;
     }
-    .entry pre ol li {
+    /*.entry pre ol li {
         margin-bottom: 0;
         line-height: 1em;
     }
     .entry pre code {
         line-height: 1em;
         font-size: 12px;
-    }
+    }*/
     .sidenav {
         display: none;
     }
