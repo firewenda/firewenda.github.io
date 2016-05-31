@@ -269,6 +269,7 @@ hr {
     height: 50px;
     line-height: 50px;
     width: 100%;
+    position: fixed;
     z-index: 9
 }
 
@@ -970,7 +971,8 @@ h3.about {
     }
     #content {
         width: 85%;
-        margin: 50px auto 30px;
+        margin: 0 auto 30px;
+        padding-top: 50px;
     }
     h2 {
         font-size: 20px;
@@ -1011,6 +1013,9 @@ h3.about {
         background: transparent;
         padding: 0;
         box-shadow: none;
+    }
+    .index-content{
+        padding-top: 60px;
     }
     .index-content .section {
         margin-left: 0;
@@ -1060,7 +1065,8 @@ h3.about {
     }
     #content {
         width: 85%;
-        margin: 50px auto 30px;
+        margin: 0 auto 30px;
+        padding-top: 50px;
     }
 }
 
@@ -1313,6 +1319,14 @@ h3.about {
 }
 
 @media screen and (max-width:768px) {
+    #header {
+        display: block;
+        -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+        transform: translate3D(0, 0, 0);
+        -webkit-transition: all .2s cubic-bezier(.4, .01, .165, .99);
+        transition: all .2s cubic-bezier(.4, .01, .165, .99)
+    }
     #sidebar {
         -webkit-transition: -webkit-transform .2s cubic-bezier(.4, .01, .165, .99);
         transition: transform .2s cubic-bezier(.4, .01, .165, .99), -webkit-transform .2s cubic-bezier(.4, .01, .165, .99)

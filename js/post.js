@@ -312,12 +312,4 @@ $(function() {
         $('#sidebar').hide(200);
     });
 
-    $(window).on('resize', function(){
-        if(isMobile.any() !== null){
-            $('#header').show();
-        }else{
-            $('#header').hide();
-        }
-    });
-
 });
