@@ -6,24 +6,6 @@
 <body>
     {% include nav.html %}
 
-    <div class="home-menu">
-        <div class="home-icon-con">
-            <a class="home-menu-icon" href="/">Wenda</a>
-            <a class="home-follow" href="#" title="Contact Me">+</a>
-        </div>
-        <div class="home-contact">
-            {% if site.weibo_username %}
-            <a href="http://weibo.com/{{ site.weibo_username }}" target="_blank" class="fa fa-2x fa-weibo" title="weibo"><span>weibo</span></a>
-            {% endif %}
-            {% if site.github_username %}
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" class="fa fa-2x fa-github" title="github"><span>github</span></a>
-            {% endif %}
-            {% if site.facebook_username %}
-            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="fa fa-2x fa-facebook" title="facebook"><span>facebook</span></a>
-            {% endif %}
-        </div>
-    </div>
-
     {{ content }}
 
     {% include footer.html %}

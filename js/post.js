@@ -285,12 +285,39 @@ $(function() {
         prettyPrint();
     });
 
-    if (/\#comment/.test(location.hash)) {
-        $('#disqus_container .comment').trigger('click');
-    }
-
     if (/css3-animation/.test(location.href)) {
         $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
         $.getScript('/js/css3-animate.js', function() {});
     }
+
+    if(isMobile.any() !== null){
+        $('#header').show();
+    }
+
+    $('#header').on('click', '.btn-bar', function(){
+        if($('body').hasClass('side')){
+            $('body').removeClass('side');
+            $('#sidebar').hide();
+            $('#sidebar-mask').hide(200);
+        }else{
+            $('body').addClass('side');
+            $('#sidebar').show();
+            $('#sidebar-mask').show(200);
+        }
+    });
+
+    $('#sidebar-mask').on('click', function(){
+        $(this).hide();
+        $('body').removeClass('side');
+        $('#sidebar').hide(200);
+    });
+
+    $(window).on('resize', function(){
+        if(isMobile.any() !== null){
+            $('#header').show();
+        }else{
+            $('#header').hide();
+        }
+    });
+
 });

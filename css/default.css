@@ -18,8 +18,10 @@ h3,
 h4,
 h5,
 h6,
+
 /*pre,
 code,*/
+
 form,
 fieldset,
 legend,
@@ -184,6 +186,21 @@ body .hide {
 body {
     font-size: 16px;
     font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.4, .01, .165, .99);
+    transition: transform .2s cubic-bezier(.4, .01, .165, .99), -webkit-transform .2s cubic-bezier(.4, .01, .165, .99);
+}
+
+body.side {
+    position: fixed;
+    -webkit-transform: translate3D(250px, 0, 0);
+    -ms-transform: translate3D(250px, 0, 0);
+    transform: translate3D(250px, 0, 0)
 }
 
 a {
@@ -211,6 +228,7 @@ hr {
     border: 0;
     border-top: 1px solid #eee;
 }
+
 .pic-tips {
     text-align: center;
     color: #aaa;
@@ -225,7 +243,7 @@ hr {
     -webkit-overflow-scrolling: touch;
     position: fixed;
     top: 0;
-    width: 20%;
+    width: 250px;
     z-index: 1;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.3);
 }
@@ -245,10 +263,91 @@ hr {
     top: 0
 }
 
+#header {
+    display: none;
+    background-color: #323436;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    z-index: 9
+}
+
+#header h1 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#header h1 a {
+    color: #999
+}
+
+#header .btn-bar {
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50px
+}
+
+body.side #header .btn-bar i {
+    opacity: 0
+}
+
+body.side #header .btn-bar:before {
+    top: 25px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 24px
+}
+
+body.side #header .btn-bar:after {
+    bottom: 24px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 24px
+}
+
+#header .btn-bar i,
+#header .btn-bar:after,
+#header .btn-bar:before {
+    background-color: #999;
+    height: 1px;
+    left: 14px;
+    position: absolute;
+    -webkit-transition: all .2s cubic-bezier(.4, .01, .165, .99) .3s;
+    transition: all .2s cubic-bezier(.4, .01, .165, .99) .3s;
+    width: 22px
+}
+
+#header .btn-bar i {
+    opacity: 1;
+    top: 25px
+}
+
+#header .btn-bar:before {
+    content: '';
+    top: 17px
+}
+
+#header .btn-bar:after {
+    bottom: 16px;
+    content: ''
+}
+
+#header a.me,
+#header a.me img {
+    border-radius: 30px;
+    height: 30px;
+    overflow: hidden;
+    width: 30px
+}
+
 #sidebar .profile {
     padding-top: 40px;
     padding-bottom: 10px;
-    margin-top: 80px;
 }
 
 #sidebar .buttons {
@@ -260,7 +359,12 @@ hr {
     border-radius: 70px;
     height: 140px;
     overflow: hidden;
-    width: 140px
+    width: 140px;
+    line-height: 140px;
+    text-align: center;
+    background: #fff;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 #sidebar .profile a {
@@ -362,46 +466,47 @@ p {
     line-height: 1.8em;
 }
 
-/*// code {
-//     background: #eee;
-//     border: 1px solid #ccc;
-//     padding: 0 5px;
-//     font-family: "Courier";
-//     line-height: 14px;
-//     font-size: 14px;
-//     word-wrap: break-word;
-// }
 
-// pre {
-//     background-color: #000;
-//     padding: 15px;
-//     overflow: auto;
-//     margin-bottom: 40px;
-//     font-size: 14px;
-//     border: 1px solid #eee;
-//     -webkit-border-radius: 4px 4px 4px 4px;
-//     -moz-border-radius: 4px 4px 4px 4px;
-//     border-radius: 4px 4px 4px 4px;
-//     color: #b9bdb6;
-//     margin-top: -20px;
-// }
+/*code {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 0 5px;
+    font-family: "Courier";
+    line-height: 14px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
 
-// h4+pre,
-// h3+pre {
-//     margin-top: 20px;
-// }
+pre {
+    background-color: #000;
+    padding: 15px;
+    overflow: auto;
+    margin-bottom: 40px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    color: #b9bdb6;
+    margin-top: -20px;
+}
 
-// pre code {
-//     background-color: transparent;
-//     border: none;
-//     padding: 0;
-//     word-wrap: normal;
-// }
+h4+pre,
+h3+pre {
+    margin-top: 20px;
+}
 
-// pre ol {
-//     margin-left: 25px;
-//     list-style-type: decimal;
-// }*/
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    word-wrap: normal;
+}
+
+pre ol {
+    margin-left: 25px;
+    list-style-type: decimal;
+}*/
 
 blockquote {
     margin-bottom: 40px;
@@ -460,7 +565,8 @@ blockquote p {
     text-decoration: none;
     transition: .5s;
 }
-.fixed-nav ul li a:hover{
+
+.fixed-nav ul li a:hover {
     text-shadow: 0 0 .03em, 0 0 .05em;
 }
 
@@ -497,7 +603,8 @@ blockquote p {
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     transition: 1s;
 }
-.aboutme .head-img:hover{
+
+.aboutme .head-img:hover {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -507,7 +614,9 @@ blockquote p {
     font-size: 12px;
 }
 
+
 /*爱心动画*/
+
 .aboutme .heart {
     cursor: pointer;
     height: 50px;
@@ -539,14 +648,20 @@ blockquote p {
 }
 
 .entry {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     width: 740px;
     float: left;
     background: #fff;
     padding: 30px;
     box-shadow: 0 2px 6px #ccc;
 }
-.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
+
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6 {
     margin: 30px 0 10px;
 }
 
@@ -855,7 +970,7 @@ h3.about {
     }
     #content {
         width: 85%;
-        margin: 100px auto 50px;
+        margin: 50px auto 30px;
     }
     h2 {
         font-size: 20px;
@@ -906,9 +1021,11 @@ h3.about {
     }
     .index-content .cate-bar {
         width: 85%;
+        display: none;
     }
     .index-content .artical-cate {
         margin-top: 50px;
+        display: none;
     }
     #J_gotoTop {
         display: none;
@@ -943,7 +1060,7 @@ h3.about {
     }
     #content {
         width: 85%;
-        margin: 100px auto 50px;
+        margin: 50px auto 30px;
     }
 }
 
@@ -1218,7 +1335,8 @@ h3.about {
     #sidebar .profile img {
         border-radius: 100px;
         height: 100px;
-        width: 100px
+        width: 100px;
+        line-height: 100px;
     }
     #sidebar .profile span {
         display: none

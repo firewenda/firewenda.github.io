@@ -1,11 +1,29 @@
 <nav id="sidebar" class="behavior_1">
     <div class="wrap">
-        <div class="profile"></div>
+        <div class="profile">
+            <a href="/">Wenda</a>
+        </div>
         <ul class="buttons">
             <li><a class="fa fa-book" href="/blog"><span>Blog</span></a></li>
             <li><a class="fa fa-birthday-cake" href="/life"><span>Life</span></a></li>
             <li><a class="fa fa-calendar" href="/project"><span>Project</span></a></li>
             <li><a class="fa fa-tags" href="/tags"><span>Tags</span></a></li>
         </ul>
+        <ul class="buttons">
+            <li>
+                {% if site.weibo_username %}
+                <a href="http://weibo.com/{{ site.weibo_username }}" target="_blank" class="inline fa fa-2x fa-weibo" title="weibo"></a>
+                {% endif %} {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" class="inline fa fa-2x fa-github" title="github"></a>
+                {% endif %} {% if site.facebook_username %}
+                <a href="https://www.facebook.com/{{ site.facebook_username }}" class="inline fa fa-2x fa-facebook" title="facebook"></a>
+                {% endif %}
+            </li>
+        </ul>
     </div>
 </nav>
+<div id="header">
+    <div class="btn-bar"><i></i></div>
+    <h1><a href="/">Wenda's Blog</a></h1>
+</div>
+<div id="sidebar-mask"></div>

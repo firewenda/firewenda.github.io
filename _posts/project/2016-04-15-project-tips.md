@@ -20,7 +20,7 @@ tags:
 	/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
 	/usr/local/bin/brew: line 26: /usr/local/Library/brew.rb: Undefined error: 0
 
-试了很多种方法都没有办法直接升级，直接个性brew.rb文件的版本号会导致无法安装文件，直接git clean也不行，最后在[stackoverflow]上找到解决方案：
+试了很多种方法都没有办法直接升级，直接修改brew.rb文件中ruby的版本号会导致无法安装文件，直接git clean也不行，最后在[stackoverflow]上找到解决方案：
 
 此时解决方案为先删除homebrew
 
