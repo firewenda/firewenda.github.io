@@ -88,14 +88,14 @@ rotate(<angle>) ：通过指定的角度参数对原元素指定一个 2D rotati
 
 <style>
 .scale-div-1 {
-	width: 300px;
+	width: 150px;
 	margin: 50px auto;
 	background-color: #22baa0;
 	text-align: center;
 	transform: scale(0.5);
 }
 .scale-div-2 {
-	width: 300px;
+	width: 150px;
 	margin: 50px auto;
 	background-color: #22baa0;
 	text-align: center;
@@ -104,7 +104,7 @@ rotate(<angle>) ：通过指定的角度参数对原元素指定一个 2D rotati
 </style>
 
 	.scale-div-1 {
-		width: 300px;
+		width: 150px;
 		margin: 50px auto;
 		background-color: #22baa0;
 		text-align: center;
@@ -116,7 +116,7 @@ rotate(<angle>) ：通过指定的角度参数对原元素指定一个 2D rotati
 <p class="pic-tips">图（二）</p>
 
 	.scale-div-2 {
-		width: 300px;
+		width: 150px;
 		margin: 50px auto;
 		background-color: #22baa0;
 		text-align: center;
