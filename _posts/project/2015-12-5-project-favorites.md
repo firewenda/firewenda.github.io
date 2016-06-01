@@ -32,12 +32,21 @@ tags:
     <li><a href="http://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a> 廖雪峰的官方网站</li>
     <li><a href="http://www.ruanyifeng.com/" target="_blank">阮一峰的个人网站</a> 阮一峰的个人网站</li>
     <li><a href="http://javascript.ruanyifeng.com/" target="_blank">JavaScript 标准参考教程</a> JavaScript 标准参考教程</li>
-    <li><a href="http://es6.ruanyifeng.com/" target="_blank">ECMAScript 6 入门</a> ECMAScript 6 入门</li>
     <li><a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭的个人博客</a> 张鑫旭, 个人博客, 个人网站, web前端,JavaScript,css,html</li>
     <li><a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> 汤姆大叔的博客</li>
     <li><a href="http://www.75team.com/" target="_blank">奇舞团</a> 奇虎360旗下前端开发团队</li>
     <li><a href="http://qianduan.guru/" target="_blank">前端外刊评论</a> 前端外刊评论</li>
 </ul>
+
+#### ES6
+<ul>
+    <li><a href="http://es6.ruanyifeng.com/" target="_blank">ECMAScript 6 入门</a> ECMAScript 6 入门</li>
+    <li><a href="http://www.infoq.com/cn/es6-in-depth/" target="_blank">深入浅出ES6</a> 深入浅出ES6</li>
+</ul>
+
+ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化兼容现有代码的设计理念,你以前变形的JS代码能继续正常运行。到目前为止，已经很多浏览器开始支持ES6的部分特性，并且逐渐支持更多的特性。代表性的浏览器就是[Chrome](http://www.google.cn/chrome/browser/desktop/index.html){:target="_blank"}。 其他浏览器是否支持你可以通过 [Can i use](http://caniuse.com/){:target="_blank"} 来查询。
+
+> IE8这种低版本的浏览器也能通过 babel 来进行 ES6 降级到 ES5 语法，再通过 es5-shim、es5-sham 来支持 ES5 方法。 <a href="https://github.com/w567675/webpack-es6-testdemo" target="_blank">Demo</a>
 
 ### 视频学习
 <ul>
