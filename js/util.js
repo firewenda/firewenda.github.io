@@ -1,4 +1,54 @@
 var util = {
+    prompt: function(args) {
+        var opts = {
+            type: "danger",
+            text: "操作失败",
+            time: 2e3
+        };
+        $.extend(opts, args);
+        var type_class = "prompt-box-text";
+        var icon_class = "";
+        if (opts.type == "success") {
+            type_class = "prompt-box-text prompt-box-success";
+            icon_class = "fa fa-2x fa-check-circle";
+        } else if (opts.type == "info") {
+            type_class = "prompt-box-text prompt-box-info";
+            icon_class = "fa fa-2x fa-info-circle";
+        } else if (opts.type == "warning") {
+            type_class = "prompt-box-text prompt-box-warning";
+            icon_class = "fa fa-2x fa-warning";
+        } else if (opts.type == "danger") {
+            type_class = "prompt-box-text prompt-box-danger";
+            icon_class = "fa fa-2x fa-times-circle";
+        }
+        var h = '<div class="prompt-box-wrap"><div class="' + type_class + '"><span class="' + icon_class + '"></span>' + opts.text + "</div></div>";
+        if ($(".prompt-box-wrap").length) {
+            $(".prompt-box-wrap").remove();
+        }
+        $("body").append(h);
+        window.setTimeout(function() {
+            $(".prompt-box-wrap").hide();
+            if (opts.callback) {
+                opts.callback();
+            }
+            // opts.callback && opts.callback();
+        }, opts.time);
+    },
+    getUrlParam: function(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r !== null) return decodeURI(r[2]);
+        return null;
+    },
+    loading: {
+        node: $('<div class="spinner-overlay"></div><div class="spinner"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div>'),
+        show: function() {
+            $('body').append(this.node);
+        },
+        hide: function() {
+            this.node.remove();
+        }
+    },
     /**
      * Function formatMoney 数值转或货币格式
      *  -@param {Number} number 要转换的数值
@@ -122,6 +172,6 @@ var util = {
         var firstOfMonth = new Date(year, month_number - 1, 1);
         var lastOfMonth = new Date(year, month_number, 0);
         var used = firstOfMonth.getDay() + lastOfMonth.getDate();
-        return Math.ceil( used / 7);
+        return Math.ceil(used / 7);
     }
-}
+};

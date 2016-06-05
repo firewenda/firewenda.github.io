@@ -158,6 +158,7 @@ $(function(){
     </div>
 </div>
 <script>
+    util.dowloadProgress;
     /**
      * [calculator 计算]
      * @return {[type]} [description]
@@ -166,7 +167,10 @@ $(function(){
         clearResult();
         var income = parseFloat($("#txtIncome").val());
         if (isNaN(income)) {
-            alert("无效的收入金额");
+            util.prompt({
+                type: 'warning',
+                text: '无效的收入金额'
+            });
             $("#txtIncome")[0].focus();
             $("#txtIncome")[0].select();
             return;
@@ -175,7 +179,10 @@ $(function(){
 
         var insure = parseFloat($("#txtInsure").val());
         if (isNaN(insure)) {
-            alert("无效的各项社会保险费金额");
+            util.prompt({
+                type: 'warning',
+                text: '无效的各项社会保险费金额'
+            });
             $("#txtInsure")[0].focus();
             $("#txtInsure")[0].select();
             return;
@@ -185,7 +192,10 @@ $(function(){
 
         var taxableIncome = income - insure - baseLine;
         if (taxableIncome <= 0) {
-            alert("您无需缴纳个人所得税!");
+            util.prompt({
+                type: 'success',
+                text: '您无需缴纳个人所得税'
+            });
             $("#txtIncome")[0].focus();
             $("#txtIncome")[0].select();
             return;
