@@ -76,6 +76,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://www.oschina.net/news/22745/8-css-preprocessors-speed" target="_blank">CSS预处理器</a> 8个CSS预处理器</li>
     <li><a href="http://lesscss.org/" target="_blank">less</a> less</li>
     <li><a href="http://sass-lang.com/" target="_blank">sass</a> sass</li>
+    <li><a href="http://compass-style.org/" target="_blank">compass</a> Compass is an open-source CSS Authoring Framework.</li>
 </ul>
 
 ## 框架类
