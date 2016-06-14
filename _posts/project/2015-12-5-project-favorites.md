@@ -57,6 +57,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
 
 ## 工具类
 <ul>
+    <li><a href="http://yeoman.io" target="_blank">Yeoman</a> 前端脚手架</li>
     <li><a href="https://tinypng.com/" target="_blank">图片压缩</a> 熊猫图片压缩</li>
     <li><a href="http://jsfiddle.net/" target="_blank">jsfiddle</a> 在线代码演示</li>
     <li><a href="http://www.gulpjs.com.cn/" target="_blank">gulp.js</a> 基于流的自动化构建工具-gulp.js 中文网</li>
