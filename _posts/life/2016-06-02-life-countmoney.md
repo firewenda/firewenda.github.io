@@ -6,6 +6,18 @@ description: 计算下钱，免得被坑。
 tags:
     - 货币计算
 ---
+
+<style>
+.form-inline{
+    margin-bottom: 20px;
+}
+.calculator label{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+</style>
+
 ## 利率计算
 
 月利率 = 年利率 / 12
@@ -16,33 +28,31 @@ tags:
 
 ##### 根据日利率计算年利率
 
-例如有些借款产品按日利率来计算利息，日利率万分之五，每天只需要还0.5元，计算出年利率为：18.2%。
+例如有些借款产品按日利率来计算利息，日利率 **万分之五**，每天只需要还0.5元，计算出年利率为：18.2%。
 <div class="form-inline">
   	<div class="form-group">
     	<label>日利率：</label>
-    	<input type="text" class="form-control js-input" value="0.05" placeholder="日利率">
+    	<input type="text" class="form-control js-input-day" value="0.05" placeholder="日利率">
   	</div>
   	<div class="form-group">
     	<label>年利率：</label>
-    	<input type="text" readonly class="form-control js-output" placeholder="年利率">
+    	<input type="text" readonly class="form-control js-output-day" placeholder="年利率">
   	</div>
-  	<button class="btn btn-default js-count">计算</button>
+  	<button class="btn btn-default js-count-day">计算</button>
 </div>
 
-<script>
-$(function(){
-	$('.js-count').on('click', function(){
-		var inputVal = $.trim($('.js-input').val());
-		var countNum = inputVal * 365;
-		if(inputVal === ''){
-			alert('请输入日利率');
-		}else{
-			$('.js-output').val(countNum + '%');
-		}
-	});
-	$('.js-count').trigger('click');
-})
-</script>
+例如有些借款产品按月利率来计算利息，月利率 **8%**，计算出年利率为：9.6%。
+<div class="form-inline">
+    <div class="form-group">
+        <label>月利率：</label>
+        <input type="text" class="form-control js-input-month" value="0.8" placeholder="月利率">
+    </div>
+    <div class="form-group">
+        <label>年利率：</label>
+        <input type="text" readonly class="form-control js-output-month" placeholder="年利率">
+    </div>
+    <button class="btn btn-default js-count-month">计算</button>
+</div>
 
 ##### 通过收益算年利率
 
@@ -56,13 +66,7 @@ $(function(){
 
 ## 个人所得税计算器{{ site.time | date: '%Y' }}
 <hr>
-<style>
-.calculator label{
-	font-size: 14px;
-	font-weight: normal;
-	text-align: right;
-}
-</style>
+
 <div class="calculator form-horizontal">
 	<div class="form-group">
         <label class="col-lg-3 col-md-3 form-control-static">收入类型</label>
@@ -158,7 +162,35 @@ $(function(){
     </div>
 </div>
 <script>
-    util.dowloadProgress;
+$(function(){
+    $('.js-count-day').on('click', function(){
+        var inputVal = $.trim($('.js-input-day').val());
+        var countNum = util.accMul(inputVal, 365);
+        if(inputVal === ''){
+            util.prompt({
+                type: 'warning',
+                text: '请输入日利率'
+            });
+        }else{
+            $('.js-output-day').val(countNum + '%');
+        }
+    });
+    $('.js-count-day').trigger('click');
+
+    $('.js-count-month').on('click', function(){
+        var inputVal = $.trim($('.js-input-month').val());
+        var countNum = util.accMul(inputVal, 12);
+        if(inputVal === ''){
+            util.prompt({
+                type: 'warning',
+                text: '请输入月利率'
+            });
+        }else{
+            $('.js-output-month').val(countNum + '%');
+        }
+    });
+    $('.js-count-month').trigger('click');
+
     /**
      * [calculator 计算]
      * @return {[type]} [description]
@@ -273,4 +305,5 @@ $(function(){
             calculator();
         }
     });
+});
 </script>
