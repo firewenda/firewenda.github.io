@@ -393,7 +393,8 @@ body.side #header .btn-bar:after {
     color: #999;
     display: block;
     height: 100%;
-    padding-left: 45px;
+    padding-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
     -webkit-transition: color .2s cubic-bezier(.4, .01, .165, .99);
     transition: color .2s cubic-bezier(.4, .01, .165, .99);
