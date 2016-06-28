@@ -742,6 +742,13 @@ blockquote p {
     line-height: 1.6em;
 }
 
+.index-content .date{
+    display: block;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
+
 .index-content .post-more-link {
     margin-top: 20px;
     text-align: left;

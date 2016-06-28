@@ -20,6 +20,7 @@ layout: home
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 </h2>
                 <div class="title-desc">{{ post.description }}</div>
+                <span class="date">Posted by Wenda on {{ post.date | date: "%Y-%-m-%-d" }}</span>
                 <hr>
             </li>
         {% endfor %}
