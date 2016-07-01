@@ -154,6 +154,11 @@ tags:
 *注意：reduce 为ES5 Array新方法，ie9以下浏览器不兼容<br>
 具体用法参考：<a href="http://www.zhihu.com/question/24927450" target="_blank">如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？</a>
 
+找到数组中的最大值或者最小值
+
+    var arr = [1, 2, 3, 4, 5, 6];
+    console.log(Math.max.apply(Math, arr)); // => 6
+
 ## 常用CSS代码
 
 文字太多超出部分省略号显示
