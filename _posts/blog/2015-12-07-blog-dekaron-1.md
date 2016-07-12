@@ -34,6 +34,7 @@ tags:
 
 ## 经典阶乘函数
 
+    //在严格模式下，不能通过脚本访问 arguments.callee,访问这个属性会导致错误。
     function factorial(num){
         if(num <= 1){
             return 1;
@@ -41,5 +42,14 @@ tags:
             return num * arguments.callee(num - 1);
         }
     }
+
+    //使用匿名函数表达式来达成相同的结果
+    var factorial = (function f(num){
+       if(num <= 1){
+            return 1;
+        }else{
+            return num * f(num - 1);
+        }
+    });
 
     factorial(3); // => 6
