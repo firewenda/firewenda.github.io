@@ -19,7 +19,7 @@ Emmet 项目的前身是前端开发人员熟知的 Zen Coding（快速编写 HT
 ## 3. <a href="https://sublime.wbond.net/packages/SublimeLinter" target="_blank">SublimeLinter</a>(<a href="https://github.com/SublimeLinter/SublimeLinter" target="_blank">GitHub</a>)
 SublimeLinter 是一个代码校验插件，它可以帮你找出错误或编写不规范的代码，支持 C/C++、CoffeeScript、CSS、Git Commit Messages、Haml、HTML、Java、JavaScript、Lua、Objective-J、Perl、PHP、Puppet、Python、Ruby 和 XML 语言。
 <br>如果要校验 JavaScript 或 CSS，你还要安装<a href="http://nodejs.org/" target="_blank">Node.js</a>。
-<br>详细安装方法：<a href="" target="_blank">http://www.wiibil.com/website/sublimelinter-jshint-csslint.html</a>
+<br>详细安装方法：<a href="http://www.wiibil.com/website/sublimelinter-jshint-csslint.html" target="_blank">http://www.wiibil.com/website/sublimelinter-jshint-csslint.html</a>
 ![SublimeLinter](http://www.imjeff.cn/wp-content/uploads/2014/06/SublimeLinter.jpg)
 
 ## 4. <a href="https://github.com/spadgos/sublime-jsdocs" target="_blank">DocBlockr</a>
