@@ -179,6 +179,22 @@ tags:
 我们假设页面默认的 font-size 是 12pt ，不过它也会包含了一个 font-size 为 24pt 的头部。如果你将 body 的 line-height 设置为2em 或者 200%，那样在文档中（当然也包括头部）就会得到一个 24pt 的行高（body 的 font-size 的 2 倍）。因而，头部就是单倍行距，而不是双倍！
 相反，将 line-height 设置为 2 会告知浏览器保持 font-size/line-height 比例，即便文字的尺寸发生变化。body 的行高将是 24pt，而头部的文字为 24pt，行高也将自动增长为 48pt。
 
+如何修改html中列表项li所显示的圆点的颜色？
+
+    ul {
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
+    li {
+        padding-left: 1em;
+        text-indent: -.7em;
+    }
+    li:before {
+        content: "• "; // or "\002022"
+        color: red; /* or whatever color you prefer */
+    }
+
 ## 常用HTML代码
 
 待补充。。。
