@@ -112,6 +112,7 @@ tags:
 	git checkout 744fd32f14604e6dacd458e9415e926574ae0956
 
 还想了解更多？请查看Git官方文档[git]或者阮一峰博客：[ruanyifeng]
+
 [git]: https://git-scm.com/book/zh/v2 "git--local-branching-on-the-cheap"
 [ruanyifeng]: http://www.ruanyifeng.com/blog/2012/07/git.html "Git分支管理策略"
 
