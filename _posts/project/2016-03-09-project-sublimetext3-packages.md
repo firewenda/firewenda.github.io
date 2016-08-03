@@ -26,11 +26,17 @@ SublimeLinter 是一个代码校验插件，它可以帮你找出错误或编写
 如果你遵循的编码的风格很严格，这款插件能够使你的任务更容易。DocBlokr 帮助你创造你的代码注释，通过解析功能，参数，变量，并且自动添加基本项目。
 ![DocBlockr](http://ww3.sinaimg.cn/mw690/005RM8OMgw1emewthbs8zj30jg06qgm8.jpg)
 
-## 5. <a href="https://github.com/revolunet/sublimetext-markdown-preview" target="_blank">MarkdownPreview</a>
+## 5. <a href="https://github.com/SublimeText-Markdown/MarkdownEditing" target="_blank">Markdown Editing</a>
+MarkdownEditing是Markdown写作者必备的插件，它可以不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示。
+
+## 6. <a href="https://github.com/revolunet/sublimetext-markdown-preview" target="_blank">MarkdownPreview</a>
 虽然许多开发人员更喜欢在云端（GitHub Gists，StackEdit，Markable）创建 Markdown 文件 。不过另外一些喜欢在本地编写 Markdown 文件的开发者， MarkdownPreview 很有用，可以预览文件，还有颜色高亮显示。
 ![MarkdownPreview](http://ww1.sinaimg.cn/mw690/005RM8OMgw1emewtgsf8qj30h608eta0.jpg)
 
-## 6. <a href="https://github.com/victorporof/Sublime-HTMLPrettify" target="_blank">HTML-CSS-JS Prettify</a>
+## 7. <a href="https://github.com/timonwong/OmniMarkupPreviewer" target="_blank">OmniMarkupPreviewer</a>
+OmniMarkupPreviewer 作为 Sublime Text 的一款强大插件，支持将标记语言渲染为 HTML 并在浏览器上实时预览，同时支持导出 HTML 源码文件。
+
+## 8. <a href="https://github.com/victorporof/Sublime-HTMLPrettify" target="_blank">HTML-CSS-JS Prettify</a>
 HTML, CSS, JavaScript and JSON code formatter for Sublime Text 2 and 3 via node.js
 
 [wenda]:    https://firewenda.github.io  "wenda"
