@@ -34,7 +34,11 @@ MarkdownEditing是Markdown写作者必备的插件，它可以不仅可以高亮
 ![MarkdownPreview](http://ww1.sinaimg.cn/mw690/005RM8OMgw1emewtgsf8qj30h608eta0.jpg)
 
 ## 7. <a href="https://github.com/timonwong/OmniMarkupPreviewer" target="_blank">OmniMarkupPreviewer</a>
-OmniMarkupPreviewer 作为 Sublime Text 的一款强大插件，支持将标记语言渲染为 HTML 并在浏览器上实时预览，同时支持导出 HTML 源码文件。
+OmniMarkupPreviewer 作为 Sublime Text 的一款强大插件，支持将标记语言渲染为 HTML 并在浏览器上实时预览，同时支持导出 HTML 源码文件。OmniMarkupPreviwer：实时在浏览器中预览，而MarkdownPreview是需要手动生成。如果双屏的话，应该具有不错的体验。快捷键如下：
+
+* Ctrl+Alt+O: Preview Markup in Browser.
+* Ctrl+Alt+X: Export Markup as HTML.
+* Ctrl+Alt+C: Copy Markup as HTML.
 
 ## 8. <a href="https://github.com/victorporof/Sublime-HTMLPrettify" target="_blank">HTML-CSS-JS Prettify</a>
 HTML, CSS, JavaScript and JSON code formatter for Sublime Text 2 and 3 via node.js
