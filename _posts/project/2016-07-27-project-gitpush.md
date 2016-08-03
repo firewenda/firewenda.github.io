@@ -53,6 +53,16 @@ tags:
 
 	git branch
 
+## 切换分支
+
+	git checkout 分支名
+
+放弃修改直接切换分支（谨慎操作）
+
+	git checkout file-name // 放弃单个文件修改
+	git checkout *.js //放弃同后缀名所有文件修改
+	git checkout . //放弃所有文件修改
+
 ## 合并分支
 
 当你对你的新功能满意了的时候，你想要把它加到主干分支上。当你在你的新功能分支上时，你首先需要加载（stage）并且提交你的文件：
