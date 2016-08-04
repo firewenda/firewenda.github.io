@@ -17,7 +17,7 @@ tags:
 ##简单才可依赖
 有些句子，看起来懂，也经常说，比如上面标题这句，但当我看到[《差速器原理》][chasuqi]的视频时，才真正懂了这句话：
 
-<p style="text-align:center"><embed src="http://player.youku.com/player.php/sid/XNDkwMTg0MDI0/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></p>
+<p style="text-align:center"><embed src="http://player.youku.com/player.php/sid/XNDkwMTg0MDI0/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></p>
 
 ##蔓延的简单
 大概是工作的关系，渐渐追求简单的思维蔓延到了生活中，甚至到了本没有标准的艺术范畴。来看下图：
