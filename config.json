@@ -1,0 +1,37 @@
+{
+    "md5path" : "md5-map.json",
+    "dest" : "build/",
+    "blog" : {
+        "clean": ["build/js", "build/css"],
+        "js": {
+            "src": "js/*.js",
+            "ignore": [],
+            "dest": "build/",
+            "md5": ["build/**/*.js", "!build/**/*.min.js"]
+        },
+        "css": {
+            "src": "css/*.css",
+            "dest": "build/",
+            "md5": ["build/**/css/**/*.css", "!build/**/css/**/*.min.css"]
+        },
+        "img": {
+          "src": [
+            "images/**/*.{jpge,jpg,gif,png}"
+          ],
+          "dest": "build/"
+        }
+    },
+    "all": {
+      "clean": "build/",
+      "js": {
+      "src": "**/*.js",
+        "ignore": ["**/*.min.js, **/data/**/*.js"]
+      },
+      "img": {
+        "src": [
+          "**/*.{jpge,jpg,gif,png}"
+        ],
+        "dest": "build/"
+      }
+    }
+}
