@@ -106,6 +106,10 @@ tags:
 
 	git push origin --delete tag tagName
 
+A删除远程分支后，B使用branch -a查看时同步A的删除
+	
+	git fetch -p
+
 ## 回滚到之前的提交状态
 
 	git log
