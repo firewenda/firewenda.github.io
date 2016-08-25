@@ -11,7 +11,7 @@ tags:
 .form-inline{
     margin-bottom: 20px;
 }
-.calculator label{
+.calculator-box label{
     font-size: 14px;
     font-weight: normal;
     text-align: right;
@@ -67,7 +67,7 @@ tags:
 ## 个人所得税计算器{{ site.time | date: '%Y' }}
 <hr>
 
-<div class="calculator form-horizontal">
+<div class="calculator-box form-horizontal">
 	<div class="form-group">
         <label class="col-lg-3 col-md-3 form-control-static">收入类型</label>
         <div class="col-lg-4 col-md-4">
@@ -300,7 +300,7 @@ $(function(){
     /**
      * [点击回车进行计算]
      */
-    $('.calculator').on('keydown', function(e){
+    $('.calculator-box').on('keydown', function(e){
         if(e.keyCode === 13){
             calculator();
         }
