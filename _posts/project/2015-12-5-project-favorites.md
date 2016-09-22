@@ -22,6 +22,7 @@ tags:
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
     <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
+    <li><a href="http://www.webhek.com/" target="_blank">WEB骇客</a></li>
 </ul>
 
 ### 博客学习
