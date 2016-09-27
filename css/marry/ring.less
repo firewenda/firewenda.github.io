@@ -1,0 +1,150 @@
+@bili:75rem;
+.page-ring{
+	display:none;
+	background-image:url("../images/fbg.jpg");
+	background-position:center;
+	background-size:100% auto;
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:999;
+	.phone-call{
+		display:block;
+		.ring-head{
+			width:174/@bili;
+			height:174/@bili;
+			border-top-left-radius: 87/@bili; /* 左上角 */
+			border-top-right-radius: 87/@bili; /* 右上角 */
+			border-bottom-right-radius: 87/@bili; /* 右下角 */
+			border-bottom-left-radius: 87/@bili; /* 左下角 */
+			border-radius:87/@bili;
+			position:absolute;
+			z-index:5;
+			left:50%;
+			top:10%;
+			margin-left:-87/@bili;
+			overflow:hidden;
+			background:url("../images/head2.jpg");
+			background-size:100% auto;
+			display:block;
+		}
+		.ring-name{
+			width:100%;
+			color:#fff;
+			text-align:center;
+			font-size:46/@bili;
+			height:46/@bili;
+			position:absolute;
+			left:0;
+			top:32%;
+		}
+		.ring-sname{
+			width:100%;
+			color:#fff;
+			text-align:center;
+			font-size:22/@bili;
+			height:22/@bili;
+			position:absolute;
+			left:0;
+			top:37%;
+		}
+		.ring-icon1{
+			width:408/@bili;
+			height:95/@bili;
+			position:absolute;
+			left:50%;
+			margin-left:-204/@bili;
+			bottom:35%;
+		}
+		.ring-btns{
+			width:475/@bili;
+			height:132/@bili;
+			position:absolute;
+			left:50%;
+			margin-left:-230/@bili;
+			bottom:20%;
+			.ring-btn{
+				width:132/@bili;
+				height:132/@bili;
+				background:url("../images/ring_07.png") no-repeat;
+				background-size:auto 100%;
+				display:block;
+			}
+			.btn-cancel{
+				float:left;
+				background-position:left;
+			}
+			.btn-get{
+				float:right;
+				margin-right:1/@bili;
+				background-position:right;
+				position:relative;
+				z-index:2;
+			}
+			.anim-ringbtn{
+				width:150/@bili;
+				height:150/@bili;
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin-top:-77/@bili;
+				margin-left:94/@bili;
+				border-radius:80/@bili;
+				border:3/@bili solid #4cd964;
+				z-index:1
+			}
+			.anim-delay1{
+				width:154/@bili;
+				height:154/@bili;
+				border-radius:82/@bili;
+				margin-top:-79/@bili;
+				margin-left:92/@bili;
+			}
+		}
+	}
+	.phone-pick{
+		display:none;
+		.phone-title{
+			width:100%;
+			color:#fff;
+			text-align:center;
+			font-size:48/@bili;
+			height:86/@bili;
+			position:absolute;
+			left:0;
+			top:12%;
+		}
+		.phone-count{
+			width:100%;
+			color:#fff;
+			text-align:center;
+			font-size:30/@bili;
+			height:30/@bili;
+			position:absolute;
+			left:0;
+			top:20%;
+		}
+		.phone-icon{
+			width:512/@bili;
+			height:388/@bili;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin-left:-256/@bili;
+			margin-top:-250/@bili;
+		}
+		.phone-btn{
+			width:132/@bili;
+			height:132/@bili;
+			background:url("../images/ring_07.png") no-repeat left;
+			background-size:auto 100%;
+			display:block;
+			position:absolute;
+			left:50%;
+			margin-left:-66/@bili;
+			bottom:15%;
+		}
+	}
+}

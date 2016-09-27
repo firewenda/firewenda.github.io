@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>欢迎参加我的婚礼</title>
+    <link rel="stylesheet" href="css/marry/reset.css">
+    <link rel="stylesheet" href="css/marry/main.css">
+    <link rel="stylesheet" href="css/marry/ring.css">
+    <link rel="stylesheet" href="css/marry/animate.css">
+    <script src="js/marry/mbase.min.js"></script>
+    <script src="js/marry/zepto.min.js"></script>
+    <script src="js/marry/artTemplate.min.js"></script>
+</head>
+<body>
+    <img src="images/marry/sharepic.jpg" class="share-pic" alt="">
+    <div class="page-main page-loading">
+        <audio src="" id="dingdong" preload="metadata"></audio>
+        <audio src="" id="bg_music" preload="metadata"></audio>
 
+        <audio src="" id="unlock" preload="metadata"></audio>
+        <audio src="" id="ring" loop="true" preload="metadata"></audio>
+        <audio src="" id="phone" preload="metadata"></audio>
+    </div>
+    <div class="page-main first-page">
+        <section class="first-time">09:00</section>
+        <section class="first-dw">11月27日 星期日</section>
+        <section class="first-message">
+            <img src="images/marry/message_02.png" alt="">
+            <p>达文东：hi，我11月27号结婚，请您务必参加，我在家恭候您的大驾哦。</p>
+        </section>
+        <section class="first-unlock">
+            <img src="images/marry/unlock.gif" alt="">
+        </section>
+        <section class="first-footer">
+            <img src="images/marry/footer_04.png" alt="" />
+        </section>
+    </div>
+    <div class="page-main chatting-page">
+        <div class="page-fix page-chat">
+            <section class="chat-wrapper">
+                <ul class="chat-list">
+                    <li class="chat-time">09:01</li>
+                </ul>
+            </section>
+        </div>
+        <section class="bottom-input">
+            <div class="show-input">
+                <p class="input-scroll-text"></p>
+            </div>
+            <a href="javascript:void(0)" class="send-message"></a>
+            <p class="btn-advioce"></p>
+        </section>
+    </div>
+    <div class="page-main page-ring">
+        <!--响铃界面-->
+        <section class="phone-call">
+            <a href="javascript:void(0)" class="ring-head">
+            </a>
+            <p class="ring-name">客户</p>
+            <p class="ring-sname">手机</p>
+            <section class="ring-icon1">
+                <img src="images/marry/ring_03.png" alt="">
+            </section>
+            <section class="ring-btns">
+                <a href="javascript:void(0)" class="ring-btn btn-cancel"></a>
+                <a href="javascript:void(0)" class="ring-btn btn-get"></a>
+                <p class="anim-ringbtn anim-btn">
+
+                </p>
+                <p class="anim-ringbtn anim-btn anim-delay1">
+
+                </p>
+            </section>
+        </section>
+        <!--接听界面-->
+        <section class="phone-pick">
+            <p class="phone-title">客户</p>
+            <p class="phone-count">00:00</p>
+            <section class="phone-icon">
+                <img src="images/marry/icon2_03.png" alt="">
+            </section>
+            <a href="javascript:void(0)" class="phone-btn"></a>
+        </section>
+    </div>
+    <div class="page-main last-page">
+
+    </div>
+    <script id="chatTmpl" type="text/html">
+        <li class="chat-item <%if(author=="self"){%>self-author<%}else{%>target-author<%}%>">
+            <p class="head-img">
+                <%if(author=="self"){%>
+                <img src="images/marry/head1.jpg" alt="" />
+                <%}else{%>
+                <img src="images/marry/head2.jpg" alt="" />
+                <%}%>
+            </p>
+            <div class="chat-section animated">
+                <p><%=word%></p>
+                <p class="chat-angle2"></p>
+                <p class="chat-angle"></p>
+            </div>
+        </li>
+    </script>
+    <script type="text/html" id="lastTmpl">
+    <section>
+        <i class="wx-star wx-star1 anim-star"></i>
+        <i class="wx-star delay1 wx-star2 anim-star"></i>
+        <i class="wx-star delay3 wx-star3 anim-star"></i>
+    </section>
+    <section class="last-person">
+        <img src="images/marry/lastperson_02.png" />
+    </section>
+    <section class="last-text">
+        <p class="show-text lastfade delay1" style="">
+            客户虐我千百遍
+        </p>
+        <p class="show-text lastfade delay4" style="margin-top:0;display:block;">
+            我待客户如初恋
+        </p>
+        <p class="show-text lastfade delay7" style="margin-top:0;">
+            每一次最终定稿
+        </p>
+        <p class="show-text lastfade delay10" style="margin-top:0;">
+            都经历了N版修改
+        </p>
+        <p class="show-text lastfade delay13" style="margin-top:0;">
+            同事们一个个都下班啦
+        </p>
+        <p class="show-text lastfade_long delay16" style="margin-top:0;">
+            泡杯咖啡疯狂加班的苦逼设计师
+        </p>
+        <p class="show-text lastfade delay19" style="margin-top:0;">
+            是你么?
+        </p>
+        <p class="show-text lastfade delay22" style="margin-top:0;">
+            在别人眼中
+        </p>
+        <p class="show-text lastfade_long delay25" style="margin-top:0;">
+            我们随便戳戳鼠标就是一个大作
+        </p>
+        <p class="show-text lastfade_long delay28" style="margin-top:0;">
+            我们脑洞大开，创意无限
+        </p>
+        <p class="show-text lastfade delay31" style="margin-top:0;">
+            在我眼里
+        </p>
+        <p class="show-text lastfade delay34" style="margin-top:0;">
+            我们是
+        </p>
+    </section>
+    <section class="last-scene">
+        <p class="last-title fadeInDown animated delay37"><img src="images/marry/f1_02.png" alt=""></p>
+        <p class="last-zan fadeInUp animated delay37">
+            <img src="images/marry/f2_05.png" alt="">
+            <span class="zan-num"></span>
+        </p>
+    </section>
+    <div class="last-page-bottom">
+        <img src="images/marry/earth_02.png" class="beyond_earth" alt="" />
+        <img src="images/marry/logo_03.png" alt="" class="beyond_logo" />
+        <img src="images/marry/earthbg_02.png" class="beyond_circle earthanim" />
+    </div>
+    <div class="last-mask">
+
+    </div>
+    </script>
+    <script src="js/marry/main.js"></script>
+</body>
+</html>
