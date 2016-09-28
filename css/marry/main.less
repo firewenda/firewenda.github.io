@@ -2,7 +2,7 @@
 html,body{height:100%;overflow:hidden}
 @font-face {
     font-family: "helve";
-    src: url("../font/helve.otf");
+    src: url("../fonts/helve.otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -11,12 +11,23 @@ html,body{height:100%;overflow:hidden}
 	width:100%;
 	height:100%;
 	z-index:999;
-	background:#15191f url("../images/loading.gif") center no-repeat;
+	background:#15191f url("../../images/marry/loading.gif") center no-repeat;
 }
 .share-pic{
 	position:absolute;
 	left:-2000px;
 	top:-2000px;
+}
+.first-message{
+	position: relative;
+}
+.first-message p{
+	position: absolute;
+	left: 12%;
+	top: 37%;
+	width: 80%;
+	line-height: 1.8;
+	color: #fff;
 }
 .wx-star{
 	display:block;
@@ -55,13 +66,13 @@ html,body{height:100%;overflow:hidden}
 	top:5/@bili;
 }
 .emj-crazy{
-	background-image:url("../images/18.gif");
+	background-image:url("../../images/marry/18.gif");
 }
 .emj-noword{
-	background-image:url("../images/1.gif");
+	background-image:url("../../images/marry/1.gif");
 }
 .emj-cry{
-	background-image:url("../images/5.gif");
+	background-image:url("../../images/marry/113.gif");
 }
 .page-main{
 	img{
@@ -187,7 +198,7 @@ html,body{height:100%;overflow:hidden}
 	}
 	.bottom-input{
 		height:101/@bili;
-		background:url("../images/chat_10.png") center no-repeat;
+		background:url("../../images/marry/chat_10.png") center no-repeat;
 		background-size:100% auto;
 		position:fixed;
 		bottom:0;
@@ -219,7 +230,7 @@ html,body{height:100%;overflow:hidden}
 		}
 		.type-pointer{
 			color:#3600ff;
-			background:url("../images/line_28.png") no-repeat center;
+			background:url("../../images/marry/line_28.png") no-repeat center;
 			background-size:auto 100%;
 			padding:0 4px;
 			position:relative;
@@ -231,7 +242,7 @@ html,body{height:100%;overflow:hidden}
 			position:absolute;
 			right:-30/@bili;
 			top:-35/@bili;
-			background:url("../images/sendbtn.gif");
+			background:url("../../images/marry/sendbtn.gif");
 			background-size:100% auto;
 			display:none;
 		}
@@ -242,18 +253,18 @@ html,body{height:100%;overflow:hidden}
 		height:100%;
 		left:0;
 		top:0;
-		background:url("../images/hallow.png") center no-repeat;
+		background:url("../../images/marry/hallow.png") center no-repeat;
 		background-size:100% auto;
 		z-index:99;
 		display:none;
-		
+
 	}
 }
 .first-page{
 	position:absolute;
 	width:100%;
 	height:100%;
-	background:url("../images/fbg.jpg") center no-repeat;
+	background:url("../../images/marry/fbg.jpg") center no-repeat;
 	background-size:100% auto;
 	z-index:11;
 	.first-time{
@@ -288,7 +299,7 @@ html,body{height:100%;overflow:hidden}
 	}
 }
 .last-page{
-	background:#111b36 url("../images/lastbg.jpg") top no-repeat;
+	background:#111b36 url("../../images/marry/lastbg.jpg") top no-repeat;
 	background-size:100% auto;
 	background-position:center -70/@bili;
 	height:100%;
@@ -306,33 +317,11 @@ html,body{height:100%;overflow:hidden}
 	}
 	.last-page-bottom{
 		position:absolute;
-		bottom:0;
-		width:100%;
-		height:276/@bili;
-		left:0;
+		bottom: 10%;
+		width:80%;
+		height: 452/@bili;
+		left:10%;
 		z-index:1;
-		.beyond_earth{
-			position:absolute;
-			z-index:2;
-			left:0;
-			top:0;
-		}
-		.beyond_logo{
-			width:170/@bili;
-			height:auto;
-			left:50%;
-			margin-left:-85/@bili;
-			bottom:10/@bili;
-			position:absolute;
-			z-index:2;
-		}
-		.beyond_circle{
-			width:100%;
-			left:0;
-			position:absolute;
-			bottom:-15/@bili;
-			z-index:1;
-		}
 	}
 	.last-title{
 		position:absolute;
@@ -340,50 +329,37 @@ html,body{height:100%;overflow:hidden}
 		margin-top:-400/@bili;
 		display:none;
 	}
-	
+
 	.last-text{
 		position:absolute;
-		width:100%;
-		top:50%;
-		margin-top:-150/@bili;
-		.show-text{
-			width:100%;
-			position:absolute;
-			left:0;
-			top:0;
-			font-size:40/@bili;
-			color:#fff;
-			line-height:72/@bili;
+		width:80%;
+		top:15%;
+		left:10%;
+		color:#fff;
+		line-height:2;
+		h5{
 			text-align:center;
-			opacity:0;
+			font-size:40/@bili;
+			margin-bottom: 50/@bili;
+		}
+		.show-text{
+			font-size:32/@bili;
+			border: 1px solid;
+    		border-radius: 5px;
+    		padding: 10px;
+			em{
+				display:block;
+				font-style: normal;
+			}
 			span{
-				
+				display:block;
+			}
+			strong{
+				display:blcok;
 			}
 		}
 	}
 	.last-scene{
 		height:100%;
-	}
-	.last-zan{
-		display:none;
-		width:210/@bili;
-		height:210/@bili;
-		position:absolute;
-		left:50%;
-		top:50%;
-		margin-left:-105/@bili;
-		margin-top:20/@bili;
-		z-index:50;
-		.zan-num{
-			position:absolute;
-			width:100%;
-			height:70/@bili;
-			line-height:70/@bili;
-			text-align:center;
-			color:#ff711c;
-			font-size:38/@bili;
-			bottom:20/@bili;
-		}
-		
 	}
 }

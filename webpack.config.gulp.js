@@ -121,13 +121,8 @@ function webpackConfig(args) {
         },
         resolve: {
             alias: {
-                'jquery': ROOT_PATH + '/plugins/jquery/jquery-2.1.4.min.js',
+                'jquery': ROOT_PATH + '/js/jquery-2.1.4.min.js',
                 '{plugins}': ROOT_PATH + '/plugins',
-                '{myplugins}': ROOT_PATH + '/myplugins',
-                '{social}': ROOT_PATH + '/social',
-                '{crm}': ROOT_PATH + '/crm',
-                '{tianwu}': ROOT_PATH + '/tianwu',
-                '{joyowyb}': ROOT_PATH + '/joyowyb',
             },
             // modulesDirectories: [ 'lib', 'modules', 'node_modules'],
             extensions: ['', '.js', '.less', '.gif', '.html', '.png', '.webp', '.jpg']

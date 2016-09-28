@@ -38,23 +38,3 @@ gulp.task('copy:myplugins', function(callback) {
     return gulp.src(['myplugins/**/*.{js,css,jpge,jpg,gif,png,ttf,eot,svg,woff,woff2}'])
         .pipe(gulp.dest( DEST + 'myplugins/'));
 });
-gulp.task('copy:plugins', function(callback) {
-    return gulp.src(['plugins/**/*.{js,css,jpge,jpg,gif,png,ttf,eot,svg,woff,woff2}'])
-        .pipe(gulp.dest( DEST + 'plugins/'));
-});
-gulp.task('copy:crm', function(callback) {
-    return gulp.src('crm/**/*.{css,jpge,jpg,gif,png}')
-        .pipe(gulp.dest(DEST + 'crm/'));
-});
-gulp.task('copy:social', function(callback) {
-    return gulp.src('social/**/*.{css,jpge,jpg,gif,png}')
-        .pipe(gulp.dest(DEST + 'social/'));
-});
-gulp.task('copy:tianwu', function(callback) {
-    return gulp.src('tianwu/**/*.{css,jpge,jpg,gif,png}')
-        .pipe(gulp.dest(DEST + 'tianwu/'));
-});
-gulp.task('copy:joyowyb', function(callback) {
-    return gulp.src('joyowyb/**/*.{css,jpge,jpg,gif,png}')
-        .pipe(gulp.dest(DEST + 'joyowyb/'));
-});

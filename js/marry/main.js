@@ -1,8 +1,6 @@
 $(function() {
     template.config("escape", false);
-    var config = {
-        voteid: "1446029479"
-    };
+
     //倒计时
     function countDown(endtime, node, aftercallback) {
         this.endtime = endtime || 100000;
@@ -71,64 +69,25 @@ $(function() {
         }
     };
     var lastPage = {
-        getZan: function() {
-            $.ajax({
-                url: "http://h5.yunplus.com.cn/vote/voteadmin/getvote.php?key=" + config.voteid,
-                dataType: "jsonp",
-                type: "get",
-                success: function(d) {
-                    console.log(d);
-                    var num = d.data[0].voteNum;
-                    $(".zan-num").html(num);
-                }
-            });
-        },
-        setZan: function() {
-            var self = this;
-            $.ajax({
-                url: "http://h5.yunplus.com.cn/vote/voteadmin/addvotenum.php?voteid=" + config.voteid,
-                dataType: "jsonp",
-                type: "get",
-                success: function(d) {
-                    if (d.success) {
-                        //alert("投票成功");
-                        self.getZan();
-                    }
-                }
-            });
-        },
         init: function() {
             var self = this;
-            window.bg_music.playm();
+            //window.bg_music.playm();
             var html = $("#lastTmpl").html();
             $(".last-page").html(html);
             $(".page-ring").add(".chatting-page").removeClass("fadeIn animated");
             $(".last-page").addClass("fadeIn animated");
-            self.getZan();
-            $(".last-zan").on("click", function() {
-                self.setZan();
-                $(".last-mask").addClass("fadeIn animated");
-                $(".last-scene").css('opacity', "0");
-            });
-            $(".last-mask").on("click", function() {
-                $(".last-mask").removeClass("fadeIn animated");
-                $(".last-scene").css('opacity', "1");
-            });
-            /*$(document).delegate(".last-zan","click",function(){
-            	self.setZan();
-            });*/
         }
     };
     var pageChat = {
         chatText: [
-            { author: "target", word: "hi，页面明早要上线，版头还有点问题，现在能改下吗？" },
-            { author: "self", word: "啊？都凌晨了，明早到公司帮你改可以吗？" },
-            { author: "target", word: "来不及啦，页面明天9点就要上线了！" },
-            { author: "self", word: "<span class='wx-emj emj-crazy'></span>要改的东西多吗？" },
-            { author: "target", word: "不多的，我打电话跟你说下要改的内容哈" },
-            { author: "self", word: "那好吧 <span class='wx-emj emj-noword'></span>" },
-            { author: "target", word: "恩，辛苦了哈，亲" },
-            { author: "self", word: "<span class='wx-emj emj-cry'></span>" },
+            { author: "self", word: "hi，我11月27号结婚，请您务必参加，我在家恭候您的大驾哦。" },
+            { author: "target", word: "哇！你终于定下来，要结婚了，恭喜恭喜呀。" },
+            { author: "self", word: "谢谢！谢谢！到时可一定要来哦！" },
+            { author: "target", word: "嗯～必须的，具体在哪举行婚礼呀？" },
+            { author: "self", word: "在我老婆家，具体地址打电话和你说下。" },
+            { author: "target", word: "好的。" },
+            { author: "self", word: "恩，欢迎亲。" },
+            { author: "target", word: "<span class='wx-emj emj-cry'></span>" },
         ],
         index: -1,
         pn: ".chat-list",
@@ -172,32 +131,6 @@ $(function() {
 
                 }
             }, delay);
-            /*setTimeout(function(){
-            	self.animnext();
-            	setTimeout(function(){
-            		self.animnext();
-            		setTimeout(function(){
-            			self.animnext();
-            			setTimeout(function(){
-            				self.animnext();
-            				setTimeout(function(){
-            					self.animnext();
-            					setTimeout(function(){
-            						self.animnext();
-            						setTimeout(function(){
-            							self.animnext();
-            							setTimeout(function(){
-            								//$(".show-input .input-scroll-text").html("点击发送，向设计师告白→");
-            								//$(".btn-advioce").css('display',"block");
-            								window.phonePage=new _phonePage();
-            							},delay);
-            						},delay)
-            					},delay);
-            				},delay);
-            			},delay);
-            		},delay);
-            	},delay)
-            },delay);*/
             self.animnext();
             window.dingdongm.playm();
             $(".btn-advioce").on("click", function() {
