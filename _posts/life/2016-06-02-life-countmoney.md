@@ -41,7 +41,7 @@ tags:
   	<button class="btn btn-default js-count-day">计算</button>
 </div>
 
-例如有些借款产品按月利率来计算利息，月利率 **8%**，计算出年利率为：9.6%。
+例如有些借款产品按月利率来计算利息，月利率 **8%。**，计算出年利率为：9.6%。
 <div class="form-inline">
     <div class="form-group">
         <label>月利率：</label>
