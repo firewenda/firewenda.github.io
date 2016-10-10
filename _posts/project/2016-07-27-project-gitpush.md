@@ -67,7 +67,8 @@ tags:
 
 当你对你的新功能满意了的时候，你想要把它加到主干分支上。当你在你的新功能分支上时，你首先需要加载（stage）并且提交你的文件：
 
-	git add .git commit -m "adds my new feature"
+	git add .
+	git commit -m "adds my new feature"
 
 然后你移到你的主干分支：
 
