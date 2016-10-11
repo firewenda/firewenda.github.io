@@ -82,7 +82,8 @@ tags:
 
 相反，如果你打算丢弃你在分支里做的修改，你首先需要加载（stage）你的文件并且在分支里提交：
 
-	git add .git commit -m "feature to be discarded"
+	git add .
+	git commit -m "feature to be discarded"
 
 然后，你移到主干分支：
 
