@@ -41,6 +41,17 @@ tags:
 	git pull //下载服务器代码
 	git push //上传代码至服务器
 
+## 暂存
+
+我们在使用git的时候也会遇到这样的情况。当在需要紧急处理一个bug时，工作区内容又没有完成，不适合提交，想暂存起来。git提供了git stash命令来解决这样的需求。
+
+	//暂存当前状态
+	git stash
+	//显示已暂存列表
+	git stash list
+	//恢复暂存区和工作区进度
+	git satsh pop
+
 ## 创建分支
 
 	git checkout -b new_feature
