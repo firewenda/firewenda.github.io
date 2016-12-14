@@ -55,6 +55,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a> IT在线教育平台-中国最大的IT职业在线教育平台</li>
     <li><a href="http://apeclass.cn/" target="_blank">海棠学院</a> WEB前端学习新体验</li>
     <li><a href="http://www.codefordream.com/" target="_blank">几米家的网站</a> HTML、CSS、Javascript基础知识</li>
+    <li><a href="https://www.khanacademy.org/" target="_blank">可汗学院</a></li>
 </ul>
 
 ## 工具类
