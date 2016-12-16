@@ -50,7 +50,7 @@ tags:
 	//显示已暂存列表
 	git stash list
 	//恢复暂存区和工作区进度
-	git satsh pop
+	git stash pop
 
 ## 创建分支
 
