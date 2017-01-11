@@ -529,6 +529,7 @@ blockquote p {
     min-height: 400px;
     height: auto !important;
     height: 400px;
+    position: relative;
 }
 
 
@@ -538,7 +539,7 @@ blockquote p {
     width: 740px;
     height: 38px;
     position: absolute;
-    top: 15px;
+    top: -60px;
     left: 50%;
     margin-left: -530px;
 }
