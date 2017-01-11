@@ -14,6 +14,12 @@ layout: default
     #sidebar{
         display: none;
     }
+    .js-particles{
+        position: fixed;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+    }
 </style>
 
 <div id="content">
@@ -97,7 +103,7 @@ layout: default
 
 </div>
 
-<canvas id="js-particles" style="position: fixed; top: 0; z-index: -1;"></canvas>
+<canvas class="js-particles" id="js-particles"></canvas>
 
 <script>
     //定义画布宽高和生成点的个数
@@ -186,6 +192,24 @@ layout: default
 
     //调用执行
     window.onload = function () {
+        init();
+        setInterval(function () {
+            for (var i = 0; i < POINT; i++) {
+                var cir = circleArr[i];
+                cir.x += cir.moveX;
+                cir.y += cir.moveY;
+                if (cir.x > WIDTH) cir.x = 0;
+                else if (cir.x < 0) cir.x = WIDTH;
+                if (cir.y > HEIGHT) cir.y = 0;
+                else if (cir.y < 0) cir.y = HEIGHT;
+                
+            }
+            draw();
+        }, 16);
+    }
+
+    //窗口变动调用执行
+    window.onresize = function () {
         init();
         setInterval(function () {
             for (var i = 0; i < POINT; i++) {
