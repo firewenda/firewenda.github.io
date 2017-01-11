@@ -1363,7 +1363,7 @@ h3.about {
     #sidebar .profile span {
         display: none
     }
-    .footer {
+    .js-particles, .js-calculator, .footer {
         display: none;
     }
 }
