@@ -530,6 +530,7 @@ blockquote p {
     height: auto !important;
     height: 400px;
     position: relative;
+    z-index: 1;
 }
 
 
