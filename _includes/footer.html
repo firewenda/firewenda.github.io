@@ -6,8 +6,8 @@
 </footer>
 <script src="/build/js/post.js"></script>
 
-<!-- async load function -->
 <script>
+// async load function
 function async(u, c) {
     var d = document,
         t = 'script',
@@ -21,9 +21,7 @@ function async(u, c) {
     }
     s.parentNode.insertBefore(o, s);
 }
-</script>
-<!-- jquery.tagcloud.js -->
-<script>
+// jquery.tagcloud.js
 // only load tagcloud.js in tag.html
 if ($('#tag_cloud').length !== 0) {
     async('/js/jquery.tagcloud.js', function() {
