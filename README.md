@@ -6,6 +6,13 @@
 
 当然你也可以直接把我的包clone下去改成自己的博客，但是请把博客里属于我原创的文章删除，若要引用注明下出处，不胜感激。
 
+页面使用wbpack打包，使用流程：
+    npm install
+    //本地环境，并将本地调用改为http://127.0.0.1:4001
+    gulp dev --src blog
+    //打包上线
+    gulp test --src blog
+
 以下纯属啰嗦，请自动互略。
 
 * 推荐阅读：[我为什么写博客？](http://beiyuu.com/why-blog/)

@@ -212,7 +212,7 @@
 	        }
 
 	        function genTmpl() {
-	            var h1txt = $('h1').text();
+	            var h1txt = $('h1.entry-title').text();
 	            var tmpl = '<ul><li class="h1"><a href="#">' + h1txt + '</a></li>';
 
 	            var heading = initHeading();
@@ -239,7 +239,7 @@
 
 	            $('#content').append(indexCon);
 
-	            $('#menuIndex').append($(tmpl)).delegate('a', 'click', function (e) {
+	            $('#menuIndex').append($(tmpl)).on('click', 'a', function (e) {
 	                e.preventDefault();
 
 	                var selector = $(this).attr('data-id') ? '#' + $(this).attr('data-id') : 'h1';

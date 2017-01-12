@@ -10,9 +10,6 @@
  * Module dependencies
  * 自动打包
  */
-
-
-
 let path = require('path');
 let glob = require('glob');
 let fs = require("fs");
@@ -35,11 +32,8 @@ let APP_PATH = path.resolve(ROOT_PATH, './');
 
 let BUILD_PATH = path.resolve(ROOT_PATH, DEST);
 
-
-
 /* 获取任务路径 */
 let taskSrcF = require('./tasks/options/taskSrc');
-
 
 /**
  * Function getEntry
@@ -55,7 +49,6 @@ function getEntry(args) {
     let files = glob.sync(taskSrc.js.src, {
         ignore: taskSrc.js.ignore
     });
-
 
     //create fileObj
     files.forEach(function(item) {
@@ -103,18 +96,6 @@ function webpackConfig(args) {
                     test: /\.jsx?$/,
                     loaders: ['babel'],
                 }]
-                // {
-                //     test: /\.(png|jpg)$/,
-                //     loader: 'url-loader?limit=1'
-                // },
-                // {
-                //     test: /\.js$/,
-                //     loader: 'babel',
-                //     query: {
-                //         presets: ['es2015']
-                //     }
-                // }
-
         },
         jshint: {
             // esnext: true
@@ -195,29 +176,7 @@ function webpackConfig(args) {
         wConfig.devtool = "#source-map";
     }
 
-
-
-    // var _ = args._;
-    // if(_[0] === 'dev') {
-    //     wConfig.devServer = {
-    //         historyApiFallback: true,
-    //         // hot: true,
-    //         inline: true,
-    //         progress: true,
-    //         proxy: {
-    //             '/api/*': {
-    //                 target: 'http://localhost:5000',
-    //                 secure: false
-    //             }
-    //         }
-    //     }
-    // }
-
     return wConfig;
-
 }
-
-
-
 
 module.exports = webpackConfig;
