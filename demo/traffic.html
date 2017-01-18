@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .traffic-wrap{
+        width: 140px;
+        height: 380px;
+        margin: 0 auto;
+        padding: 10px 0;
+        background: linear-gradient(#121823, #161d2b);
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: inset 0 3px 8px 1px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .traffic-wrap ul{
+        width: 140px;
+    }
+    .traffic-wrap ul li{
+        display: block;
+        width: 140px;
+        margin-bottom: 10px;
+    }
+    .traffic-wrap ul li span{
+        display: block;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background-color: #ccc;
+        box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.05), 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    .traffic-wrap .stop li:nth-child(1) span{
+        background-color: red;
+    }
+    .traffic-wrap .wait li:nth-child(2) span{
+        background-color: yellow;
+    }
+    .traffic-wrap .pass li:nth-child(3) span{
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+    <div class="traffic-wrap">
+        <ul id="traffic">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+
+    <script>
+    const traffic = document.getElementById('traffic');
+    
+    // 无法修改间隔时间
+    /*function poll(...fnList){
+        let stateIndex = 0;
+        return function(...args){
+            let fn = fnList[stateIndex++ % fnList.length];
+            return fn.apply(this, args);
+        }
+    }
+
+    function setState(state){
+        traffic.className = state;
+    }
+
+    let trafficStatePoll = poll(setState.bind(null, 'wait'), setState.bind(null, 'stop'), setState.bind(null, 'pass'));
+
+    setInterval(trafficStatePoll, 2000);*/
+
+    // 可以修改间隔时间
+    function wait(time){
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+    function setState(state){
+        traffic.className = state;
+    }
+
+    function reset(){
+        Promise.resolve()
+            .then(setState.bind(null, 'wait'))
+            .then(wait.bind(null, 1000))
+            .then(setState.bind(null, 'stop'))
+            .then(wait.bind(null, 2000))
+            .then(setState.bind(null, 'pass'))
+            .then(wait.bind(null, 3000))
+            .then(reset);
+    }
+
+    reset();
+    </script>
+</body>
+</html>
