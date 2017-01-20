@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .lottery-box{
+        width: 735px;
+        height: 460px;
+        margin: 20px auto;
+        border: 1px solid #000;
+        padding: 20px;
+    }
+    .base {
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        color: #000000;
+        background: -moz-linear-gradient(top, #FFFFFF, #DDDDDD);
+        background: -webkit-gradient(linear,0 0, 0 100%, from(#FFFFFF), to(#DDDDDD));
+        border-radius: 5px 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        box-shadow: 5px 5px 5px #CCCCCC;
+        -webkit-box-shadow: 5px 5px #CCCCCC;
+        -moz-box-shadow: 5px 5px #CCCCCC;
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='#CCCCCC', Direction=135, Strength=5);
+        height: 200px;
+        width: 100px;
+        float: left;
+        cursor: pointer;
+        font-size: 80px;
+        font-family: "Arial";
+        line-height: 200px;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 0 0 25px;
+        margin: 0 20px 20px 0;
+    }
+    .lottery-handle{
+        width: 735px;
+        margin: 0 auto;
+        padding: 0 20px;
+        line-height: 24px;
+    }
+    .lottery-handle input{
+        height: 24px;
+    }
+    .lottery-handle button{
+        display: block;
+        width: 200px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        margin: 20px auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="lottery-box" id="lotteryBox"></div>
+    <div class="lottery-handle">
+        <label for="maxPeople">抽奖总人数：</label>
+        <input id="maxPeople" type="number" min="1" name="" value="10">
+        <label for="showPeople">展示中奖号码数：</label>
+        <input id="showPeople" type="number" min="1" name="" value="2">
+        <button id="lotteryBtn">抽奖</button>
+    </div>
+    
+    <script>
+    function * draw(amount){
+        const cards = Array(amount).fill().map((_,i) => i+1);
+
+        for(let i = amount - 1; i >= 0; i--){
+            let rand = Math.floor((i + 1) * Math.random());
+            [cards[rand], cards[i]] = [cards[i], cards[rand]];
+            yield cards[i];
+        }
+    }
+
+    let lotteryBtn = document.getElementById('lotteryBtn');
+
+    lotteryBtn.onclick = function(){
+        let maxPeople = parseInt(document.getElementById('maxPeople').value, 10);
+        let drawer = draw(maxPeople);
+        let showPeople = parseInt(document.getElementById('showPeople').value, 10);
+        let showNum = Array(showPeople).fill().map(() => drawer.next().value);
+        let result = '';
+        for(let i = 0; i < showNum.length; i++){
+            result += '<div class="base">'+showNum[i]+'</div>'
+        }
+
+        lotteryBtn.setAttribute('disabled', true);
+        document.getElementById('lotteryBox').innerHTML = result;
+    }
+    </script>
+</body>
+</html>
