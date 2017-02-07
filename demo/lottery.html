@@ -82,7 +82,7 @@
 
     let lotteryBtn = document.getElementById('lotteryBtn');
 
-    lotteryBtn.onclick = function(){
+    lotteryBtn.addEventListener('click', function(){
         let maxPeople = parseInt(document.getElementById('maxPeople').value, 10);
         let drawer = draw(maxPeople);
         let showPeople = parseInt(document.getElementById('showPeople').value, 10);
@@ -94,7 +94,7 @@
 
         lotteryBtn.setAttribute('disabled', true);
         document.getElementById('lotteryBox').innerHTML = result;
-    }
+    }, false)
     </script>
 </body>
 </html>
