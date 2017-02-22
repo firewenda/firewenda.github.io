@@ -8,7 +8,9 @@ tags:
 ---
 
 >作者： Sahat Yalkabov
+
 >译者：pockry
+
 >转载部分内容，原文地址：[sahatyalkabov.com](http://sahatyalkabov.com/create-a-character-voting-app-using-react-nodejs-mongodb-and-socketio/)
 
 最好的学习ES6的方法，是为每一个ES6示例提供一个等价的ES5实现。外面已经有不少介绍ES6的文章，本文将只讲其中一些。
