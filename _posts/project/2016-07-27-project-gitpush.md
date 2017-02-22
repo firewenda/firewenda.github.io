@@ -141,7 +141,7 @@ A删除远程分支后，B使用branch -a查看时同步A的删除
 
 ## .gitconfig 配置
 
-```js
+```
 [core]
     editor = vim
     quotepath = false
