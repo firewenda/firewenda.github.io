@@ -143,38 +143,38 @@ A删除远程分支后，B使用branch -a查看时同步A的删除
 
 ```js
 [core]
-	editor = vim
-	quotepath = false
-	# 处理windows和linux下换行时\r\n和\n的区别，尽量保持一致
-	# autocrlf表示以已输入换行为准，不自动替换，减少fetch后差异的出现
-	autocrlf = input
-	# eol表示统一使用\n, 在add后自动替换\r\n为\n，减少提交后的差异
-	eol = lf
-	# 忽略大小写, false表示不忽略大小写
-	ignorecase = false
+    editor = vim
+    quotepath = false
+    # 处理windows和linux下换行时\r\n和\n的区别，尽量保持一致
+    # autocrlf表示以已输入换行为准，不自动替换，减少fetch后差异的出现
+    autocrlf = input
+    # eol表示统一使用\n, 在add后自动替换\r\n为\n，减少提交后的差异
+    eol = lf
+    # 忽略大小写, false表示不忽略大小写
+    ignorecase = false
 [alias]
-	ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	co = checkout
-	ci = commit
-	br = branch
-	st = status
-	ps = push
-	pl = pull
+    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+    ps = push
+    pl = pull
 [color]
-	ui = auto
+    ui = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 ```
 
 [git]: https://git-scm.com/book/zh/v2 "git--local-branching-on-the-cheap"
