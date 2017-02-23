@@ -7,7 +7,7 @@ email: btlitong@gmail.com
 description: "关于前端与生活"
 keyword: "文达的博客, Wenda's blog, 博客, 个人网站, 互联网, 前端"
 url: "http://isme.wang"              # your host, for absolute URL
-baseurl: "/"                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 author_info: <a href="http:/isme.wang/">Wenda</a>
 
 # SNS settings
