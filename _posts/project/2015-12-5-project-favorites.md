@@ -7,7 +7,7 @@ tags:
     - 收藏夹
 ---
 
-2015年12月5日，杭州迎来初雪。漫步大雪中，看着雪如同精灵般在路灯下起舞，甚是惊艳。不经意间回忆起往昔关于雪的记忆，心中不免泛起涟漪。。。
+2015年12月5日，杭州迎来初雪。漫步大雪中，看着雪如同精灵般在路灯下起舞，甚是惊艳。不经意间回忆起往昔关于雪的记忆，心中不免泛起涟漪。。。😺
 
 有点扯远了，工作了很久，做前端需要适配很多不同的浏览器，导致每个浏览器的收藏夹里都收藏了很多。随手点开几个，发现都无法访问了，时间能改变许多，我个人比较懒，也用过很多博客，基本上刚开始还有兴趣折腾下，后来慢慢的就淡忘了。但对技术的热情依旧存在，收集点优秀的博客地址，自己也抽时间关注。
 
@@ -22,7 +22,6 @@ tags:
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
     <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
-    <li><a href="http://www.webhek.com/" target="_blank">WEB骇客</a></li>
 </ul>
 
 ### 博客学习
@@ -37,6 +36,7 @@ tags:
     <li><a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔</a> 汤姆大叔的博客</li>
     <li><a href="http://www.75team.com/" target="_blank">奇舞团</a> 奇虎360旗下前端开发团队</li>
     <li><a href="http://qianduan.guru/" target="_blank">前端外刊评论</a> 前端外刊评论</li>
+    <li><a href="http://www.alloyteam.com/" target="_blank">腾讯AlloyTeam Blog</a> 腾讯AlloyTeam Blog，腾讯全端 AlloyTeam 团队 Blog</li>
 </ul>
 
 #### ES6
@@ -56,6 +56,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://apeclass.cn/" target="_blank">海棠学院</a> WEB前端学习新体验</li>
     <li><a href="http://www.codefordream.com/" target="_blank">几米家的网站</a> HTML、CSS、Javascript基础知识</li>
     <li><a href="https://www.khanacademy.org/" target="_blank">可汗学院</a></li>
+    <li><a href="https://www.coursera.org/" target="_blank">coursera</a> 在网上学习全世界最好的课程。</li>
 </ul>
 
 ## 工具类
@@ -87,6 +88,14 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
 <ul>
     <li><a href="http://ionicframework.com/">ionicframework</a> 一款开源的Html5移动App开发框架</li>
     <li><a href="http://framework7.taobao.org/">framework7</a> 一个开源免费的框架可以用来开发混合移动应用</li>
+</ul>
+
+## 其他
+<ul>
+    <li><a href="http://www.webhek.com/" target="_blank">WEB骇客</a></li>
+    <li><a href="https://gold.xitu.io/" target="_blank">掘金</a></li>
+    <li><a href="http://web.jobbole.com/" target="_blank">伯乐在线：WEB前端 - 伯乐在线</a></li>
+    <li><a href="http://www.w3cplus.com/" target="_blank">w3cplus</a></li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
