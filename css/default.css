@@ -525,7 +525,7 @@ blockquote p {
 
 #content {
     width: 1060px;
-    margin: 90px auto 60px;
+    margin: 30px auto;
     min-height: 400px;
     height: auto !important;
     height: 400px;
@@ -536,7 +536,7 @@ blockquote p {
 
 /****************entry style**************/
 
-.fixed-nav {
+/*.fixed-nav {
     width: 740px;
     height: 38px;
     position: absolute;
@@ -572,7 +572,7 @@ blockquote p {
 
 .fixed-nav ul li a:hover {
     text-shadow: 0 0 .03em, 0 0 .05em;
-}
+}*/
 
 .sidenav {
     width: 290px;
@@ -656,7 +656,7 @@ blockquote p {
     width: 740px;
     float: left;
     background: #fff;
-    padding: 30px;
+    padding: 0 30px;
     box-shadow: 0 2px 6px #ccc;
 }
 
