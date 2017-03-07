@@ -584,9 +584,11 @@ blockquote p {
 }
 
 .sidenav h2 {
+    margin-bottom: 15px;
+}
+.sidenav h2 a{
     font-size: 18px;
     color: #333;
-    margin-bottom: 15px;
 }
 
 .sidenav li {
