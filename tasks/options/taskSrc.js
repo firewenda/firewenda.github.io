@@ -2,7 +2,7 @@
 
 /**
  * taskSrc.js
- * @author zhanghaiyang<403724532@qq.com>
+ * @author wenda
  * @version 1.0.0
  */
 

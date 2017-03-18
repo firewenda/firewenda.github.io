@@ -1,8 +1,8 @@
 'use strict';
 /**
  * webpack.config.js
- * @author zhanghaiyang<403724532@qq.com>
- * joyowo web
+ * @author wenda
+ * wenda's blog
  * @version 1.0.0
  */
 
@@ -116,54 +116,6 @@ function webpackConfig(args) {
         },
         plugins: [
             new ExtractTextPlugin('[name].css'),
-            /* 压缩js插件 */
-            // new webpack.optimize.UglifyJsPlugin({
-            //     minimize: true,
-            //     compress: {
-            //         /* 不显示js规范的警告、提示 */
-            //         warnings: false
-            //     },
-            //     //  Preserve copyright comments in the output. By
-            //     // default this works like Google Closure, keeping
-            //     // JSDoc-style comments that contain "@license" or
-            //     // "@preserve". You can optionally pass one of the
-            //     // following arguments to this flag:
-            //     // - "all" to keep all comments
-            //     // - a valid JS regexp (needs to start with a
-            //     // slash) to keep only comments that match.
-            //     // Note that currently not *all* comments can be
-            //     // kept when compression is on, because of dead
-            //     // code removal or cascading statements into
-            //     // sequences.
-
-            //     /**
-            //      * 上面的介绍是指，这个comments的选项是保留一些类似 "@license" or "@preserve" 这种版权的注释，
-            //      * 可选参数有2种， 一种是 字符串 'all'，保留所有注释。
-            //      * 另一种是 可以是正则表达式
-            //      * 这里我去掉了所有注释使用了 空字符串 '';
-            //      */
-            //     comments: ''
-            // }),
-
-
-            /**
-             * webpack.ProvidePlugin
-             * 作用是， 如果你的模块没有require一个模块，但是又使用这个模块的功能，就会预先插入以下你配置的对应模块。
-             * 例如：
-             *    Datatables 基于 jquery
-             *    但是你在 Datatables 没有require('jquery'),
-             *    不用担心，如果你下面 配置了jquery， 就会在打包的时候自动插入
-             */
-            // new webpack.ProvidePlugin({
-            //     $: "jquery",
-            //     jQuery: "jquery",
-            //     jquery: "jquery",
-            //     "window.jQuery": "jquery"
-            // }),
-
-
-            /* 提取公共模块 */
-            //new webpack.optimize.CommonsChunkPlugin('common.js', commom, 2),
         ],
     };
 

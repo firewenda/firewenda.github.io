@@ -21,8 +21,7 @@
     "options": {
         "alias": {
           "$": "js/jquery-2.1.4.min",
-          "{cmd}": "lib/cmd-plugins",
-          "{mycmd}": "lib/my-cmd-plugins"
+          "{pluginscmd}": "js/plugins"
         }
     },
     "homepage": "https://github.com/firewenda/firewenda.github.io#readme",
@@ -57,7 +56,7 @@
         "run-sequence": "^1.1.5",
         "style-loader": "^0.13.1",
         "url-loader": "^0.5.7",
-        "webpack": "latest",
+        "webpack": "^1.14.0",
         "webpack-dev-server": "^1.14.1"
     }
 }

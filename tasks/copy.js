@@ -2,7 +2,7 @@
 
 /**
  * copy.js
- * @author zhanghaiyang<403724532@qq.com>
+ * @author wenda
  * @version 1.0.0
  */
 /**
@@ -27,14 +27,10 @@ let DEST = config.dest;
  * [上线时候的copy任务]
  */
 gulp.task('copy', function(callback) {
-    runSequence(['copy:public', 'copy:myplugins','copy:plugins', 'copy:crm', 'copy:tianwu', 'copy:social', 'copy:joyowyb'],
+    runSequence(['copy:js'],
         callback);
 });
-gulp.task('copy:public', function(callback) {
-    return gulp.src(['public/**/*.{js,css,jpge,jpg,gif,png,ttf,eot,svg,woff,woff2}'])
-        .pipe(gulp.dest(DEST + 'public/'));
-});
-gulp.task('copy:myplugins', function(callback) {
-    return gulp.src(['myplugins/**/*.{js,css,jpge,jpg,gif,png,ttf,eot,svg,woff,woff2}'])
-        .pipe(gulp.dest( DEST + 'myplugins/'));
+gulp.task('copy:plugins', function(callback) {
+    return gulp.src(['js/plugins/*.{js,css,jpge,jpg,gif,png,ttf,eot,svg,woff,woff2}'])
+        .pipe(gulp.dest( DEST + 'js/plugins/'));
 });

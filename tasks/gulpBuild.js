@@ -64,25 +64,11 @@ let taskSrc = require('./options/taskSrc')(options);
  */
 let webpackCompiler = webpack(webpackConfig(options));
 
-
-// gulp.task('watch', function(done) {
-//     gulp.watch(taskSrc.watch, ['dev:build:js'])
-//         .on('end', done);
-// });
-
 gulp.task('clean', function(done) {
     // return;
     return gulp.src([taskSrc.clean[0]])
         .pipe(gulpClean());
 });
-
-
-// let IMGSRC = [
-//     "**/*.{jpge,jpg,gif,png}",
-//     "!build/**/*.{jpge,jpg,gif,png}",
-//     "!node_modules/**/*.{jpge,jpg,gif,png}"
-// ]
-// let DEST = "./build/";
 
 /**
  * [上线时候的build:img任务]
@@ -95,17 +81,7 @@ gulp.task('build:img', function() {
             interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
             multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
         })))
-        // .pipe(rev())
-        // .pipe(gulp.dest('./'))
-        // .pipe(rev.manifest({
-        //     path: 'md5-map.json',
-        //     base: DEST,
-        //     merge: true
-        // }))
         .pipe(gulp.dest(taskSrc.img.dest))
-        // .pipe(notify({
-        //     message: 'img task complete'
-        // }));
 });
 
 
@@ -158,17 +134,6 @@ gulp.task('dev:build:js', function(callback) {
         console.log('server is runing on port 4001...');
 
     });
-    // webpackCompiler.run(function(error, status) {
-    //     if (error) {
-    //         throw new gulpUtil.PluginsError('webpack:build:js', error);
-    //     }
-
-    //     gulpUtil.log('[webpack:build:js]', status.toString({
-    //         colors: true
-    //     }));
-
-    //     callback();
-    // })
 });
 
 
