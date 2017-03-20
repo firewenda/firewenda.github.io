@@ -524,7 +524,7 @@ blockquote p {
 /************layout style*****************/
 
 #content {
-    width: 1060px;
+    width: 1200px;
     margin: 30px auto;
     min-height: 400px;
     height: auto !important;
@@ -655,7 +655,7 @@ blockquote p {
 
 .entry {
     margin-bottom: 10px;
-    width: 740px;
+    width: 880px;
     float: left;
     background: #fff;
     padding: 0 30px;
