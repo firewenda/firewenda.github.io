@@ -2,8 +2,8 @@
 layout: main
 ---
 
-<img src="/images/index/background.jpg" class="fullscreenImg">
-<div class="fullscreenMask"></div>
+<img src="/images/index/background.jpg" class="fullscreenImg" style="display: none;">
+<div class="fullscreenMask" style="display: none;"></div>
 
 <div class="panel-cover">
     <img src="/images/icon/head.png" class="face">
@@ -15,3 +15,7 @@ layout: main
         <li><a class="fa fa-2x fa-tags" href="/tags" title="tags"><span class="description">Tags</span></a><em class="nav">Tags</em></li>
     </ul>
 </div>
+
+<canvas height="100%" width="100%" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;"  id="canv"></canvas>
+
+<script type="text/javascript" src="/js/cavas.stellar.js"></script>
