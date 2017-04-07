@@ -68,12 +68,12 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://www.jslint.com/" target="_blank">JSLint</a> The JavaScript Code Quality Tool</li>
     <li><a href="http://webpack.github.io/" target="_blank">webpack</a> webpack is a module bundler</li>
     <li><a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a> Animate css3动画列表</li>
+    <li><a href="http://tool.oschina.net/" target="_blank">开源中国在线工具</a>：非常多实用小工具。</li>
+    <li><a href="http://devdocs.io/" target="_blank">devdocs.io</a>：我见过的最全的官方文档合集。</li>
+    <li><a href="https://jex.im/regulex/#!embed=false&amp;flags=&amp;re=%5E(a%7Cb)*%3F%24" target="_blank">Regulex</a>：非常好用的正则可视化工具，轻松学会正则表达式。</li>
+    <li><a href="https://leohxj.gitbooks.io/front-end-database/content/index.html" target="_blank">前端工程师手册</a>：总结了前端工程师应该学习哪些东西，比较靠谱。</li>
+    <li><a href="http://cubic-bezier.com/#.17,.67,.83,.67" target="_blank">贝塞尔曲线模拟器</a>：学习css3动画必备，强，无敌。</li>
 </ul>
-
-#### 注意事项
-使用gulp和grunt等压缩工具build项目时，尤其当压缩框架文件时。
-到框架的github主页，查看package.json文件配置项，并应用到自己项目配置文件里。
-**直接用官网提供的配置项，build项目时有可能产生不可预知的错误。**
 
 ### CSS预编译
 <ul>
@@ -84,7 +84,6 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
 </ul>
 
 ## 框架类
-
 <ul>
     <li><a href="http://ionicframework.com/">ionicframework</a> 一款开源的Html5移动App开发框架</li>
     <li><a href="http://framework7.taobao.org/">framework7</a> 一个开源免费的框架可以用来开发混合移动应用</li>
