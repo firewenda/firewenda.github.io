@@ -161,6 +161,30 @@ tags:
         </div>
     </div>
 </div>
+
+## 日期推算
+
+根据某一日期，推算向前（输入负整数）或者向后（输入正整数）对应天数据的具体日期
+
+<div class="form-inline">
+  	<div class="form-group">
+    	<label>当前日期：</label>
+    	<input type="date" class="form-control js-input-date" value="" placeholder="当前日期">
+  	</div>
+    <div class="form-group">
+    	<label>推迟天数：</label>
+    	<input type="number" class="form-control js-input-daynum" value="" placeholder="推迟天数">
+  	</div>
+    <div class="form-group">
+  	    <button class="btn btn-default js-calc-date">计算</button>
+    </div>
+    <hr>
+  	<div class="form-group">
+    	<label>具体日期：</label>
+    	<input type="text" readonly class="form-control js-output-date">
+  	</div>
+</div>
+
 <script>
 $(function(){
     $('.js-count-day').on('click', function(){
@@ -168,7 +192,6 @@ $(function(){
         var countNum = util.accMul(inputVal, 365);
         if(inputVal === ''){
             util.prompt({
-                type: 'warning',
                 text: '请输入日利率'
             });
         }else{
@@ -182,7 +205,6 @@ $(function(){
         var countNum = util.accMul(inputVal, 12);
         if(inputVal === ''){
             util.prompt({
-                type: 'warning',
                 text: '请输入月利率'
             });
         }else{
@@ -190,6 +212,27 @@ $(function(){
         }
     });
     $('.js-count-month').trigger('click');
+
+    function GetDateStr(setDate, AddDayCount) {
+        var dd = new Date(setDate);
+        dd.setDate(dd.getDate() + parseInt(AddDayCount, 10));//获取AddDayCount天后的日期
+        var y = dd.getFullYear();
+        var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);//获取当前月份的日期，不足10补0
+        var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();//获取当前几号，不足10补0
+        return y + "/" + m + "/" + d;
+    }
+
+    $('.js-calc-date').on('click', function () {
+        var $getYear = $('.js-input-date').val();
+        var $getDayNum = $('.js-input-daynum').val();
+        if ($getYear == '' || $getDayNum == '') {
+            util.prompt({
+                text: '请输入正确数值'
+            });
+        } else {
+            $('.js-output-date').val(GetDateStr($getYear, $getDayNum));
+        }
+    });
 
     /**
      * [calculator 计算]
@@ -200,7 +243,6 @@ $(function(){
         var income = parseFloat($("#txtIncome").val());
         if (isNaN(income)) {
             util.prompt({
-                type: 'warning',
                 text: '无效的收入金额'
             });
             $("#txtIncome")[0].focus();
@@ -212,7 +254,6 @@ $(function(){
         var insure = parseFloat($("#txtInsure").val());
         if (isNaN(insure)) {
             util.prompt({
-                type: 'warning',
                 text: '无效的各项社会保险费金额'
             });
             $("#txtInsure")[0].focus();
