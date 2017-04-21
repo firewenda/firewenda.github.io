@@ -30,5 +30,17 @@ tags:
 
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Win10
+
+Win10系统80端口被占用的解决方案。
+
+1、以管理员身份运行regedit ；
+
+2、打开键值：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\HTTP ；
+
+3、在右边找到Start这一项，将其改为0；
+
+4、重启系统，System进程不会占用80端口。
+
 [wenda]:    https://firewenda.github.io  "wenda"
 [stackoverflow]:	http://stackoverflow.com/questions/24652996/homebrew-not-working-on-osx "stackoverflow"
