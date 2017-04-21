@@ -30,7 +30,7 @@ tags:
 
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Win10
+## Win10
 
 Win10系统80端口被占用的解决方案。
 
