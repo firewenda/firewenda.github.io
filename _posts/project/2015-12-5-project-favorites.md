@@ -20,7 +20,8 @@ tags:
     <li><a href="http://reactjs.cn/" target="_blank">React</a> ReactJS中文网站</li>
     <li><a href="http://reactnative.cn/" target="_blank">React Native</a> React Native 中文网</li>
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
-    <li><a href="http://www.angularjs.cn/" target="_blank">angularjs</a> angularjs中文社区</li>
+    <li><a href="http://www.angularjs.cn/" target="_blank">Angularjs</a> Angularjs中文社区</li>
+    <li><a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> 渐进式 JavaScript 框架</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
 </ul>
 
@@ -95,6 +96,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="https://gold.xitu.io/" target="_blank">掘金</a></li>
     <li><a href="http://web.jobbole.com/" target="_blank">伯乐在线：WEB前端 - 伯乐在线</a></li>
     <li><a href="http://www.w3cplus.com/" target="_blank">w3cplus</a></li>
+    <li><a href="https://weekly.75team.com/" target="_blank">奇舞周刊</a> 领略前端技术 阅读奇舞周刊</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
