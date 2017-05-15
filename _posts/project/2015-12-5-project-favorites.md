@@ -97,6 +97,7 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://web.jobbole.com/" target="_blank">伯乐在线：WEB前端 - 伯乐在线</a></li>
     <li><a href="http://www.w3cplus.com/" target="_blank">w3cplus</a></li>
     <li><a href="https://weekly.75team.com/" target="_blank">奇舞周刊</a> 领略前端技术 阅读奇舞周刊</li>
+    <li><a href="http://www.zcfy.cc/" target="_blank">众成翻译</a> 中国最好的技术翻译社区，最懂译者的翻译平台，奇虎360最大前端团队“奇舞团”出品。</li>
 </ul>
 
 [wenda]:    https://firewenda.github.io  "wenda"
