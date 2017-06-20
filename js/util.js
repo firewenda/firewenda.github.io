@@ -227,7 +227,7 @@
 
         })(),
         /**
-         * Function formatMoney 数值转或货币格式
+         * Function formatMoney 数值转货币格式
          *  -@param {Number} number 要转换的数值
          *  -@param {Number} places 保留小数点位数
          *  -@param {String} symbol 货币符号
