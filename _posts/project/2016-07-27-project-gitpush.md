@@ -112,7 +112,7 @@ tags:
 
 删除远程分支(git version > 1.7.0)
 
-	git push origin :branchName //git version < 1.7.0
+	//git push origin :branchName //git version < 1.7.0
 	git push origin --delete branchName //git version > 1.7.0
 
 删除tag
