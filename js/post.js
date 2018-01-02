@@ -281,9 +281,9 @@ $(function() {
         }
     })();
 
-    $.getScript('/js/prettify/prettify.js', function() {
-        prettyPrint();
-    });
+    // $.getScript('/js/prettify/prettify.js', function() {
+    //     prettyPrint();
+    // });
 
     if (/css3-animation/.test(location.href)) {
         $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
