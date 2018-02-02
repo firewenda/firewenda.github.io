@@ -40,14 +40,8 @@ gems: [jekyll-paginate]
 # Friends
 friends: [
     {
-        title: "小米诺",
-        href: "http://www.xiaominuo.com/"
-    },{
         title: "休休的博客",
         href: "https://ignous.github.io/"
-    },{
-        title: "江南客的博客",
-        href: "http://www.ismumu.com"
     },{
         title: "黄玄的博客",
         href: "http://huangxuan.me/"
