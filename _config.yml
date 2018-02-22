@@ -5,6 +5,7 @@ SEOTitle: 文达的博客 | Wenda's blog
 header-img: /images/icon/head.png
 email: btlitong@gmail.com
 description: "关于前端与生活"
+site_root: /
 keyword: "文达的博客, Wenda's blog, 博客, 个人网站, 互联网, 前端"
 url: "http://isme.wang"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
