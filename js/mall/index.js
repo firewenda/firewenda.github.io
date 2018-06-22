@@ -32,7 +32,7 @@ $(function(){
 
     // 展示分类
     $.when(promiseAjax({
-        url: 'https://api.it120.cc/dawendong/shop/goods/category/all',
+        url: '//api.it120.cc/dawendong/shop/goods/category/all',
     }))
     .then(function (res) {
         $('.my-nav-tabs').html(Handlebars.compile($("#categoryList").html())(res));
@@ -43,7 +43,7 @@ $(function(){
 
     // 展示公告
     $.when(promiseAjax({
-        url: 'https://api.it120.cc/dawendong/notice/list',
+        url: '//api.it120.cc/dawendong/notice/list',
         pageSize: 5,
     }))
     .then(function (res) {
@@ -55,7 +55,7 @@ $(function(){
 
     //获取所有商品
     $.when(promiseAjax({
-        url: 'https://api.it120.cc/dawendong/shop/goods/list',
+        url: '//api.it120.cc/dawendong/shop/goods/list',
         categoryId: '',
         nameLike: $.trim($('.search-content').val())
     }))
@@ -75,7 +75,7 @@ $(function(){
         $('.cd-gallery').html('');
         
         $.when(promiseAjax({
-            url: 'https://api.it120.cc/dawendong/shop/goods/list',
+            url: '//api.it120.cc/dawendong/shop/goods/list',
             categoryId: $(this).attr('data-id'),
             nameLike: $.trim($('.search-content').val())
         }))
@@ -93,7 +93,7 @@ $(function(){
     $('.js-search-btn').on('click', function(){
         $('.cd-gallery').html('');
         $.when(promiseAjax({
-            url: 'https://api.it120.cc/dawendong/shop/goods/list',
+            url: '//api.it120.cc/dawendong/shop/goods/list',
             categoryId: $('.my-nav-tabs li.active').attr('data-id'),
             nameLike: $.trim($('.search-content').val())
         }))
