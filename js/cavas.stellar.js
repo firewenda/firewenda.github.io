@@ -319,8 +319,8 @@ var trans = {
     };
     var app = new Build();
     app.run();
+    window.addEventListener('resize', function () {
+        app.canvas.width = w = window.innerWidth;
+        app.canvas.height = h = window.innerHeight;
+    }, false);
 })();
-window.addEventListener('resize', function () {
-    canvas.width = w = window.innerWidth;
-    canvas.height = h = window.innerHeight;
-}, false);
