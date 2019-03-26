@@ -17,15 +17,16 @@ tags:
 <ul>
     <li><a href="https://github.com/" target="_blank">github</a> 必看，技术的交流平台</li>
     <li><a href="https://cnodejs.org/" target="_blank">cnode</a> nodejs中文社区</li>
-    <li><a href="http://reactjs.cn/" target="_blank">React</a> ReactJS中文网站</li>
+    <li><a href="https://reactjs.org/" target="_blank">React</a> ReactJS</li>
     <li><a href="http://reactnative.cn/" target="_blank">React Native</a> React Native 中文网</li>
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
     <li><a href="https://ant.design/index-cn">Ant Design</a> A UI Design Language</li>
     <li><a href="https://dvajs.com/">DvaJS</a> React and redux based, lightweight and elm-style framework.</li>
     <li><a href="https://umijs.org/zh/">UmiJS</a> 可插拔的企业级 react 应用框架。</li>
-    <li><a href="http://www.angularjs.cn/" target="_blank">Angularjs</a> Angularjs中文社区</li>
+    <li><a href="https://angularjs.org/" target="_blank">Angularjs</a> Angularjs</li>
     <li><a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> 渐进式 JavaScript 框架</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
+    <li><a href="https://lodash.com/" target="_blank">lodash</a> lodash</li>
 </ul>
 
 ### 博客学习
@@ -46,7 +47,7 @@ tags:
 #### ES6
 <ul>
     <li><a href="http://es6.ruanyifeng.com/" target="_blank">ECMAScript 6 入门</a> ECMAScript 6 入门</li>
-    <li><a href="http://www.infoq.com/cn/es6-in-depth/" target="_blank">深入浅出ES6</a> 深入浅出ES6</li>
+    <!-- <li><a href="http://www.infoq.com/cn/es6-in-depth/" target="_blank">深入浅出ES6</a> 深入浅出ES6</li> -->
 </ul>
 
 ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化兼容现有代码的设计理念,你以前变形的JS代码能继续正常运行。到目前为止，已经很多浏览器开始支持ES6的部分特性，并且逐渐支持更多的特性。代表性的浏览器就是[Chrome](http://www.google.cn/chrome/browser/desktop/index.html){:target="_blank"}。 其他浏览器是否支持你可以通过 [Can i use](http://caniuse.com/){:target="_blank"} 来查询。
@@ -59,7 +60,6 @@ ES6是一次比较重大的变革，与此同时呢，由于ES6秉承最大化�
     <li><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a> IT在线教育平台-中国最大的IT职业在线教育平台</li>
     <li><a href="http://apeclass.cn/" target="_blank">海棠学院</a> WEB前端学习新体验</li>
     <li><a href="http://www.codefordream.com/" target="_blank">几米家的网站</a> HTML、CSS、Javascript基础知识</li>
-    <li><a href="https://www.khanacademy.org/" target="_blank">可汗学院</a></li>
     <li><a href="https://www.coursera.org/" target="_blank">coursera</a> 在网上学习全世界最好的课程。</li>
 </ul>
 
