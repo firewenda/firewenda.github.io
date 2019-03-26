@@ -20,6 +20,9 @@ tags:
     <li><a href="http://reactjs.cn/" target="_blank">React</a> ReactJS中文网站</li>
     <li><a href="http://reactnative.cn/" target="_blank">React Native</a> React Native 中文网</li>
     <li><a href="http://cn.redux.js.org/">Redux</a> Redux 中文文档</li>
+    <li><a href="https://ant.design/index-cn">Ant Design</a> A UI Design Language</li>
+    <li><a href="https://dvajs.com/">DvaJS</a> React and redux based, lightweight and elm-style framework.</li>
+    <li><a href="https://umijs.org/zh/">UmiJS</a> 可插拔的企业级 react 应用框架。</li>
     <li><a href="http://www.angularjs.cn/" target="_blank">Angularjs</a> Angularjs中文社区</li>
     <li><a href="https://cn.vuejs.org/" target="_blank">Vue.js</a> 渐进式 JavaScript 框架</li>
     <li><a href="http://backbonejs.org/" target="_blank">backbonejs</a> backbonejs</li>
