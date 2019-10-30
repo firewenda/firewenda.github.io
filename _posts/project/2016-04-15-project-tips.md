@@ -9,6 +9,14 @@ tags:
 
 ## Nodejs
 
+快速删除node_modules
+
+	安装 rimraf 模块
+	npm install rimraf -g
+	rimraf node_modules
+	// 清除缓存
+	npm cache clean
+
 删除node_modules文件夹下所有模块
 
 	npm ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm rm

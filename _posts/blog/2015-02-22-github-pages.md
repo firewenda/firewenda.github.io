@@ -333,7 +333,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 [1]:    {{ page.url}}  ({{ page.title }})
 [2]: http://markdown.tw/    "Markdown语法"
 [3]:    http://baike.baidu.com/view/65575.htm "A记录"
-[4]: http://progit.org/book/zh/ "Pro Git中文版"
+[4]: https://git-scm.com/book/zh/v2 "Git中文版"
 [5]: https://help.github.com/articles/set-up-git/ "Mac下Git安装"
 [6]: http://help.github.com/ssh-key-passphrases/
 [7]: http://firewenda.github.io

@@ -10,4 +10,4 @@
 
 * 推荐阅读：[我为什么写博客？](http://beiyuu.com/why-blog)
 * 本博客使用markdow语法
-* 若要在本地测试，需要安装ruby,jekyll等，推荐阅读：[一步步在GitHub上创建博客主页](http://www.pchou.info/ssgithubPage/2013-01-03-build-github-blog-page-01.html)配合首页[使用Github Pages建独立博客](http://www.isme.wang/github-pages)，你将拥有一个属于自己的博客
+* 若要在本地测试，需要安装ruby,jekyll等，推荐阅读：[使用Github Pages建独立博客](http://www.isme.wang/blog/github-pages)，你将拥有一个属于自己的博客
