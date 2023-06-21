@@ -1,0 +1,37 @@
+<html>
+  <head></head>
+  <body>
+    
+  </body>
+  <script type="text/javascript">
+  function generateIdCardNumber() {
+    // 随机生成一个18位的身份证号
+    const provinceList = [
+      '11', '12', '13', '14', '15', '21', '22', '23', '31', '32', '33', '34', '35', '36', '37', '41', '42', '43', '44', '45', '46', '50', '51', '52', '53', '54', '61', '62', '63', '64', '65', '71', '81', '82'
+    ];
+    const randomProvince = provinceList[Math.floor(Math.random() * provinceList.length)];
+    const cityList = Array.from({ length: 90 }, (item, index)=> index + 1 > 9 ? `${index+1}` : `0${index+1}`);
+    const randomCity = cityList[Math.floor(Math.random() * provinceList.length)];
+    const randomYear = Math.floor(Math.random() * 60) + 1950;
+    const randomMonth = Math.floor(Math.random() * 12) + 1;
+    const isLeapYear = (randomYear % 4 === 0 && randomYear % 100 !== 0) || randomYear % 400 === 0;
+    const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const randomDay = Math.floor(Math.random() * daysInMonth[randomMonth - 1]) + 1;
+    const randomSequence = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    const idCardNumberWithoutCheckCode = `${randomProvince}${randomCity}${randomCity}${randomYear}${randomMonth.toString().padStart(2, '0')}${randomDay.toString().padStart(2, '0')}${randomSequence}`;
+    // 计算身份证号的校验码
+    const weightFactors = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+    const checkCodeList = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];
+    let sum = 0;
+    for (let i = 0; i < idCardNumberWithoutCheckCode.length; i++) {
+      sum += parseInt(idCardNumberWithoutCheckCode.charAt(i)) * weightFactors[i];
+    }
+    const checkCode = checkCodeList[sum % 11];
+    return `${idCardNumberWithoutCheckCode}${checkCode}`;
+  }
+  // 生成20个身份证号
+  for (let i = 0; i < 50; i++) {
+    document.write(`${generateIdCardNumber()}<br />`);
+  }
+  </script>
+</html>
