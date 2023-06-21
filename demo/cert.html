@@ -1,7 +1,28 @@
 <html>
-  <head></head>
+  <head>
+    <style type="text/css">
+      body {
+        padding: 0 50px;
+        line-height: 1.6;
+      }
+      .btn-warp {
+        margin-bottom: 20px;
+      }
+      .btn-warp button {
+        padding: 5px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
   <body>
-    
+    <h1>随机生成50个身份证号码</h1>
+    <div class="btn-warp">
+      <button id="myButton0">生成10个身份证号码</button>
+      <button id="myButton1">生成20个身份证号码</button>
+      <button id="myButton2">生成50个身份证号码</button>
+      <button id="myButton3">生成100个身份证号码</button>
+    </div>
+    <div id="wrap"></div>
   </body>
   <script type="text/javascript">
   function generateIdCardNumber() {
@@ -29,9 +50,26 @@
     const checkCode = checkCodeList[sum % 11];
     return `${idCardNumberWithoutCheckCode}${checkCode}`;
   }
-  // 生成20个身份证号
-  for (let i = 0; i < 50; i++) {
-    document.write(`${generateIdCardNumber()}<br />`);
+  document.querySelector('#myButton0').addEventListener('click', function() {
+    create(10);
+  });
+  document.querySelector('#myButton1').addEventListener('click', function() {
+    create(20);
+  });
+  document.querySelector('#myButton2').addEventListener('click', function() {
+    create(50);
+  });
+  document.querySelector('#myButton3').addEventListener('click', function() {
+    create(100);
+  });
+  function create(number) {
+    const wrap = document.querySelector('#wrap'); // 获取按钮元素
+    let htmlStr = '';
+    for (let i = 0; i < number; i++) {
+      htmlStr += `<div>${generateIdCardNumber()}</div>`;
+    }
+    wrap.innerHTML = htmlStr;
   }
+  create(10);
   </script>
 </html>
