@@ -28,6 +28,10 @@
     "homepage": "https://github.com/firewenda/firewenda.github.io#readme",
     "devDependencies": {
         "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^6.8.1",
+        "eslint": "^8.47.0",
+        "style-loader": "^3.3.3",
+        "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.9",
         "webpack-dev-server": "^3.9.0"
